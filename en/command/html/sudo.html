@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>sudo : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+sudo - sudoedit - execute a command as another user</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] sudo OPTION COMMAND</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">option</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td style="width:100px">-u USER</td>
+<td>causes sudo to run the specified command as a user other than root
+</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>runs the shell specified by the SHELL environment variable if it is set or the shell as specified in passwd(5)
+</td>
+</tr>
+<tr>
+<td>-H</td>
+<td>sets the HOME environment variable to the homedir of the target user (root by default) as specified in passwd(5)
+</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>The -l (list) option will list out the allowed (and forbidden) commands for the invoking user on the current host
+</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>show help
+</td>
+</tr>
+<tr>
+<td>-v</td>
+<td> sudo will update the userâ€™s timestamp, prompting for the userâ€™s password if necessary
+</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>The option to sudo invalidates the userâ€™s timestamp by setting the time on it to the Epoch
+</td>
+</tr>
+<tr>
+<td>-K</td>
+<td>The option is like -k except that it removes the userâ€™s timestamp entirely
+</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>The option tells sudo to run the given command in the background
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Ubuntu 15.04 : FTP Server : Vsftpd Over SSL/TLS : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8652 / 62643388</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Ubuntu 15.04</div>
+<div class="navi">
+<ul>
+<li><a href="note (29).html">Get Ubuntu 15.04</a></li>
+<li><a href="note (4248).html">Install Ubuntu</a></li>
+<li class="tree"><a href="note (4249).html">Initial Settings</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (4250).html">(1) Add a user</a></li>
+<li><a href="note (4251).html">(2) Enable root user</a></li>
+<li><a href="note (4252).html">(3) Network Settings</a></li>
+<li><a href="note (4253).html">(4) Configure Services</a></li>
+<li><a href="note (4254).html">(5) Update System</a></li>
+<li><a href="note (4255).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (4256).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4257).html">NTP Server</a>
+<ul>
+<li><a href="note (4258).html">(1) Configure NTP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4259).html">(2) Configure NTP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4260).html">SSH Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (4261).html">(1) Password Authentication</a></li>
+<li><a href="note (4262).html">(2) SSH File Transfer (Ubuntu)</a></li>
+<li><a href="note (4263).html">(3) SSH File Transfer (Windows)</a></li>
+<li><a href="note (4264).html">(4) Key-Pair Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (4265).html">(5) SFTP only + Chroot</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4266).html">DNS Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (4267).html">(1) Install Bind</a></li>
+<li><a href="note (4268).html">(2) Set Zone Info</a></li>
+<li><a href="note (4269).html">(3) Start BIND</a></li>
+<li><a href="note (4270).html">(4) Set CNAME record</a></li>
+<li style="border-bottom: 0px"><a href="note (4271).html">(5) Slave DNS Server</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4272).html">DHCP Server</a>
+<ul>
+<li><a href="note (4273).html">(1) Configure DHCP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4274).html">(2) Configure DHCP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4275).html">Storage Server</a>
+<ul style="position: absolute; margin-top: -5.4em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4275).html">&nbsp; NFS</a></li>
+<li><a href="note (4276).html">(1) Configure NFS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4277).html">(2) Configure NFS Client</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid; border-bottom: #696969 1px solid;"><a href="note (4278).html">&nbsp; iSCSI</a></li>
+<li><a href="note (4279).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (4280).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4281).html">Virtualization</a>
+<ul style="position: absolute; margin-top: -5.55em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4281).html">&nbsp; KVM</a></li>
+<li><a href="note (4282).html">(1) Install KVM</a></li>
+<li><a href="note (4283).html">(2) Create Virtual Machine#1</a></li>
+<li><a href="note (4284).html">(3) Create Virtual Machine#2</a></li>
+<li><a href="note (4285).html">(4) Basic Operations</a></li>
+<li><a href="note (4286).html">(5) Management tools</a></li>
+<li><a href="note (4287).html">(6) SPICE Server</a></li>
+<li><a href="note (4288).html">(7) SPICE Client</a></li>
+<li style="border-bottom: 0px"><a href="note (4289).html">(8) Nested KVM</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4290).html">Directory Server</a>
+<ul style="position: absolute; margin-top: -5.4em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4290).html">&nbsp; OpenLDAP</a></li>
+<li><a href="note (4291).html">(1) Configure LDAP Server</a></li>
+<li><a href="note (4292).html">(2) Add User Accounts</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (4293).html">(3) Configure LDAP Client</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4294).html">&nbsp; NIS</a></li>
+<li><a href="note (4295).html">(1) Configure NIS Server</a></li>
+<li><a href="note (4296).html">(2) Configure NIS Client</a></li>
+<li style="border-bottom: 0px"><a href="note (4297).html">(3) Configure NIS Slave</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4298).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -5.4em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4298).html">&nbsp; Apache2</a></li>
+<li><a href="note (4299).html">( 1 ) Install Apache2</a></li>
+<li><a href="note (4300).html">( 2 ) Use Perl Scripts</a></li>
+<li><a href="note (4301).html">( 3 ) Use PHP Scripts</a></li>
+<li><a href="note (4302).html">( 4 ) Use Ruby Scripts</a></li>
+<li><a href="note (4303).html">( 5 ) Enable Userdir</a></li>
+<li><a href="note (4304).html">( 6 ) Virtual Hostings</a></li>
+<li><a href="note (4305).html">( 7 ) Configure SSL</a></li>
+<li><a href="note (4306).html">( 8 ) Use Basic Auth</a></li>
+<li style="border-bottom: 0px"><a href="note (4307).html">( 9 ) Basic Auth + PAM</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4308).html">Database</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4308).html">&nbsp; MySQL</a></li>
+<li><a href="note (4309).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (4310).html">(2) Install phpMyAdmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4311).html">FTP Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (4312).html">(1) Install Vsftpd</a></li>
+<li><a href="note (4313).html">(2) Install ProFTPD</a></li>
+<li><a href="note (4314).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (4315).html">(4) FTP Client (Debian)</a></li>
+<li><a href="note (4316).html">(5) FTP Client (Windows)</a></li>
+<li><a href="note (4317).html">(6) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (4318).html">(7) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (4319).html">(8) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4320).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (4321).html">(1) Install Postfix</a></li>
+<li><a href="note (4322).html">(2) Install Dovecot</a></li>
+<li><a href="note (4323).html">(3) Clients' Settings</a></li>
+<li><a href="note (4324).html">(4) SSL Settings</a></li>
+<li><a href="note (4325).html">(5) Virtual Domains</a></li>
+<li><a href="note (4326).html">(6) Postfix+Clamav+ClamSMTP</a></li>
+<li><a href="note (4327).html">(7) Log Analyzer : pflogsumm</a></li>
+<li><a href="note (4328).html">(8) Log Analyzer : MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (4329).html">(9) Log Analyzer : AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4330).html">Samba Server</a>
+<ul style="position: absolute; margin-top: -3.8em;">
+<li><a href="note (4331).html">(1) Fully accessed Shared Directory</a></li>
+<li><a href="note (4332).html">(2) Limited Shared Directory</a></li>
+<li><a href="note (4333).html">(3) Samba Winbind</a></li>
+<li><a href="note (4334).html">(4) Samba AD DC : Server Settings</a></li>
+<li><a href="note (4335).html">(5) Samba AD DC : Basic Operation</a></li>
+<li style="border-bottom: 0px"><a href="note (4336).html">(6) Samba AD DC : Client Settings</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4337).html">Proxy Server</a>
+<ul style="position: absolute; margin-top: -5.55em;">
+<li><a href="note (4338).html">(1) Install Squid</a></li>
+<li><a href="note (4339).html">(2) Configure Proxy Clients</a></li>
+<li><a href="note (4340).html">(3) Set Basic Authentication</a></li>
+<li><a href="note (4341).html">(4) Configure as a Reverse Proxy</a></li>
+<li style="border-bottom: 0px"><a href="note (4342).html">(5) Squid + SquidClamav</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4343).html">Desktop Env</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (4344).html">(1) Install Desktop Environment</a></li>
+<li><a href="note (4345).html">(2) GNOME Desktop Environment</a></li>
+<li><a href="note (4346).html">(3) Cinnamon Desktop Environment</a></li>
+<li><a href="note (4347).html">(4) MATE Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (4348).html">(5) Install VNC Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (4349).html">Others</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (4350).html">Create SSL Certificates</a></li>
+<li><a href="note (4351).html">Set System Timezone</a></li>
+<li><a href="note (4352).html">Set KeyboardMap</a></li>
+<li><a href="note (4353).html">Set System Language</a></li>
+<li><a href="note (4349).html">Set Hostname</a></li>
+<li style="border-bottom: 0px"><a href="note (4354).html">Clamav AntiVirus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Vsftpd Over SSL/TLS<div class="date">2015/05/20</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Configure Vsftpd to use SSL/TLS. 
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Create certificates. 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+root@www:~# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> /etc/ssl/private </div><br>
+root@www:/etc/ssl/private# <div class="color1">openssl req -x509 -nodes -newkey rsa:1024 -keyout vsftpd.pem -out vsftpd.pem -days 365 </div><br>
+Generating a 1024 bit RSA private key<br>
+......++++++<br>
+.......++++++<br>
+writing new private key to '/etc/pki/tls/certs/vsftpd.pem'<br>
+-----<br>
+You are about to be asked to enter information that will be incorporated<br>
+into your certificate request.<br>
+What you are about to enter is what is called a Distinguished Name or a DN.<br>
+There are quite a few fields but you can leave some blank<br>
+For some fields there will be a default value,<br>
+If you enter '.', the field will be left blank.<br>
+-----<br>
+<div class="block">
+Country Name (2 letter code) [AU]:<div class="color1">JP</div><div class="posl-1"><div class="color2"># country</div></div><br>
+State or Province Name (full name) [Some-State]:<div class="color1">Hiroshima</div> &nbsp; <div class="color2"># State</div><br>
+Locality Name (eg, city) []:<div class="color1">Hiroshima</div><div class="posl-1"><div class="color2"># city</div></div><br>
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:<div class="color1">GTS</div> &nbsp; <div class="color2"># company</div><br>
+Organizational Unit Name (eg, section) []:<div class="color1">Server World</div> &nbsp; <div class="color2"># department</div><br>
+Common Name (eg, YOUR name) []:<div class="color1">www.srv.world</div> &nbsp; <div class="color2"># server's FQDN</div><br>
+Email Address []:<div class="color1">root@srv.world</div><div class="posl-1"><div class="color2"># admin's email</div></div>
+</div>
+root@www:/etc/ssl/private# <div class="color1"><a href="command\html\chmod.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chmod</a> 600 vsftpd.pem </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Configure Vsftpd. 
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+<div class="block">
+root@www:~# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/vsftpd.conf </div></div>
+<div class="block">
+<div class="color2"># line 149: change like follows</div><br>
+rsa_cert_file=<div class="color1">/etc/ssl/private/vsftpd.pem</div><br>
+rsa_private_key_file=<div class="color1">/etc/ssl/private/vsftpd.pem</div><br>
+ssl_enable=<div class="color1">YES</div><br>
+<div class="color1">
+ssl_ciphers=HIGH<br>
+force_local_data_ssl=YES<br>
+force_local_logins_ssl=YES 
+</div>
+</div>
+root@www:~# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> restart vsftpd </div><br>
+</td>
+</tr>
+</table>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">FTP Client : Ubuntu</div>
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Configure FTP Client to use FTPS connection. 
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[3]</td>
+<td><a href="note (4315).html">Install FTP Client</a> and configure like follows. 
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+<div class="block">
+ubuntu@client:~$ <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> ~/.lftprc </div>
+</div>
+<div class="color1">
+<div class="block">
+<div class="color2"># create new</div><br>
+set ftp:ssl-auth TLS<br>
+set ftp:ssl-force true<br>
+set ftp:ssl-protect-list yes<br>
+set ftp:ssl-protect-data yes<br>
+set ftp:ssl-protect-fxp yes<br>
+set ssl:verify-certificate no
+</div>
+</div>
+ubuntu@client:~$ <div class="color1">lftp -u jessie www.srv.world </div><br>
+Password:<br>
+lftp jessie@www.srv.world:~&gt;
+</td>
+</tr>
+</table>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">FTP Client : Windows</div>
+</td>
+</tr>
+</table>
+<table class="base_win" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td><a href="note (4316).html">For example of FileZilla on Windows</a>, Open 'File'-'Site Manager'. 
+</td>
+</tr>
+</table>
+<table class="base_win" summary="4-1">
+<tr>
+<td>
+<img src="Ubuntu_15.04\ftp\img\3.png" width="797" height="750" alt="" class="img" style="max-width: 797px; width: 100%; height: auto;">
+</td>
+</tr>
+</table>
+<table class="base_win" summary="5">
+<tr>
+<td class="num">[5]</td>
+<td>Input user info like follows, for encryption field, select "explicit FTP over TLS". 
+</td>
+</tr>
+</table>
+<table class="base_win" summary="5-1">
+<tr>
+<td>
+<img src="Ubuntu_15.04\ftp\img\4.png" width="724" height="515" alt="" class="img" style="max-width: 724px; width: 100%; height: auto;">
+</td>
+</tr>
+</table>
+<table class="base_win" summary="6">
+<tr>
+<td class="num">[6]</td>
+<td>The user's Password is required. Input it. 
+</td>
+</tr>
+</table>
+<table class="base_win" summary="6-1">
+<tr>
+<td>
+<img src="Ubuntu_15.04\ftp\img\5.png" width="310" height="245" alt="" class="img" style="max-width: 310px; width: 100%; height: auto;">
+</td>
+</tr>
+</table>
+<table class="base_win" summary="7">
+<tr>
+<td class="num">[7]</td>
+<td>The following warning is shown because the certificate is self signed, it's no ploblem. Go next.
+</td>
+</tr>
+</table>
+<table class="base_win" summary="7-1">
+<tr>
+<td>
+<img src="Ubuntu_15.04\ftp\img\6.png" width="585" height="691" alt="" class="img" style="max-width: 585px; width: 100%; height: auto;">
+</td>
+</tr>
+</table>
+<table class="base_win" summary="8">
+<tr>
+<td class="num">[8]</td>
+<td>Just connected with FTPS. 
+</td>
+</tr>
+</table>
+<table class="base_win" summary="8-1">
+<tr>
+<td>
+<img src="Ubuntu_15.04\ftp\img\7.png" width="797" height="747" alt="" class="img" style="max-width: 797px; width: 100%; height: auto;">
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">FTP Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (4312).html">Install Vsftpd</a></li>
+<li><a href="note (4313).html">Install ProFTPD</a></li>
+<li><a href="note (4314).html">Install Pure-FTPd</a></li>
+<li><a href="note (4315).html">FTP Client#1</a></li>
+<li><a href="note (4316).html">FTP Client#2</a></li>
+<li><a href="note (4317).html">Vsftpd+SSL/TLS</a></li>
+<li><a href="note (4318).html">Proftpd+SSL/TLS</a></li>
+<li><a href="note (4319).html">Pure-FTPd+SSL/TLS</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (4355).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>quotacheck : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+quotacheck - scan a filesystem for disk usage, create, check and repair quota files</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] quotacheck OPTION FILE-SYSTEM</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">option</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td>-b</td>
+<td>Forces quotacheck to make backups of the quota file before writing the new data
+</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>quotacheck  reports  its  operation as it progresses
+</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>Enable  debugging mode
+</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>Only user quotas listed in /etc/mtab or on the filesystems specified are to be checked
+</td>
+</tr>
+<tr>
+<td>-g</td>
+<td>Only group quotas listed in /etc/mtab or on the filesystems specified are to be checked
+</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>Donâ€™t  read  existing  quota files. Just perform a new scan and save it to disk
+</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>Forces checking and writing of new quota files on filesystems with quotas enabled
+</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>Check all mounted non-NFS filesystems in /etc/mtab
+</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>Donâ€™t try to remount filesystem read-only. See comment with option -M
+</td>
+</tr>
+<tr>
+<td>-M</td>
+<td>This  flag  forces  checking of filesystem in read-write mode if a remount fails
+</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>When  used  together with the -a option, all filesystems except for the root filesystem are checked for quotas
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

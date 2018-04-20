@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Scientific Linux 6 - WEB Server - Install/Configure httpd : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8918 / 62643654</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Scientific Linux 6</div>
+<div class="navi">
+<ul>
+<li><a href="note (39).html">Download SL 6</a></li>
+<li><a href="note (5280).html">Install OS</a></li>
+<li class="tree"><a href="note (5281).html">Initial Config</a>
+<ul>
+<li><a href="note (5282).html">(1) Add Admin User</a></li>
+<li><a href="note (5283).html">(2) FW &amp; SELinux</a></li>
+<li><a href="note (5284).html">(3) Configure Networking</a></li>
+<li><a href="note (5285).html">(4) Configure Services</a></li>
+<li><a href="note (5286).html">(5) Update System</a></li>
+<li><a href="note (5287).html">(6) Add Repositories for yum</a></li>
+<li><a href="note (5288).html">(7) Configure vim</a></li>
+<li><a href="note (5289).html">(8) Configure sudo</a></li>
+<li style="border-bottom: 0px"><a href="note (5290).html">(9) Cron's Settings</a></li>
+</ul>
+</li>
+<li><a href="note (5291).html">NTP Server</a></li>
+<li class="tree"><a href="note (5292).html">SSH Server</a>
+<ul>
+<li><a href="note (5293).html">(1) Password Authentication</a></li>
+<li><a href="note (5294).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (5295).html">(3) Transfer files with SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5296).html">DNS Server</a>
+<ul>
+<li><a href="note (5297).html">(1) Install/Configure BIND</a></li>
+<li><a href="note (5298).html">(2) Set Zones</a></li>
+<li><a href="note (5299).html">(3) Start BIND</a></li>
+<li><a href="note (5300).html">(4) chroot Environment</a></li>
+<li><a href="note (5301).html">(5) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (5302).html">(6) Config as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (5303).html">DHCP Server</a></li>
+<li class="tree"><a href="note (5304).html">Storage Server</a>
+<ul>
+<li><a href="note (5305).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (5306).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5307).html">Virtualization</a>
+<ul>
+<li class="tree2"><a href="note (5307).html"> &nbsp; KVM</a>
+<ul>
+<li><a href="note (5308).html">( 1 ) Install KVM</a></li>
+<li><a href="note (5309).html">( 2 ) Create Virtual Machine #1</a></li>
+<li><a href="note (5310).html">( 3 ) Create Virtual Machine #2</a></li>
+<li><a href="note (5311).html">( 4 ) Create Virtual Machine #3</a></li>
+<li><a href="note (5312).html">( 5 ) Operations</a></li>
+<li><a href="note (5313).html">( 6 ) Enable vhost-net</a></li>
+<li><a href="note (5314).html">( 7 ) Install Virt-top</a></li>
+<li><a href="note (5315).html">( 8 ) Configure SPICE Server</a></li>
+<li><a href="note (5316).html">( 9 ) Configure SPICE Client</a></li>
+<li><a href="note (5317).html">(10) Set SPICE Password</a></li>
+<li style="border-bottom: 0px"><a href="note (5318).html">(11) SPICE - Enable Sounds</a></li>
+</ul>
+</li>
+<li style="border-bottom: 0px" class="tree2"><a href="note (5319).html"> &nbsp; VMware Player</a>
+<ul>
+<li><a href="note (5320).html">(1) Install VMware Player</a></li>
+<li style="border-bottom: 0px"><a href="note (5321).html">(2) Create Virtual Machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="note (5322).html">NFS Server</a></li>
+<li class="tree"><a href="note (5323).html">NIS Server</a>
+<ul>
+<li><a href="note (5324).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (5325).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5326).html">LDAP Server</a>
+<ul>
+<li><a href="note (5327).html">(1) Configure LDAP Server</a></li>
+<li><a href="note (5328).html">(2) Configure LDAP Client</a></li>
+<li><a href="note (5329).html">(3) LDAP over TLS</a></li>
+<li style="border-bottom: 0px"><a href="note (5330).html">(4) phpLDAPadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5331).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -14.6em;">
+<li><a href="note (5332).html">( 1 ) Install/Configure httpd</a></li>
+<li><a href="note (5333).html">( 2 ) Install PHP</a></li>
+<li><a href="note (5334).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (5335).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (5336).html">( 5 ) Configure SSL</a></li>
+<li><a href="note (5337).html">( 6 ) Virtual Hostings</a></li>
+<li><a href="note (5338).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (5339).html">( 8 ) Enable APC</a></li>
+<li><a href="note (5340).html">( 9 ) Enable mod_perl</a></li>
+<li><a href="note (5341).html">(10) Enable SpeedyCGI</a></li>
+<li><a href="note (5342).html">(11) Enable proxy_http</a></li>
+<li><a href="note (5343).html">(12) Basic Auth + LDAP</a></li>
+<li><a href="note (5344).html">(13) Log analyzer - Visitors</a></li>
+<li><a href="note (5345).html">(14) Log analyzer - AWstats</a></li>
+<li><a href="note (5346).html">(15) Access analyzer - Piwik</a></li>
+<li><a href="note (5347).html">(16) WebMail - SquirrelMail</a></li>
+<li><a href="note (5348).html">(17) WebMail - RoundCubeMail</a></li>
+<li style="border-bottom: 0px"><a href="note (5349).html">(18) Install Wordpress</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5350).html">Database</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li class="tree2"><a href="note (5351).html"> &nbsp; PostgreSQL</a>
+<ul>
+<li><a href="note (5352).html">(1) Install PostgreSQL</a></li>
+<li style="border-bottom: 0px"><a href="note (5353).html">(2) phpPgAdmin</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5350).html"> &nbsp; MySQL</a>
+<ul>
+<li><a href="note (5354).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (5355).html">(2) phpMyAdmin</a></li>
+</ul>
+</li>
+<li style="border-bottom: 0px" class="tree2"><a href="note (5356).html"> &nbsp; Oracle Database 11g R2</a>
+<ul>
+<li><a href="note (5357).html">(1) Settings before Installation</a></li>
+<li><a href="note (5358).html">(2) Install Oracle 11g R2</a></li>
+<li><a href="note (5359).html">(3) Configure Oracle Net Listener</a></li>
+<li><a href="note (5360).html">(4) Create a Database</a></li>
+<li style="border-bottom: 0px"><a href="note (5361).html">(5) Create a init Script</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="tree"><a href="note (5362).html">FTP Server</a>
+<ul>
+<li><a href="note (5363).html">(1) Install Vsftpd</a></li>
+<li><a href="note (5364).html">(2) Install ProFTPD</a></li>
+<li><a href="note (5365).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (5366).html">(4) FTP Client - FileZilla</a></li>
+<li><a href="note (5367).html">(5) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (5368).html">(6) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (5369).html">(7) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5370).html">MAIL Server</a>
+<ul>
+<li><a href="note (5371).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (5372).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (5373).html">(3) Configure Client</a></li>
+<li><a href="note (5374).html">(4) Configure SSL</a></li>
+<li><a href="note (5375).html">(5) Virtual Domains</a></li>
+<li><a href="note (5376).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li><a href="note (5377).html">(7) Log analyzer - pflogsumm</a></li>
+<li><a href="note (5378).html">(8) Log analyzer - MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (5379).html">(9) Log analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5380).html">Samba Server</a>
+<ul>
+<li><a href="note (5381).html">(1) Create fully accessed Directory</a></li>
+<li><a href="note (5382).html">(2) Create Limited Directory</a></li>
+<li><a href="note (5383).html">(3) Install SWAT</a></li>
+<li><a href="note (5384).html">(4) Samba PDC #1 - Config PDC</a></li>
+<li><a href="note (5385).html">(5) Samba PDC #2 - Config Client</a></li>
+<li style="border-bottom: 0px"><a href="note (5386).html">(6) Samba BDC</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5387).html">Proxy Server</a>
+<ul>
+<li><a href="note (5388).html">(1) Install Squid</a></li>
+<li><a href="note (5389).html">(2) Run with Clamav - SquidClamav</a></li>
+<li><a href="note (5390).html">(3) Run with SquidGuard</a></li>
+<li style="border-bottom: 0px"><a href="note (5391).html">(4) Config as a Reverse Proxy</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5392).html">Desktop Env</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (5393).html">(3) rdesktop</a></li>
+<li><a href="note (5394).html">(2) Configure VNC Server</a></li>
+<li style="border-bottom: 0px"><a href="note (5395).html">(1) Configure Desktop Environment</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (5396).html">Others #1</a>
+<ul style="position: absolute; margin-top: -32.8em;">
+<li class="tree2"><a href="note (5397).html">Subversion <span style="display:inline;position:absolute;left:105px;">- &nbsp; Version Control</span></a>
+<ul>
+<li><a href="note (5398).html">(1) Server Settings</a></li>
+<li><a href="note (5399).html">(2) Client Settings</a></li>
+<li><a href="note (5400).html">(3) Update Repository</a></li>
+<li style="border-bottom: 0px"><a href="note (5401).html">(4) Update data from Repository</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5402).html">Func  <span style="display:inline;position:absolute;left:105px;">- &nbsp; System Control</span></a>
+<ul>
+<li><a href="note (5403).html">(1) Install</a></li>
+<li><a href="note (5404).html">(2) How to use</a></li>
+<li><a href="note (5405).html">(3) YumModule</a></li>
+<li><a href="note (5406).html">(4) CommandModule</a></li>
+<li style="border-bottom: 0px"><a href="note (5407).html">(5) CopyFileModule</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5408).html">Pound <span style="display:inline;position:absolute;left:105px;">- &nbsp; Load Balance</span></a>
+<ul>
+<li><a href="note (5409).html">(1) Install / Configure</a></li>
+<li style="border-bottom: 0px"><a href="note (5410).html">(2) SSL Wrapper</a></li>
+</ul>
+</li>
+<li><a href="note (5411).html">Pen <span style="display:inline;position:absolute;left:105px;">- &nbsp; Load Balance</span></a></li>
+<li class="tree2"><a href="note (5412).html">Munin <span style="display:inline;position:absolute;left:105px;">- &nbsp; Monitoring</span></a>
+<ul>
+<li><a href="note (5413).html">(1) Install / Configure</a></li>
+<li><a href="note (5414).html">(2) Add monitoring target</a></li>
+<li><a href="note (5415).html">(3) Add monitoring item</a></li>
+<li style="border-bottom: 0px"><a href="note (5416).html">(4) Set Alart notification</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5417).html">Nagios <span style="display:inline;position:absolute;left:105px;">- &nbsp; Monitoring</span></a>
+<ul>
+<li><a href="note (5418).html">(1) Install / Configure</a></li>
+<li><a href="note (5419).html">(2) Add monitoring target#1</a></li>
+<li><a href="note (5420).html">(3) Add monitoring target#2</a></li>
+<li><a href="note (5421).html">(4) Set Alart notification</a></li>
+<li><a href="note (5422).html">(5) Install plugins</a></li>
+<li><a href="note (5423).html">(6) Check SMTP service</a></li>
+<li><a href="note (5424).html">(7) Check POP service</a></li>
+<li style="border-bottom: 0px"><a href="note (5425).html">(8) Check IMAP service</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5426).html">Zabbix <span style="display:inline;position:absolute;left:105px;">- &nbsp; Monitoring</span></a>
+<ul>
+<li><a href="note (5427).html">(1) Install / Configure</a></li>
+<li><a href="note (5428).html">(2) Initial setup</a></li>
+<li><a href="note (5429).html">(3) Change admin password</a></li>
+<li><a href="note (5430).html">(4) Basic monitoring setting#1</a></li>
+<li><a href="note (5431).html">(5) Basic monitoring setting#2</a></li>
+<li><a href="note (5432).html">(6) Setting of Alart notification</a></li>
+<li><a href="note (5433).html">(7) Add monitoring target#1</a></li>
+<li style="border-bottom: 0px"><a href="note (5434).html">(8) Add monitoring target#2</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5435).html">Bacula <span style="display:inline;position:absolute;left:105px;">- &nbsp; Backup</span></a>
+<ul>
+<li><a href="note (5436).html">(1) Configure Bacula Server#1</a></li>
+<li><a href="note (5437).html">(2) Configure Bacula Server#2</a></li>
+<li><a href="note (5438).html">(3) Configure Bacula Client</a></li>
+<li><a href="note (5439).html">(4) Run Backup</a></li>
+<li><a href="note (5440).html">(5) Restore files</a></li>
+<li><a href="note (5441).html">(6) Install GUI based tool</a></li>
+<li><a href="note (5442).html">(7) Install GUI based tool ( Win )</a></li>
+<li style="border-bottom: 0px"><a href="note (5443).html">(8) Configure Client ( Win )</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5444).html">Pacemaker <span style="display:inline;position:absolute;left:105px;">- &nbsp; HA Cluster</span></a>
+<ul>
+<li><a href="note (5445).html">(1) Install Pacemaker</a></li>
+<li><a href="note (5446).html">(2) Set Virtual IP Address</a></li>
+<li><a href="note (5447).html">(3) Cluster Config for httpd</a></li>
+<li><a href="note (5448).html">(4) Cluster Config for Vsftpd</a></li>
+<li style="border-bottom: 0px"><a href="note (5449).html">(5) Cluster Config for DRBD</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5450).html">PXE Server <span style="display:inline;position:absolute;left:105px;">- &nbsp; Network Boot</span></a>
+<ul>
+<li><a href="note (5451).html">(1) Configure PXE Server</a></li>
+<li><a href="note (5452).html">(2) Network Install</a></li>
+<li><a href="note (5453).html">(3) Kick-Start Install</a></li>
+<li style="border-bottom: 0px"><a href="note (5454).html">(4) Diskless Client</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (5455).html">OpenVPN <span style="display:inline;position:absolute;left:105px;">- &nbsp; VPN Server</span></a>
+<ul>
+<li><a href="note (5456).html">(1) Install OpenVPN</a></li>
+<li style="border-bottom: 0px"><a href="note (5457).html">(2) Client's Settings</a></li>
+</ul>
+</li>
+<li><a href="note (5458).html">Ruby on Rails <span style="display:inline;position:absolute;left:105px;">- &nbsp; Ruby Development</span></a></li>
+<li><a href="note (5459).html">Tomcat 7 <span style="display:inline;position:absolute;left:105px;">- &nbsp; JAVA App Server</span></a></li>
+<li><a href="note (5460).html">JDK 6 <span style="display:inline;position:absolute;left:105px;">- &nbsp; JAVA Development</span></a></li>
+<li><a href="note (5461).html">DRBD <span style="display:inline;position:absolute;left:105px;">- &nbsp; Distributed Storage</span></a></li>
+<li><a href="note (5462).html">lsync <span style="display:inline;position:absolute;left:105px;">- &nbsp; Mirroring</span></a></li>
+<li><a href="note (5463).html">rsync <span style="display:inline;position:absolute;left:105px;">- &nbsp; Mirroring</span></a></li>
+<li><a href="note (5464).html">Snort <span style="display:inline;position:absolute;left:105px;">- &nbsp; Network Based IDS</span></a></li>
+<li><a href="note (5465).html">Tripwire <span style="display:inline;position:absolute;left:105px;">- &nbsp; Host Based IDS</span></a></li>
+<li style="border-bottom: 0px"><a href="note (5396).html">Clamav <span style="display:inline;position:absolute;left:105px;">- &nbsp; Anti-Virus</span></a></li>
+</ul>
+</li>
+<li id="other"><a href="note (5466).html">Others #2</a>
+<ul style="position: absolute; margin-top: -22.0em;">
+<li><a href="note (5467).html">Wake on Lan</a></li>
+<li><a href="note (5468).html">Use limited Shell</a></li>
+<li><a href="note (5469).html">Set Disk Quota</a></li>
+<li><a href="note (5470).html">Configure RAID 1</a></li>
+<li><a href="note (5471).html">Add Hard Drive</a></li>
+<li><a href="note (5472).html">Install Usermin</a></li>
+<li><a href="note (5473).html">Install Webmin</a></li>
+<li><a href="note (5474).html">Monitor files with inotify</a></li>
+<li><a href="note (5475).html">Get all histories of commands</a></li>
+<li><a href="note (5476).html">Detect RootKit by Chkrootkit</a></li>
+<li><a href="note (5477).html">Access Controls by TCP Wrapper</a></li>
+<li><a href="note (5478).html">Set Password Rules</a></li>
+<li><a href="note (5466).html">Create SSL Certificates</a></li>
+<li class="tree2" style="border-bottom: 0px"><a href="note (5479).html">LVM Operations</a>
+<ul>
+<li><a href="note (5480).html">(1) Physical Volume</a></li>
+<li><a href="note (5481).html">(2) Volume Group</a></li>
+<li style="border-bottom: 0px"><a href="note (5482).html">(3) Logical Volume</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Install/Configure httpd<div class="date">2011/03/20</div></div>
+</td>
+</tr>
+</table>
+<table class="base">
+<tr>
+<td class="num">[1]</td>
+<td>Install httpd
+</td>
+</tr>
+</table>
+<table class="term">
+<tr>
+<td>
+[root@www ~]# <div class="color1"><a href="command\html\yum.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">yum</a> -y install httpd </div><br><br>
+<div class="color2"># remove test page</div><br>
+[root@www ~]# <div class="color1"><a href="command\html\rm.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">rm</a> -f /etc/httpd/conf.d/welcome.conf</div><br>
+<div class="color2"># remove test page</div><br>
+[root@www ~]# <div class="color1"><a href="command\html\rm.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">rm</a> -f /var/www/error/noindex.html</div><br>
+<div class="color2"># create a link for Perl</div><br>
+[root@www ~]# <div class="color1"><a href="command\html\ln.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">ln</a> -s /usr/bin/perl /usr/local/bin/perl</div><br>
+</td>
+</tr>
+</table>
+<table class="base">
+<tr>
+<td class="num">[2]</td>
+<td>Configure httpd. 
+</td>
+</tr>
+</table>
+<table class="term">
+<tr>
+<td>
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">vi</a> /etc/httpd/conf/httpd.conf </div><br><br>
+<div class="color2"># line 44: change</div><br>
+ServerTokens <div class="color1">Prod</div><br><br>
+<div class="color2"># line 76: change to ON</div><br>
+KeepAlive <div class="color1">On</div><br><br>
+<div class="color2"># line 262: Admin's address</div><br>
+ServerAdmin <div class="color1">root@srv.world</div><br><br>
+<div class="color2"># line 276: change to your server's name</div><br>
+ServerName <div class="color1">www.srv.world:80</div><br><br>
+<div class="color2"># line 331: change (enable CGI and disable Indexes)</div><br>
+Options FollowSymLinks <div class="color1">ExecCGI</div><br><br>
+<div class="color2"># line 338: change</div><br>
+AllowOverride <div class="color1">All</div><br><br>
+<div class="color2"># line 402: add file name that it can access only with directory's name</div><br>
+DirectoryIndex index.html <div class="color1">index.cgi index.php</div><br><br>
+<div class="color2"># line 536: change</div><br>
+ServerSignature <div class="color1">Off</div><br><br>
+<div class="color2"># line 759: make it comment</div><br>
+<div class="color1">#</div>AddDefaultCharset UTF-8<br><br>
+<div class="color2"># line 796: uncomment and add file-type that apache looks them CGI</div><br>
+AddHandler cgi-script .cgi <div class="color1">.pl</div><br><br>
+[root@www ~]# <div class="color1">/etc/rc.d/init.d/httpd start </div><br>
+Starting httpd: <div class="posl-1">[  OK  ]</div><br>
+[root@www ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">chkconfig</a> httpd on </div><br>
+</td>
+</tr>
+</table>
+<table class="base">
+<tr>
+<td class="num">[3]</td>
+<td>Create a HTML test page and access to it with web browser. It's OK if following page is shown. 
+</td>
+</tr>
+</table>
+<table class="term">
+<tr>
+<td>
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">vi</a> /var/www/html/index.html </div><br><br>
+<div class="color1">&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;"&gt;<br>
+Test Page<br>
+&lt;/div&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+<table class="base">
+<tr>
+<td>
+<img src="Scientific_Linux_6\httpd\img\1.jpg" width="666" height="287" alt="" class="img">
+</td>
+</tr>
+</table>
+<table class="base">
+<tr>
+<td class="num">[4]</td>
+<td>Create a CGI test page and access to it with web browser. It's OK if following page is shown. 
+</td>
+</tr>
+</table>
+<table class="term">
+<tr>
+<td>
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">vi</a> /var/www/html/index.cgi </div><br><br>
+<div class="color1">#!/usr/local/bin/perl<br><br>
+print "Content-type: text/html\n\n";<br>
+print &lt;&lt;"EOM";<br>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;"&gt;<br>
+CGI Test Page<br>
+&lt;/div&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+EOM<br>
+exit;</div><br><br>
+[root@www ~]# <div class="color1"><a href="command\html\chmod.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">chmod</a> 705 /var/www/html/index.cgi </div><br>
+</td>
+</tr>
+</table>
+<table class="base">
+<tr>
+<td>
+<img src="Scientific_Linux_6\httpd\img\2.jpg" width="666" height="287" alt="" class="img">
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">WEB Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (5332).html">Install httpd</a></li>
+<li><a href="note (5333).html">Install PHP</a></li>
+<li><a href="note (5334).html">Install Ruby</a></li>
+<li><a href="note (5335).html">Enable Userdir</a></li>
+<li><a href="note (5336).html">Configure SSL</a></li>
+<li><a href="note (5337).html">Virtual Hostings</a></li>
+<li><a href="note (5338).html">Config WebDAV</a></li>
+<li><a href="note (5339).html">Enable APC</a></li>
+<li><a href="note (5340).html">Enable mod_perl</a></li>
+<li><a href="note (5341).html">Enable SpeedyCGI</a></li>
+<li><a href="note (5342).html">Enable proxy_http</a></li>
+<li><a href="note (5343).html">BasicAuth+LDAP</a></li>
+<li><a href="note (5344).html">Log Analyzer #1</a></li>
+<li><a href="note (5345).html">Log Analyzer #2</a></li>
+<li><a href="note (5346).html">Log Analyzer #3</a></li>
+<li><a href="note (5347).html">WebMail #1</a></li>
+<li><a href="note (5348).html">WebMail #2</a></li>
+<li><a href="note (5349).html">Install Wordpress</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (5483).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

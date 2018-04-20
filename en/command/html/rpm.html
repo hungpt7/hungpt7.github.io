@@ -1,0 +1,183 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>rpm : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+rpm - RPM Package Manager</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] rpm OPTION PACKAGE</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">option</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td>-i</td>
+<td>This installs a new package<br>
+<div style="margin-left: 20px"># rpm -i package</div>
+</td>
+</tr>
+<tr>
+<td>-F</td>
+<td>This will upgrade packages, but only if an earlier version currently exists<br>
+<div style="margin-left: 20px"># rpm -F package</div>
+</td>
+</tr>
+<tr>
+<td>-U</td>
+<td>This  upgrades  or  installs the package currently installed to a newer version<br>
+<div style="margin-left: 20px"># rpm -U package</div>
+</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>erase (uninstall) package<br>
+<div style="margin-left: 20px"># rpm -e package</div>
+</td>
+</tr>
+<tr>
+<td>-q</td>
+<td>query packages<br>
+<div style="margin-left: 20px"># rpm -q package</div>
+</td>
+</tr>
+<tr>
+<td>-V</td>
+<td>verify installed packages<br>
+<div style="margin-left: 20px"># rpm -V package</div>
+</td>
+</tr>
+<tr>
+<td>-K</td>
+<td>verify package signature<br>
+<div style="margin-left: 20px"># rpm -K package</div>
+</td>
+</tr>
+<tr>
+<td>--rebuilddb</td>
+<td>rebuild the database indices from the installed package headers<br>
+<div style="margin-left: 20px"># rpm --rebuilddb</div>
+</td>
+</tr>
+<tr>
+<td>--initdb</td>
+<td>create a new database if one doesnâ€™t already exist<br>
+<div style="margin-left: 20px"># rpm --initdb</div>
+</td>
+</tr>
+<tr>
+<td>--import</td>
+<td>import PUBKEY<br>
+<div style="margin-left: 20px"># rpm --import /usr/share/rhn/RPM-GPG-KEY</div>
+</td>
+</tr>
+<tr><td colspan="2" style="background-color: #cccccc">options with i, U</td></tr>
+<tr>
+<td>-v</td>
+<td>show package name<br>
+<div style="margin-left: 20px"># rpm -iv package</div>
+</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>display progress<br>
+<div style="margin-left: 20px"># rpm -ivh package</div>
+</td>
+</tr>
+<tr>
+<td>-vv</td>
+<td>Print lots of ugly debugging information<br>
+<div style="margin-left: 20px"># rpm -ivv package</div>
+</td>
+</tr>
+<tr>
+<td>--nodeps</td>
+<td>Donâ€™t do a dependency check before installing or upgrading a package<br>
+<div style="margin-left: 20px"># rpm -ivh --nodeps package</div>
+</td>
+</tr>
+<tr>
+<td>--test</td>
+<td>Donâ€™t  really  uninstall  anything,  just  go  through the motions<br>
+<div style="margin-left: 20px"># rpm -ivh --test package</div>
+</td>
+</tr>
+<tr><td colspan="2" style="background-color: #cccccc">options with q </td></tr>
+<tr>
+<td>-a</td>
+<td>Query all installed packages<br>
+<div style="margin-left: 20px"># rpm -qa</div>
+</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>Display package information, including name, version, and description.  This uses the --queryformat  if one was specified<br>
+<div style="margin-left: 20px"># rpm -qi package</div>
+</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>List files in package<br>
+<div style="margin-left: 20px"># rpm -ql package</div>
+</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>List only configuration files (implies -l)<br>
+<div style="margin-left: 20px"># rpm -qc package</div>
+</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>List only documentation files (implies -l)<br>
+<div style="margin-left: 20px"># rpm -qd package</div>
+</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>Query package owning FILE<br>
+<div style="margin-left: 20px"># rpm -qf /bin/bash</div>
+</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>List packages on which this package depends<br>
+<div style="margin-left: 20px"># rpm -qR package</div>
+</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>Display the states of files in the package (implies -l)<br>
+<div style="margin-left: 20px"># rpm -qs package</div>
+</td>
+</tr>
+<tr>
+<td>--last</td>
+<td>Orders the package listing by install time such that the latest packages are at the top<br>
+<div style="margin-left: 20px"># rpm -q --last package</div>
+</td>
+</tr>
+<tr>
+<td style="width: 90px">--changelog</td>
+<td>Display change information for the package<br>
+<div style="margin-left: 20px"># rpm -q --changelog package</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

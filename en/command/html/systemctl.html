@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>systemctl : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+systemctl - Query or send control commands to the systemd manager.</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] systemctl OPTIONS COMMAND</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">OPTIONS</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td>--all</td>
+<td>Show all units/properties, including dead/empty ones<br>
+<div style="margin-left: 20px"># systemctl --all</div>
+</td>
+</tr>
+<tr>
+<td>--t</td>
+<td>List only units of a particular type<br>
+<div style="margin-left: 20px"># systemctl -t service</div>
+</td>
+</tr>
+</table><br>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">COMMAND</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td>start</td>
+<td>Start (activate) one or more units<br>
+<div style="margin-left: 20px"># systemctl start sendmail.service</div>
+</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>Stop (deactivate) one or more units<br>
+<div style="margin-left: 20px"># systemctl stop sendmail.service</div>
+</td>
+</tr>
+<tr>
+<td>reload</td>
+<td>Reload one or more units<br>
+<div style="margin-left: 20px"># systemctl reload sendmail.service</div>
+</td>
+</tr>
+<tr>
+<td>restart</td>
+<td>Start or restart one or more units<br>
+<div style="margin-left: 20px"># systemctl restart sendmail.service</div>
+</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Show runtime status of one or more units<br>
+<div style="margin-left: 20px"># systemctl status sendmail.service</div>
+</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>Enable one or more unit files<br>
+<div style="margin-left: 20px"># systemctl enable sendmail.service</div>
+</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>Disable one or more unit files<br>
+<div style="margin-left: 20px"># systemctl disable sendmail.service</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

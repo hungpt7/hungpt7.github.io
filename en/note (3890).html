@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Fedora 15 - LDAP Server - Configure LDAP Server : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8426 / 62643162</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Fedora 15</div>
+<div class="navi">
+<ul>
+<li><a href="note (25).html">Get Fedora 15</a></li>
+<li><a href="note (3852).html">Install Fedora 15</a></li>
+<li class="tree"><a href="note (3853).html">Initial Config</a>
+<ul>
+<li><a href="note (3854).html">(1) Create a User</a></li>
+<li><a href="note (3855).html">(2) FW &amp; SELinux</a></li>
+<li><a href="note (3856).html">(3) Networking</a></li>
+<li><a href="note (3857).html">(4) Services</a></li>
+<li><a href="note (3858).html">(5) Update System</a></li>
+<li><a href="note (3859).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (3860).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li><a href="note (3861).html">NTP Server</a></li>
+<li class="tree"><a href="note (3862).html">SSH Server</a>
+<ul>
+<li><a href="note (3863).html">(1) Password Authentication</a></li>
+<li><a href="note (3864).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (3865).html">(3) Transfer files with SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3866).html">DNS Server</a>
+<ul>
+<li><a href="note (3867).html">(1) Install BIND</a></li>
+<li><a href="note (3868).html">(2) Configure Zones</a></li>
+<li><a href="note (3869).html">(3) Start BIND</a></li>
+<li><a href="note (3870).html">(4) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (3871).html">(5) Configure as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (3872).html">DHCP Server</a></li>
+<li class="tree"><a href="note (3873).html">Storage Server</a>
+<ul>
+<li><a href="note (3874).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (3875).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3876).html">Virtualization</a>
+<ul>
+<li><a href="note (3877).html">(1) Install KVM</a></li>
+<li><a href="note (3878).html">(2) Create Virtual Machine #1</a></li>
+<li><a href="note (3879).html">(3) Create Virtual Machine #2</a></li>
+<li><a href="note (3880).html">(4) Create Virtual Machine #3</a></li>
+<li><a href="note (3881).html">(5) Operation</a></li>
+<li><a href="note (3882).html">(6) Enable vhost-net</a></li>
+<li><a href="note (3883).html">(7) Install Virt-top</a></li>
+<li><a href="note (3884).html">(8) Configure SPICE Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3885).html">(9) Configure SPICE Client</a></li>
+</ul>
+</li>
+<li><a href="note (3886).html">NFS Server</a></li>
+<li class="tree"><a href="note (3887).html">NIS Server</a>
+<ul>
+<li><a href="note (3888).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3889).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3890).html">LDAP Server</a>
+<ul>
+<li><a href="note (3891).html">(1) Configure LDAP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3892).html">(2) Configure LDAP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3893).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (3894).html">( 1 ) Install/Configure httpd</a></li>
+<li><a href="note (3895).html">( 2 ) Install PHP</a></li>
+<li><a href="note (3896).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (3897).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (3898).html">( 5 ) Configure SSL</a></li>
+<li><a href="note (3899).html">( 6 ) Virtual Hostings</a></li>
+<li><a href="note (3900).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (3901).html">( 8 ) Basic Auth + LDAP</a></li>
+<li><a href="note (3902).html">( 9 ) Log Analyzer - Visitors</a></li>
+<li><a href="note (3903).html">(10) Log Analyzer - AWstats</a></li>
+<li><a href="note (3904).html">(11) WebMail - SquirrelMail</a></li>
+<li style="border-bottom: 0px"><a href="note (3905).html">(12) WebMail - RoundCubeMail</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3906).html">Database</a>
+<ul>
+<li><a href="note (3907).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (3908).html">(2) Install phpmyadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3909).html">FTP Server</a>
+<ul>
+<li><a href="note (3910).html">(1) Install Vsftpd</a></li>
+<li><a href="note (3911).html">(2) Install ProFTPD</a></li>
+<li><a href="note (3912).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (3913).html">(4) FTP Client - FileZilla</a></li>
+<li><a href="note (3914).html">(5) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (3915).html">(6) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (3916).html">(7) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3917).html">MAIL Server</a>
+<ul>
+<li><a href="note (3918).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (3919).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (3920).html">(3) Configure Client</a></li>
+<li><a href="note (3921).html">(4) Configure SSL</a></li>
+<li><a href="note (3922).html">(5) Virtual Domains</a></li>
+<li><a href="note (3923).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li><a href="note (3924).html">(7) Log Analyzer - pflogsumm</a></li>
+<li><a href="note (3925).html">(8) Log Analyzer - MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (3926).html">(9) Log Analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3927).html">Samba Server</a>
+<ul>
+<li><a href="note (3928).html">(1) Create fully accessed Directory</a></li>
+<li><a href="note (3929).html">(2) Create Limited Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (3930).html">(3) Install SWAT</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3931).html">Proxy Server</a>
+<ul>
+<li><a href="note (3932).html">(1) Install Squid</a></li>
+<li><a href="note (3933).html">(2) Run with Clamav - SquidClamav</a></li>
+<li><a href="note (3934).html">(3) Run with SquidGuard</a></li>
+<li style="border-bottom: 0px"><a href="note (3935).html">(4) Config as a Reverse Proxy</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3936).html">Desktop Env</a>
+<ul>
+<li><a href="note (3937).html">(1) Install Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (3938).html">(2) Install VNC Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (3939).html">Others</a>
+<ul style="position: absolute; margin-top: -5.5em;">
+<li class="tree2"><a href="note (3940).html">LVM Operations</a>
+<ul>
+<li><a href="note (3941).html">(1) Physical Volume</a></li>
+<li><a href="note (3942).html">(2) Volume Group</a></li>
+<li style="border-bottom: 0px"><a href="note (3943).html">(3) Logical Volume</a></li>
+</ul>
+</li>
+<li><a href="note (3944).html">Create SSL Certificates</a></li>
+<li><a href="note (3945).html">Add Hard Drive</a></li>
+<li><a href="note (3946).html">Access Controls by TCP Wrapper</a></li>
+<li style="border-bottom: 0px"><a href="note (3939).html">Clamav <span style="display:inline;position:absolute;left:110px;">- Anti-Virus</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Configure LDAP Server<div class="date">2011/05/28</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Configure LDAP Server in order to share users' accounts in your local networks. 
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Install 389 Directory Server
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+<div class="block">
+[root@master ~]# <div class="color1"><a href="command\html\yum.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">yum</a> -y install 389-ds openldap-clients </div></div>
+<div class="block">
+[root@master ~]# <div class="color1">setup-ds-admin.pl </div><div class="posl-1"><div class="color2"># setup</div></div></div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+This program will set up the 389 Directory and Administration Servers.
+
+It is recommended that you have "root" privilege to set up the software.
+Tips for using this program:
+  - Press "Enter" to choose the default and go to the next screen
+  - Type "Control-B" then "Enter" to go back to the previous screen
+  - Type "Control-C" to cancel the setup program
+
+</pre>
+<div class="block">
+Would you like to continue with set up? [yes]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+BY SETTING UP AND USING THIS SOFTWARE YOU ARE CONSENTING TO BE BOUND BY
+AND ARE BECOMING A PARTY TO THE AGREEMENT FOUND IN THE
+LICENSE.TXT FILE. IF YOU DO NOT AGREE TO ALL OF THE TERMS
+OF THIS AGREEMENT, PLEASE DO NOT SET UP OR USE THIS SOFTWARE.
+
+</pre>
+<div class="block">
+Do you agree to the license terms? [no]: <div class="color1">yes</div><div class="posl-1"><div class="color2"># yes</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Your system has been scanned for potential problems, missing patches,
+etc.  The following output is a report of the items found that need to
+be addressed before running this software in a production
+environment.
+
+389 Directory Server system tuning analysis version 10-AUGUST-2007.
+
+NOTICE : System is x86_64-unknown-linux2.6.38.6-27.fc15.x86_64 (2 processors).
+
+NOTICE : The net.ipv4.tcp_keepalive_time is set to 7200000 milliseconds
+(120 minutes).  This may cause temporary server congestion from lost
+client connections.
+
+WARNING: There are only 1024 file descriptors (hard limit) available, which
+limit the number of simultaneous connections.
+
+WARNING: There are only 1024 file descriptors (soft limit) available, which
+limit the number of simultaneous connections.
+
+WARNING  : The warning messages above should be reviewed before proceeding.
+
+</pre>
+<div class="block">
+Would you like to continue? [no]: <div class="color1">yes</div><div class="posl-1"><div class="color2"># yes</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Choose a setup type:
+
+   1. Express
+       Allows you to quickly set up the servers using the most
+       common options and pre-defined defaults. Useful for quick
+       evaluation of the products.
+
+   2. Typical
+       Allows you to specify common defaults and options.
+
+   3. Custom
+       Allows you to specify more advanced options. This is
+       recommended for experienced server administrators only.
+
+To accept the default shown in brackets, press the Enter key.
+
+</pre>
+<div class="block">
+Choose a setup type [2]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Enter the fully qualified domain name of the computer
+on which you're setting up server software. Using the form
+&lt;hostname&gt;.&lt;domainname&gt;
+Example: eros.example.com.
+
+To accept the default shown in brackets, press the Enter key.
+
+Warning: This step may take a few minutes if your DNS servers
+can not be reached or if DNS is not configured correctly.  If
+you would rather not wait, hit Ctrl-C and run this program again
+with the following command line option to specify the hostname:
+
+    General.FullMachineName=your.hostname.domain.name
+
+</pre>
+<div class="block">
+Computer name [master.srv.world]: <div class="posl-1"><div class="color2"># make sure hostname ( if different, replace it )</div></div><br>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+The servers must run as a specific user in a specific group.
+It is strongly recommended that this user should have no privileges
+on the computer (i.e. a non-root user).  The setup procedure
+will give this user/group some permissions in specific paths/files
+to perform server-specific operations.
+
+If you have not yet created a user and group for the servers,
+create this user and group using your native operating
+system utilities.
+
+</pre>
+<div class="block">
+System User [nobody]:<div class="posl-1"><div class="color2"># Enter</div></div><br>
+System Group [nobody]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Server information is stored in the configuration directory server.
+This information is used by the console and administration server to
+configure and manage your servers.  If you have already set up a
+configuration directory server, you should register any servers you
+set up or create with the configuration server.  To do so, the
+following information about the configuration server is required: the
+fully qualified host name of the form
+&lt;hostname&gt;.&lt;domainname&gt;(e.g. hostname.example.com), the port number
+(default 389), the suffix, the DN and password of a user having
+permission to write the configuration information, usually the
+configuration directory administrator, and if you are using security
+(TLS/SSL).  If you are using TLS/SSL, specify the TLS/SSL (LDAPS) port
+number (default 636) instead of the regular LDAP port number, and
+provide the CA certificate (in PEM/ASCII format).
+
+If you do not yet have a configuration directory server, enter 'No' to
+be prompted to set up one.
+
+</pre>
+<div class="block">
+Do you want to register this software with an existing<br>
+configuration directory server? [no]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Please enter the administrator ID for the configuration directory
+server.  This is the ID typically used to log in to the console.  You
+will also be prompted for the password.
+
+</pre>
+<div class="block">
+Configuration directory server<br>
+administrator ID [admin]:<div class="posl-1"><div class="color2"># Enter</div></div><br>
+Password:<div class="posl-1"><div class="color2"># set admin password</div></div><br>
+Password (confirm):<div class="posl-1"><div class="color2"># confirm</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+The information stored in the configuration directory server can be
+separated into different Administration Domains.  If you are managing
+multiple software releases at the same time, or managing information
+about multiple domains, you may use the Administration Domain to keep
+them separate.
+
+If you are not using administrative domains, press Enter to select the
+default.  Otherwise, enter some descriptive, unique name for the
+administration domain, such as the name of the organization
+responsible for managing the domain.
+
+</pre>
+<div class="block">
+Administration Domain [srv.world]:<div class="posl-1"><div class="color2"># make sure domain name</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+The standard directory server network port number is 389.  However, if
+you are not logged as the superuser, or port 389 is in use, the
+default value will be a random unused port number greater than 1024.
+If you want to use port 389, make sure that you are logged in as the
+superuser, that port 389 is not in use.
+
+</pre>
+<div class="block">
+Directory server network port [389]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Each instance of a directory server requires a unique identifier.
+This identifier is used to name the various
+instance specific files and directories in the file system,
+as well as for other uses as a server instance identifier.
+
+</pre>
+<div class="block">
+Directory server identifier [master]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+The suffix is the root of your directory tree.  The suffix must be a valid DN.
+It is recommended that you use the dc=domaincomponent suffix convention.
+For example, if your domain is example.com,
+you should use dc=example,dc=com for your suffix.
+Setup will create this initial suffix for you,
+but you may have more than one suffix.
+Use the directory server utilities to create additional suffixes.
+
+</pre>
+<div class="block">
+Suffix [dc=srv, dc=world]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+Certain directory server operations require an administrative user.
+This user is referred to as the Directory Manager and typically has a
+bind Distinguished Name (DN) of cn=Directory Manager.
+You will also be prompted for the password for this user.  The password must
+be at least 8 characters long, and contain no spaces.
+Press Control-B or type the word "back", then Enter to back up and start over.
+
+</pre>
+<div class="block">
+Directory Manager DN [cn=Directory Manager]:<div class="posl-1"><div class="color2"># Enter</div></div><br>
+Password:<div class="posl-1"><div class="color2"># set Directory Manager's password</div></div><br>
+Password (confirm):<div class="posl-1"><div class="color2"># confirm</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+The Administration Server is separate from any of your web or application
+servers since it listens to a different port and access to it is
+restricted.
+
+Pick a port number between 1024 and 65535 to run your Administration
+Server on. You should NOT use a port number which you plan to
+run a web or application server on, rather, select a number which you
+will remember and which will not be used for anything else.
+
+</pre>
+<div class="block">
+Administration port [9830]:<div class="posl-1"><div class="color2"># Enter</div></div>
+</div>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+==============================================================================
+The interactive phase is complete.  The script will now set up your
+servers.  Enter No or go Back if you want to change something.
+
+</pre>
+Are you ready to set up your servers? [yes]:<div class="posl-1"><div class="color2"># Enter</div></div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+Creating directory server . . .
+Warning: Hostname master.srv.world is valid, but none of the IP addresses
+resolve back to master.srv.world
+        address 10.0.0.100 resolves to host master
+Your new DS instance 'master' was successfully created.
+Creating the configuration directory server . . .
+Beginning Admin Server creation . . .
+Creating Admin Server files and directories . . .
+Updating adm.conf . . .
+Updating admpw . . .
+Registering admin server with the configuration directory server . . .
+Updating adm.conf with information from configuration directory server . . .
+Updating the configuration for the httpd engine . . .
+Starting admin server . . .
+output: httpd.worker: Could not reliably determine the server's fully qualified domain name, 
+using master.srv.world for ServerName
+The admin server was successfully started.
+Admin server was successfully created, configured, and started.
+Exiting . . .
+Log file is '/tmp/setup1Qk90G.log'
+
+</pre>
+[root@master ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chkconfig</a> dirsrv on </div><br>
+[root@master ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chkconfig</a> dirsrv-admin on </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Add Existing local Users to LDAP Directory 
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+<div class="block">
+[root@master ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> ldapuser.sh </div></div>
+<div class="color2">
+# extract local users who have 500-999 digit UID<br>
+# replace "SUFFIX=***" to your own suffix<br>
+# this is an example</div><br>
+<div class="color1"><div class="block">
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+#!/bin/bash
+
+SUFFIX='dc=srv,dc=world'
+LDIF='ldapuser.ldif'
+
+echo -n &gt; $LDIF
+for line in `grep "x:[5-9][0-9][0-9]:" /etc/passwd | sed -e "s/ /%/g"`
+do
+   UID1=`echo $line | cut -d: -f1`
+   NAME=`echo $line | cut -d: -f5 | cut -d, -f1`
+   if [ ! "$NAME" ]
+   then
+      NAME=$UID1
+   else
+      NAME=`echo $NAME | sed -e "s/%/ /g"`
+   fi
+   SN=`echo $NAME | awk '{print $2}'`
+   if [ ! "$SN" ]
+   then
+      SN=$NAME
+   fi
+   GIVEN=`echo $NAME | awk '{print $1}'`
+   UID2=`echo $line | cut -d: -f3`
+   GID=`echo $line | cut -d: -f4`
+   PASS=`grep $UID1: /etc/shadow | cut -d: -f2`
+   SHELL=`echo $line | cut -d: -f7`
+   HOME=`echo $line | cut -d: -f6`
+   EXPIRE=`passwd -S $UID1 | awk '{print $7}'`
+   FLAG=`grep $UID1: /etc/shadow | cut -d: -f9`
+   if [ ! "$FLAG" ]
+   then
+      FLAG="0"
+   fi
+   WARN=`passwd -S $UID1 | awk '{print $6}'`
+   MIN=`passwd -S $UID1 | awk '{print $4}'`
+   MAX=`passwd -S $UID1 | awk '{print $5}'`
+   LAST=`grep $UID1: /etc/shadow | cut -d: -f3`
+
+   echo "dn: uid=$UID1,ou=people,$SUFFIX" &gt;&gt; $LDIF
+   echo "objectClass: inetOrgPerson" &gt;&gt; $LDIF
+   echo "objectClass: posixAccount" &gt;&gt; $LDIF
+   echo "objectClass: shadowAccount" &gt;&gt; $LDIF
+   echo "uid: $UID1" &gt;&gt; $LDIF
+   echo "sn: $SN" &gt;&gt; $LDIF
+   echo "givenName: $GIVEN" &gt;&gt; $LDIF
+   echo "cn: $NAME" &gt;&gt; $LDIF
+   echo "displayName: $NAME" &gt;&gt; $LDIF
+   echo "uidNumber: $UID2" &gt;&gt; $LDIF
+   echo "gidNumber: $GID" &gt;&gt; $LDIF
+   echo "userPassword: {crypt}$PASS" &gt;&gt; $LDIF
+   echo "gecos: $NAME" &gt;&gt; $LDIF
+   echo "loginShell: $SHELL" &gt;&gt; $LDIF
+   echo "homeDirectory: $HOME" &gt;&gt; $LDIF
+   echo "shadowExpire: $EXPIRE" &gt;&gt; $LDIF
+   echo "shadowFlag: $FLAG" &gt;&gt; $LDIF
+   echo "shadowWarning: $WARN" &gt;&gt; $LDIF
+   echo "shadowMin: $MIN" &gt;&gt; $LDIF
+   echo "shadowMax: $MAX" &gt;&gt; $LDIF
+   echo "shadowLastChange: $LAST" &gt;&gt; $LDIF
+   echo &gt;&gt; $LDIF
+done
+</pre></div></div>
+[root@master ~]# <div class="color1">sh ldapuser.sh </div><br>
+[root@master ~]# <div class="color1">ldapadd -x -D "cn=Directory Manager" -W -f ldapuser.ldif </div><br>
+Enter LDAP Password:<div class="posl-1"><div class="color2"># Directory Manager's password</div></div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+adding new entry "uid=fedora,ou=people,dc=srv,dc=world"
+
+adding new entry "uid=cent,ou=people,dc=srv,dc=world"
+
+adding new entry "uid=ubuntu,ou=people,dc=srv,dc=world"
+
+adding new entry "uid=debian,ou=people,dc=srv,dc=world"
+</pre>
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>Add existing local groups to LDAP directory. 
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+<div class="block">
+[root@master ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> ldapgroup.sh </div></div>
+<div class="color2">
+# extract local groups who have 500-999 digit UID<br>
+# replace "SUFFIX=***" to your own suffix</div><br>
+<div class="color1"><div class="block">
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+#!/bin/bash
+
+SUFFIX='dc=srv,dc=world'
+LDIF='ldapgroup.ldif'
+
+echo -n &gt; $LDIF
+for line in `grep "x:[5-9][0-9][0-9]:" /etc/group`
+do
+   CN=`echo $line | cut -d: -f1`
+   GID=`echo $line | cut -d: -f3`
+   echo "dn: cn=$CN,ou=groups,$SUFFIX" &gt;&gt; $LDIF
+   echo "objectClass: posixGroup" &gt;&gt; $LDIF
+   echo "cn: $CN" &gt;&gt; $LDIF
+   echo "gidNumber: $GID" &gt;&gt; $LDIF
+   users=`echo $line | cut -d: -f4 | sed "s/,/ /g"`
+   for user in ${users} ; do
+      echo "memberUid: ${user}" &gt;&gt; $LDIF
+   done
+   echo &gt;&gt; $LDIF
+done
+</pre></div></div>
+[root@master ~]# <div class="color1">sh ldapgroup.sh </div><br>
+[root@master ~]# <div class="color1">ldapadd -x -D "cn=Directory Manager" -W -f ldapgroup.ldif </div><br>
+Enter LDAP Password:<div class="posl-1"><div class="color2"># Directory Manager's password</div></div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+adding new entry "cn=fedora,ou=groups,dc=srv,dc=world"
+
+adding new entry "cn=cent,ou=groups,dc=srv,dc=world"
+
+adding new entry "cn=ubuntu,ou=groups,dc=srv,dc=world"
+
+adding new entry "cn=debian,ou=groups,dc=srv,dc=world"
+</pre>
+</td>
+</tr>
+</table>
+<table class="base" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td>If you'd like to delete User or Group in LDAP, Do as below. 
+</td>
+</tr>
+</table>
+<table class="term" summary="4-1">
+<tr>
+<td>
+[root@master ~]# <div class="color1">ldapdelete -x -D "cn=Directory Manager" -W "uid=fedora,ou=people,dc=srv,dc=world" </div><br>
+Enter LDAP Password:<br>
+[root@master ~]# <div class="color1">ldapdelete -x -D "cn=Directory Manager" -W "cn=fedora,ou=groups,dc=srv,dc=world" </div><br>
+Enter LDAP Password:
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">LDAP Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (3891).html">LDAP Server</a></li>
+<li><a href="note (3892).html">LDAP Client</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (3947).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

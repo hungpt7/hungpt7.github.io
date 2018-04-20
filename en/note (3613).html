@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Fedora 18 - NIS Server - Configure NIS Client : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8361 / 62643097</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Fedora 18</div>
+<div class="navi">
+<ul>
+<li><a href="note (22).html">Get Fedora 18</a></li>
+<li><a href="note (3575).html">Install Fedora 18</a></li>
+<li class="tree"><a href="note (3576).html">Initial Config</a>
+<ul>
+<li><a href="note (3577).html">(1) Create a User</a></li>
+<li><a href="note (3578).html">(2) FW &amp; SELinux</a></li>
+<li><a href="note (3579).html">(3) Networking</a></li>
+<li><a href="note (3580).html">(4) Services</a></li>
+<li><a href="note (3581).html">(5) Update System</a></li>
+<li><a href="note (3582).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (3583).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li><a href="note (3584).html">NTP Server</a></li>
+<li class="tree"><a href="note (3585).html">SSH Server</a>
+<ul>
+<li><a href="note (3586).html">(1) Password Authentication</a></li>
+<li><a href="note (3587).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (3588).html">(3) Transfer files with SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3589).html">DNS Server</a>
+<ul>
+<li><a href="note (3590).html">(1) Install BIND</a></li>
+<li><a href="note (3591).html">(2) Configure Zones</a></li>
+<li><a href="note (3592).html">(3) Start BIND</a></li>
+<li><a href="note (3593).html">(4) chroot Environment</a></li>
+<li><a href="note (3594).html">(5) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (3595).html">(6) Configure as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (3596).html">DHCP Server</a></li>
+<li class="tree"><a href="note (3597).html">Storage Server</a>
+<ul>
+<li><a href="note (3598).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (3599).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3600).html">Virtualization</a>
+<ul>
+<li><a href="note (3601).html">(1) Install KVM</a></li>
+<li><a href="note (3602).html">(2) Create Virtual Machine #1</a></li>
+<li><a href="note (3603).html">(3) Create Virtual Machine #2</a></li>
+<li><a href="note (3604).html">(4) Create Virtual Machine #3</a></li>
+<li><a href="note (3605).html">(5) Operation</a></li>
+<li><a href="note (3606).html">(6) Install Virt-top</a></li>
+<li><a href="note (3607).html">(7) Configure SPICE Server</a></li>
+<li><a href="note (3608).html">(8) Configure SPICE Client</a></li>
+<li style="border-bottom: 0px"><a href="note (3609).html">(9) Nested KVM</a></li>
+</ul>
+</li>
+<li><a href="note (3610).html">NFS Server</a></li>
+<li class="tree"><a href="note (3611).html">NIS Server</a>
+<ul>
+<li><a href="note (3612).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3613).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3614).html">LDAP Server</a>
+<ul>
+<li><a href="note (3615).html">(1) Configure FreeIPA Server</a></li>
+<li><a href="note (3616).html">(2) Configure FreeIPA Client</a></li>
+<li style="border-bottom: 0px"><a href="note (3617).html">(3) Basic Operation</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3618).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (3619).html">( 1 ) Install/Configure httpd</a></li>
+<li><a href="note (3620).html">( 2 ) Install PHP</a></li>
+<li><a href="note (3621).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (3622).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (3623).html">( 5 ) Configure SSL</a></li>
+<li><a href="note (3624).html">( 6 ) Virtual Hostings</a></li>
+<li><a href="note (3625).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (3626).html">( 8 ) Basic Auth + PAM</a></li>
+<li><a href="note (3627).html">( 9 ) FreeIPA Auth</a></li>
+<li><a href="note (3628).html">(10) Access Log Analyzer - AWstats</a></li>
+<li><a href="note (3629).html">(11) WebMail - SquirrelMail</a></li>
+<li style="border-bottom: 0px"><a href="note (3630).html">(12) WebMail - RoundCubeMail</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3631).html">Database</a>
+<ul>
+<li><a href="note (3632).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (3633).html">(2) Install phpmyadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3634).html">FTP Server</a>
+<ul>
+<li><a href="note (3635).html">(1) Install Vsftpd</a></li>
+<li><a href="note (3634).html">(2) Install ProFTPD</a></li>
+<li><a href="note (3636).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (3637).html">(4) FTP Client - FileZilla</a></li>
+<li><a href="note (3638).html">(5) Vsftpd over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (3639).html">(6) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3640).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (3641).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (3642).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (3643).html">(3) Configure Client</a></li>
+<li><a href="note (3644).html">(4) Configure SSL</a></li>
+<li><a href="note (3645).html">(5) Virtual Domains</a></li>
+<li><a href="note (3646).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li><a href="note (3647).html">(7) Log Analyzer - pflogsumm</a></li>
+<li><a href="note (3648).html">(8) Log Analyzer - MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (3649).html">(9) Log Analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3650).html">Samba Server</a>
+<ul>
+<li><a href="note (3651).html">(1) Create fully accessed Directory</a></li>
+<li><a href="note (3652).html">(2) Create Limited Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (3653).html">(3) Install SWAT</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3654).html">Proxy Server</a>
+<ul>
+<li><a href="note (3655).html">(1) Install Squid</a></li>
+<li style="border-bottom: 0px"><a href="note (3656).html">(2) Run with Clamav - SquidClamav</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3657).html">Desktop Env</a>
+<ul>
+<li><a href="note (3658).html">(1) Install Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (3659).html">(2) Install VNC Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (3660).html">Others</a>
+<ul style="position: absolute; margin-top: -9.2em;">
+<li><a href="note (3661).html">Add Hard Drive</a></li>
+<li><a href="note (3662).html">Set time-zone</a></li>
+<li><a href="note (3663).html">Set keymap</a></li>
+<li><a href="note (3664).html">Set system language</a></li>
+<li><a href="note (3665).html">Set Hostname</a></li>
+<li><a href="note (3666).html">Create SSL Certificates</a></li>
+<li style="border-bottom: 0px"><a href="note (3660).html">Clamav Anti-Virus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Configure NIS Client<div class="date">2013/01/18</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>Configure on NIS clients in order to share users' accounts in your local networks. 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+<div class="block">
+[root@www ~]# <div class="color1"><a href="command\html\yum.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">yum</a> -y install ypbind rpcbind </div></div>
+[root@www ~]# <div class="color1">ypdomainname srv.world </div> &nbsp; <div class="color2"># set NIS domain name</div><br>
+<div class="block">
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/sysconfig/authconfig </div></div>
+<div class="block">
+USENIS=<div class="color1">yes</div><div class="posl-1"><div class="color2"># line 22: change</div></div>
+</div>
+<div class="block">
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/yp.conf </div></div>
+<div class="block">
+<div class="color2"># add at the last line ( [domain] server [NIS server] )</div><br>
+<div class="color1">domain srv.world server dlp.srv.world </div>
+</div>
+<div class="block">
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/nsswitch.conf </div></div>
+<div class="block">
+passwd:<div class="posl-1"><div class="color1">nis</div> files</div><div class="posl-1"><div class="color2"># line 33: add</div></div><br>
+shadow:<div class="posl-1"><div class="color1">nis</div> files</div><div class="posl-1"><div class="color2"># add</div></div><br>
+group:<div class="posl-1"><div class="color1">nis</div> files</div><div class="posl-1"><div class="color2"># add</div></div><br>
+hosts:<div class="posl-1"><div class="color1">nis</div> files dns myhostname <div class="color2"># add</div></div>
+</div>
+<div class="block">
+<div class="color2"># add optionally if you need ( create home directory automatically if it's none )</div><br>
+[root@www ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/pam.d/system-auth </div></div>
+<div class="color2"># add at the last line</div><br>
+<div class="color1">
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+session     optional      pam_mkhomedir.so skel=/etc/skel umask=077
+
+</pre>
+</div>
+[root@www ~]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> enable rpcbind.service </div><br>
+[root@www ~]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> enable ypbind.service </div><br>
+<div class="block">
+[root@www ~]# <div class="color1"><a href="command\html\exit.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">exit</a> </div></div>
+www login: <div class="color1">fedora</div><div class="posl-1"><div class="color2"># a user on NIS</div></div><br>
+Password:<div class="posl-1"><div class="color2"># password</div></div><br>
+Creating directory '/home/fedora'.<br>
+[fedora@www ~]$ <div class="posl-1"><div class="color2"># logined</div></div><br>
+[fedora@www ~]$ <div class="color1"><a href="command\html\ypwhich.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">ypwhich</a> </div><br>
+dlp.srv.world<br>
+[fedora@www ~]$ <div class="color1"><a href="command\html\ypcat.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">ypcat</a> passwd </div><br>
+cent:x:1001:1001::/home/cent:/bin/bash<br>
+clamupdate:x:997:997:Clamav database update user:/var/lib/clamav:/sbin/nologin<br>
+fedora:x:1000:1000::/home/fedora:/bin/bash<br>
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin<br>
+saslauth:x:998:76:"Saslauthd user":/run/saslauthd:/sbin/nologin<br>
+ubuntu:x:1002:1002::/home/ubuntu:/bin/bash<br>
+[fedora@www ~]$ <div class="color1"><a href="command\html\ypcat.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">ypcat</a> hosts </div><br>
+10.0.0.30   dlp.srv.world dlp<br>
+10.0.0.30   dlp.srv.world dlp<br>
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">NIS Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (3612).html">NIS Server</a></li>
+<li><a href="note (3613).html">NIS Client</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (3667).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

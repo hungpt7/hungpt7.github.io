@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>dnf : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+dnf - Package manager for RPM</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] dnf OPTION COMMAND PACKAGE</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;" summary="command">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">command</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com" summary="contents">
+<tr>
+<td>install</td>
+<td>Install a package or packages on your system<br>
+<div style="margin-left: 20px"># dnf install package</div>
+</td>
+</tr>
+<tr>
+<td>reinstall</td>
+<td>reinstall a package
+</td>
+</tr>
+<tr>
+<td>upgrade</td>
+<td>Upgrade a package or packages on your system<br>
+<div style="margin-left: 20px"># dnf upgrade package</div>
+</td>
+</tr>
+<tr>
+<td>upgrade-to</td>
+<td>Upgrade a package on your system to the specified version
+</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>Remove a package or packages from your system<br>
+<div style="margin-left: 20px"># dnf remove package</div>
+</td>
+</tr>
+<tr>
+<td>group</td>
+<td>Display, or use, the groups information
+</td>
+</tr>
+<tr>
+<td>list</td>
+<td>List a package or groups of packages
+</td>
+</tr>
+<tr>
+<td>check-update</td>
+<td>Check for available package upgrades
+</td>
+</tr>
+<tr>
+<td>info</td>
+<td>Display details about a package or group of packages
+</td>
+</tr>
+<tr>
+<td>provides</td>
+<td>Find what package provides the given value
+</td>
+</tr>
+<tr>
+<td>search</td>
+<td>Search package details for the given string<br>
+<div style="margin-left: 20px"># dnf search keyword</div>
+</td>
+</tr>
+<tr>
+<td>history</td>
+<td>Display, or use, the transaction history
+</td>
+</tr>
+<tr>
+<td>updateinfo</td>
+<td>Display advisories about packages
+</td>
+</tr>
+</table><br>
+<table style="width: 100px; background-color: #999999;" summary="option">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">option</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com" summary="contents2">
+<tr>
+<td>-y</td>
+<td>answer yes for all questions<br>
+<div style="margin-left: 20px"># dnf -y install package</div>
+</td>
+</tr>
+<tr>
+<td>--enablerepo=repo</td>
+<td>enable one or more repositories (wildcards allowed)<br>
+<div style="margin-left: 20px"># dnf --enablerepo=repo install package</div>
+</td>
+</tr>
+<tr>
+<td>--disablerepo=repo</td>
+<td>disable one or more repositories (wildcards allowed)<br>
+<div style="margin-left: 20px"># dnf --disablerepo=repo install package</div>
+</td>
+</tr>
+<tr>
+<td>--installroot [path]</td>
+<td>set install root
+</td>
+</tr>
+<tr>
+<td>--exclude=package</td>
+<td>exclude packages by name or glob<br>
+<div style="margin-left: 20px"># dnf --exclude=package update</div>
+</td>
+</tr>
+<tr>
+<td>--releasever RELEASEVER</td>
+<td>override the value of $releasever in config and repo files
+</td>
+</tr>
+<tr>
+<td>--noplugins</td>
+<td>disable all plugins<br>
+<div style="margin-left: 20px"># dnf --noplugins update</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

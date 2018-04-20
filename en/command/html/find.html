@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<title>find : Server World</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+find - search for files in a directory hierarchy</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] find PATH OPTION</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">option</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td style="width:140px">-name PATTERN</td>
+<td>Search from file name with the PATTERN<br>
+<div style="margin-left: 20px"># find ./ -name file.txt</div>
+</td>
+</tr>
+<tr>
+<td>-perm PATTERN</td>
+<td>Search from permissions with the PATTERN<br>
+<div style="margin-left: 20px"># find ./ -perm -o+x</div>
+</td>
+</tr>
+<tr>
+<td>-size SIZE</td>
+<td>Search from file-size with the SIZE<br>
+<div style="margin-left: 20px"># find ./ -size 1140c</div>
+</td>
+</tr>
+<tr>
+<td>-type TYPE</td>
+<td>Search from file-type with the TYPE<br>
+<div style="margin-left: 20px"># find ./ -type d</div>
+</td>
+</tr>
+<tr>
+<td>-user USER</td>
+<td>Search from owner with the USER<br>
+<div style="margin-left: 20px"># find ./ -user root</div>
+</td>
+</tr>
+<tr>
+<td>-group GROUP</td>
+<td>Search from group with the GROUP<br>
+<div style="margin-left: 20px"># find ./ -group root</div>
+</td>
+</tr>
+<tr>
+<td>-exec COMMAND {} \;</td>
+<td>Execute command when matching<br>
+<div style="margin-left: 20px"># find ./ -size 1140c -exec cat {} \;</div>
+</td>
+</tr>
+<tr>
+<td>-print</td>
+<td>list search-result
+</td>
+</tr>
+<tr>
+<td>-fprint FILE</td>
+<td>print the full file name into file file
+</td>
+</tr>
+<tr>
+<td>-ls</td>
+<td>list current file in â€˜ls -dilsâ€™ format on standard output
+</td>
+</tr>
+<tr>
+<td>-nouser</td>
+<td>No user corresponds to fileâ€™s numeric user ID
+</td>
+</tr>
+<tr>
+<td>-nogroup</td>
+<td>No group corresponds to fileâ€™s numeric group ID
+</td>
+</tr>
+<tr>
+<td>-and</td>
+<td>Search with "AND"
+</td>
+</tr>
+<tr>
+<td>-or</td>
+<td>Search with "OR"
+</td>
+</tr>
+<tr>
+<td>-atime N</td>
+<td>File was last accessed N*24 hours ago
+</td>
+</tr>
+<tr>
+<td>-mtime N</td>
+<td>Fileâ€™s data was last modified N*24 hours ago
+</td>
+</tr>
+<tr>
+<td>-ctime N</td>
+<td>Fileâ€™s  status was last changed N*24 hours ago
+</td>
+</tr>
+<tr>
+<td>-newer FILE</td>
+<td>File was modified more recently than file
+</td>
+</tr>
+<tr>
+<td>-links N</td>
+<td>File has N links
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

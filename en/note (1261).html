@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Fedora 27 : Squid : Basic Authentication : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">7848 / 62642584</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Fedora 27</div>
+<div class="navi">
+<ul>
+<li><a href="note (3).html">Download Fedora 27</a></li>
+<li><a href="note (1145).html">Install Fedora 27</a></li>
+<li class="tree"><a href="note (1146).html">Initial Settings</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (1147).html">(01) Add Common Users</a></li>
+<li><a href="note (1148).html">(02) FW &amp; SELinux</a></li>
+<li><a href="note (1149).html">(03) Networking</a></li>
+<li><a href="note (1150).html">(04) Services</a></li>
+<li><a href="note (1151).html">(05) Update System</a></li>
+<li><a href="note (1152).html">(06) Vim Settings</a></li>
+<li><a href="note (1153).html">(07) Sudo Settings</a></li>
+<li style="border-bottom: 0px"><a href="note (1154).html">(08) Use Admin Console</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1155).html">NTP Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (1156).html">(01) Configure NTP Server (Chrony)</a></li>
+<li><a href="note (1157).html">(02) Configure NTP Server (NTPd)</a></li>
+<li style="border-bottom: 0px"><a href="note (1158).html">(03) Configure NTP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1159).html">SSH Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (1160).html">(01) Password Authentication</a></li>
+<li><a href="note (1161).html">(02) SSH File Transfer(Fedora)</a></li>
+<li><a href="note (1162).html">(03) SSH File Transfer(Windows)</a></li>
+<li><a href="note (1163).html">(04) SSH Key-Pair Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (1164).html">(05) SFTP only + Chroot</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1165).html">DNS Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (1166).html">(01) Install BIND</a></li>
+<li><a href="note (1167).html">(02) Configure Zones</a></li>
+<li><a href="note (1168).html">(03) Start BIND</a></li>
+<li><a href="note (1169).html">(04) Chroot Environment</a></li>
+<li><a href="note (1170).html">(05) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (1171).html">(06) Configure as a Slave Server</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1172).html">DHCP Server</a>
+<ul>
+<li><a href="note (1173).html">(01) Configure DHCP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (1174).html">(02) Configure DHCP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1175).html">Storage Server</a>
+<ul style="position: absolute; margin-top: -5.55em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1175).html">&nbsp; NFS</a></li>
+<li><a href="note (1176).html">(01) Configure NFS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (1177).html">(02) Configure NFS Client</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (1178).html">&nbsp; iSCSI</a></li>
+<li><a href="note (1179).html">(01) Configure iSCSI Target</a></li>
+<li><a href="note (1180).html">(02) Configure iSCSI Target(tgt)</a></li>
+<li style="border-bottom: 0px"><a href="note (1181).html">(03) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1182).html">Virtualization</a>
+<ul style="position: absolute; margin-top: -14.7em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1182).html">&nbsp; KVM</a></li>
+<li><a href="note (1183).html">(01) Install KVM</a></li>
+<li><a href="note (1184).html">(02) Create Virtual Machine#1</a></li>
+<li><a href="note (1185).html">(03) Create Virtual Machine#2</a></li>
+<li><a href="note (1186).html">(04) Basic Operation</a></li>
+<li><a href="note (1187).html">(05) Management Tools</a></li>
+<li><a href="note (1188).html">(06) SPICE Server</a></li>
+<li><a href="note (1189).html">(07) SPICE Client</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (1190).html">(08) Nested KVM</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid; border-top: #696969 1px solid;"><a href="note (1191).html">&nbsp; Docker</a></li>
+<li><a href="note (1192).html">(01) Install Docker</a></li>
+<li><a href="note (1193).html">(02) Add Images</a></li>
+<li><a href="note (1194).html">(03) Access to Services on Container</a></li>
+<li><a href="note (1195).html">(04) Use Dockerfile</a></li>
+<li><a href="note (1196).html">(05) Use Persistent Storage</a></li>
+<li><a href="note (1197).html">(06) Use Docker-Registry</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (1198).html">(07) Docker Swarm</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1199).html">Directory Server</a>
+<ul style="position: absolute; margin-top: -16.5em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1199).html">&nbsp; FreeIPA</a></li>
+<li><a href="note (1200).html">(01) Configure FreeIPA Server</a></li>
+<li><a href="note (1201).html">(02) Add User Accounts</a></li>
+<li><a href="note (1202).html">(03) Configure FreeIPA Client</a></li>
+<li><a href="note (1203).html">(04) Basic Operation</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (1204).html">(05) Web Admin Console</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1205).html">&nbsp; OpenLDAP</a></li>
+<li><a href="note (1206).html">(01) Configure LDAP Server</a></li>
+<li><a href="note (1207).html">(02) Add User Accounts</a></li>
+<li><a href="note (1208).html">(03) Configure LDAP Client</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (1209).html">(04) LDAP Replication</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1210).html">&nbsp; NIS</a></li>
+<li><a href="note (1211).html">(01) Configure NIS Server</a></li>
+<li><a href="note (1212).html">(02) Configure NIS Client</a></li>
+<li style="border-bottom: 0px"><a href="note (1213).html">(03) Configure NIS Slave</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1214).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -11.0em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1214).html">&nbsp; Apache httpd</a></li>
+<li><a href="note (1215).html">(01) Install httpd</a></li>
+<li><a href="note (1216).html">(02) Use Perl Scripts</a></li>
+<li><a href="note (1217).html">(03) Use PHP Scripts</a></li>
+<li><a href="note (1218).html">(04) Use Ruby Scripts</a></li>
+<li><a href="note (1219).html">(05) Use Python Scripts</a></li>
+<li><a href="note (1220).html">(06) Enable UserDir</a></li>
+<li><a href="note (1221).html">(07) Virtual Hostings</a></li>
+<li><a href="note (1222).html">(08) SSL Settings</a></li>
+<li><a href="note (1223).html">(09) Basic Authentication</a></li>
+<li><a href="note (1224).html">(10) Basic Auth + PAM</a></li>
+<li><a href="note (1225).html">(11) Use WebDAV</a></li>
+<li><a href="note (1226).html">(12) PHP + PHP-FPM</a></li>
+<li style="border-bottom: 0px"><a href="note (1227).html">(13) Webmail : RoundCubeMail</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1228).html">Database</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1228).html">&nbsp; MariaDB</a></li>
+<li><a href="note (1229).html">(01) Install MariaDB</a></li>
+<li><a href="note (1230).html">(02) Install phpMyAdmin</a></li>
+<li style="border-bottom: 0px"><a href="note (1231).html">(03) MariaDB Replication</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1232).html">FTP Server</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (1233).html">(01) Install Vsftpd</a></li>
+<li><a href="note (1234).html">(02) Install ProFTPD</a></li>
+<li><a href="note (1235).html">(03) Install Pure-FTPd</a></li>
+<li><a href="note (1236).html">(04) FTP Client : Fedora</a></li>
+<li><a href="note (1237).html">(05) FTP Client : Windows</a></li>
+<li><a href="note (1238).html">(06) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (1239).html">(07) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (1240).html">(08) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1241).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -5.55em;">
+<li><a href="note (1242).html">(01) Install Postfix</a></li>
+<li><a href="note (1243).html">(02) Install Dovecot</a></li>
+<li><a href="note (1244).html">(03) Add Mail Accounts#1</a></li>
+<li><a href="note (1245).html">(04) Client's Settings</a></li>
+<li><a href="note (1246).html">(05) SSL Settings</a></li>
+<li><a href="note (1247).html">(06) Virtual Domain</a></li>
+<li><a href="note (1248).html">(07) Add Mail Accounts#2</a></li>
+<li><a href="note (1249).html">(08) Postfix + Clamav + Amavisd</a></li>
+<li style="border-bottom: 0px"><a href="note (1250).html">(09) Log Analyze : pflogsumm</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1251).html">Samba Server</a>
+<ul style="position: absolute; margin-top: -3.8em;">
+<li><a href="note (1252).html">(01) Fully accessed shared Folder</a></li>
+<li><a href="note (1253).html">(02) Limited accessed shared Folder</a></li>
+<li><a href="note (1254).html">(03) Join in AD with Samba Winbind</a></li>
+<li><a href="note (1255).html">(04) Samba AD DC#1</a></li>
+<li><a href="note (1256).html">(05) Samba AD DC#2</a></li>
+<li style="border-bottom: 0px"><a href="note (1257).html">(06) Samba AD DC#3</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1258).html">Proxy Server</a>
+<ul style="position: absolute; margin-top: -3.6em;">
+<li><a href="note (1259).html">(01) Install Squid</a></li>
+<li><a href="note (1260).html">(02) Proxy Clients' Settings</a></li>
+<li><a href="note (1261).html">(03) Set Basic Auth</a></li>
+<li style="border-bottom: 0px"><a href="note (1262).html">(04) Reverse Proxy Settings</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1263).html">Desktop Env</a>
+<ul style="position: absolute; margin-top: -11.0em;">
+<li><a href="note (1264).html">(08) Configure noVNC</a></li>
+<li><a href="note (1265).html">(07) Configure Xrdp Server</a></li>
+<li><a href="note (1266).html">(06) Configure VNC Server</a></li>
+<li><a href="note (1267).html">(05) Xfce Desktop Environment</a></li>
+<li><a href="note (1268).html">(04) MATE Desktop Environment</a></li>
+<li><a href="note (1269).html">(03) Cinnamon Desktop Environment</a></li>
+<li><a href="note (1270).html">(02) KDE Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (1271).html">(01) GNOME Desktop Environment</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (1272).html">Others</a>
+<ul style="position: absolute; margin-top: -11.0em;">
+<li><a href="note (1273).html">Create SSL Certificates</a></li>
+<li><a href="note (1274).html">Change Run-Level</a></li>
+<li><a href="note (1275).html">Set Timezone</a></li>
+<li><a href="note (1276).html">Set Keymap</a></li>
+<li><a href="note (1277).html">Set Locale</a></li>
+<li><a href="note (1272).html">Set Hostname</a></li>
+<li><a href="note (1278).html">Join in Active Directory Domain</a></li>
+<li style="border-bottom: 0px"><a href="note (1279).html">Clamav AntiVirus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Basic Authentication<div class="date">2017/12/19</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Set Basic Authentication and limit squid for users to require authentication. 
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Install a package which includes htpasswd. 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+[root@prox ~]# <div class="color1"><a href="command\html\dnf.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">dnf</a> -y install httpd-tools </div>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Configure Squid to set Basic Auth. 
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+<div class="block">
+[root@prox ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/squid/squid.conf </div></div>
+<div class="block">
+acl CONNECT method CONNECT<br>
+<div class="color2"># line 28: add follows for Basic Auth</div><br>
+<div class="color1">
+auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/.htpasswd<br>
+auth_param basic children 5<br>
+auth_param basic realm Squid Basic Authentication<br>
+auth_param basic credentialsttl 5 hours<br>
+acl password proxy_auth REQUIRED<br>
+http_access allow password
+</div>
+</div>
+<div class="block">
+[root@prox ~]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> restart squid </div><br>
+</div>
+<div class="color2"># add a user : create a new file with "-c" ( add the "-c" option only for the initial registration )</div><br>
+[root@prox ~]# <div class="color1"><a href="command\html\htpasswd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">htpasswd</a> -c /etc/squid/.htpasswd fedora </div><br>
+New password: &nbsp; &nbsp; <div class="color2"># set password</div><br>
+Re-type new password: <br>
+Adding password for user fedora
+</td>
+</tr>
+</table>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Proxy Clients' Settings : Fedora</div>
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>Configure Fedora Proxy Client for Basic Authentication. 
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+<div class="block">
+[root@client ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/profile.d/proxy.sh </div></div>
+<div class="color1">
+<div class="color2"># add follows to the end</div><br>
+<div class="block">
+<div class="color2"># username:password@proxyserver:port</div><br>
+MY_PROXY_URL="fedora:password@prox.srv.world:3128"
+</div>
+<div class="block">
+HTTP_PROXY=$MY_PROXY_URL<br>
+HTTPS_PROXY=$MY_PROXY_URL<br>
+FTP_PROXY=$MY_PROXY_URL<br>
+http_proxy=$MY_PROXY_URL<br>
+https_proxy=$MY_PROXY_URL<br>
+ftp_proxy=$MY_PROXY_URL
+</div>
+<div class="block">
+export HTTP_PROXY HTTPS_PROXY FTP_PROXY http_proxy https_proxy ftp_proxy
+</div>
+</div>
+<div class="block">
+[root@client ~]# <div class="color1">source /etc/profile.d/proxy.sh </div>
+</div>
+<div class="color2"># it's OK all, but it's possible to set proxy settings for each application like follows</div><br>
+<div class="color2"># for dnf</div><br>
+<div class="block">
+[root@client ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/dnf/dnf.conf </div></div>
+<div class="block">
+<div class="color1">
+<div class="color2"># add to the end</div><br>
+proxy=prox.srv.world:3128<br>
+proxy_username=fedora<br>
+proxy_password=password
+</div>
+</div>
+<div class="color2"># for wget</div><br>
+<div class="block">
+[root@client ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/wgetrc </div></div>
+<div class="color1">
+<div class="color2"># add to the end</div><br>
+http_proxy = prox.srv.world:3128<br>
+https_proxy = prox.srv.world:3128<br>
+ftp_proxy = prox.srv.world:3128<br>
+proxy_user = fedora<br>
+proxy_passwd = password
+</div>
+</td>
+</tr>
+</table>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Proxy Clients' Settings : Windows</div>
+</td>
+</tr>
+</table>
+<table class="base_win" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td>For Windows Clients, none of specific settings, but when access to a web, 
+proxy server requires authentication like follows, then input username and password.
+</td>
+</tr>
+</table>
+<table class="base_win" summary="4-1">
+<tr>
+<td>
+<img src="Fedora_27\squid\img\3.png" width="800" height="547" alt="" class="img" style="max-width: 800px; width: 100%; height: auto;">
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">Proxy Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (1259).html">Install Squid</a></li>
+<li><a href="note (1260).html">Proxy Clients</a></li>
+<li><a href="note (1261).html">Basic Authentication</a></li>
+<li><a href="note (1262).html">Reverse Proxy</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (1280).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Debian 9 Stretch : OpenStack Newton : Overview : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">7903 / 62642639</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Debian 9 Stretch</div>
+<div class="navi">
+<ul>
+<li><a href="note (5).html">Get Debian 9</a></li>
+<li><a href="note (1419).html">Install Debian</a></li>
+<li class="tree"><a href="note (1420).html">Initial Settings</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (1421).html">(1) Add New Users</a></li>
+<li><a href="note (1422).html">(2) Set Command Alias</a></li>
+<li><a href="note (1423).html">(3) Network Settings</a></li>
+<li><a href="note (1424).html">(4) Services</a></li>
+<li><a href="note (1425).html">(5) Update System</a></li>
+<li><a href="note (1426).html">(6) Install Vim</a></li>
+<li style="border-bottom: 0px"><a href="note (1427).html">(7) Configure Sudo</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1428).html">NTP Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (1429).html">(1) Configure NTP Server(NTPd)</a></li>
+<li><a href="note (1430).html">(2) Configure NTP Server(Chrony)</a></li>
+<li style="border-bottom: 0px"><a href="note (1431).html">(3) Configure NTP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1432).html">SSH Server</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (1433).html">(1) Password Authentication</a></li>
+<li><a href="note (1434).html">(2) SSH File Transfer(Debian)</a></li>
+<li><a href="note (1435).html">(3) SSH File Transfer(Windows)</a></li>
+<li><a href="note (1436).html">(4) SSH Key-Pair Authentication</a></li>
+<li><a href="note (1437).html">(5) SFTP only + Chroot</a></li>
+<li><a href="note (1438).html">(6) Use SSHPass</a></li>
+<li><a href="note (1439).html">(7) Use SSH-Agent</a></li>
+<li style="border-bottom: 0px"><a href="note (1440).html">(8) Use Parallel SSH</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1441).html">DNS / DHCP Server</a>
+<ul style="position: absolute; margin-top: -5.55em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1442).html">&nbsp; DNS/DHCP Server (Dnsmasq)</a></li>
+<li><a href="note (1443).html">(1) Install Dnsmasq</a></li>
+<li style="border-bottom: #696969 1px solid"><a href="note (1444).html">(2) Configure DHCP Server</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1441).html">&nbsp; DNS Server (BIND)</a></li>
+<li><a href="note (1445).html">(1) Install BIND</a></li>
+<li><a href="note (1446).html">(2) Set Zone Files</a></li>
+<li><a href="note (1447).html">(3) Start BIND</a></li>
+<li><a href="note (1448).html">(4) Set CNAME Record</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (1449).html">(5) Slave DNS Server</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1450).html">&nbsp; DHCP Server</a></li>
+<li><a href="note (1451).html">(1) Configure DHCP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (1452).html">(2) Configure DHCP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1453).html">Storage Server</a>
+<ul style="position: absolute; margin-top: -11.0em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1453).html">&nbsp; NFS</a></li>
+<li><a href="note (1454).html">(1) Configure NFS Server</a></li>
+<li><a href="note (1455).html">(2) NFS Client(Debian)</a></li>
+<li><a href="note (1456).html">(3) NFS Client(Win Server)</a></li>
+<li style="border-bottom: 0px"><a href="note (1457).html">(4) NFS Client(Win Client)</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid; border-bottom: #696969 1px solid;"><a href="note (1458).html">&nbsp; iSCSI</a></li>
+<li><a href="note (1459).html">(1) Conf iSCSI Taregt(targetcli)</a></li>
+<li><a href="note (1460).html">(2) Conf iSCSI Taregt(tgt)</a></li>
+<li><a href="note (1461).html">(3) iSCSI Initiator(Debian)</a></li>
+<li style="border-bottom: 0px"><a href="note (1462).html">(4) iSCSI Initiator(Windows)</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (1463).html">&nbsp; GlusterFS</a></li>
+<li><a href="note (1464).html">(1) Install GlusterFS</a></li>
+<li><a href="note (1465).html">(2) Distributed Setting</a></li>
+<li><a href="note (1466).html">(3) Replication Setting</a></li>
+<li><a href="note (1467).html">(4) Striping Setting</a></li>
+<li><a href="note (1468).html">(5) Distributed + Replication</a></li>
+<li><a href="note (1469).html">(6) Striping + Replication</a></li>
+<li style="border-bottom: 0px"><a href="note (1470).html">(7) Clients' Settings</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1471).html">Virtualization</a>
+<ul style="position: absolute; margin-top: -12.8em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1471).html">&nbsp; KVM</a></li>
+<li><a href="note (1472).html">(1) Install KVM</a></li>
+<li><a href="note (1473).html">(2) Create Virtual Machine#1</a></li>
+<li><a href="note (1474).html">(3) Create Virtual Machine#2</a></li>
+<li><a href="note (1475).html">(4) Basic Operations</a></li>
+<li><a href="note (1476).html">(5) Management tools</a></li>
+<li><a href="note (1477).html">(6) SPICE Server</a></li>
+<li><a href="note (1478).html">(7) SPICE Client</a></li>
+<li style="border-bottom: 0px"><a href="note (1479).html">(8) Nested KVM</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid; border-top: #696969 1px solid;"><a href="note (1480).html">&nbsp; Docker</a></li>
+<li><a href="note (1481).html">(1) Install Docker</a></li>
+<li><a href="note (1482).html">(2) Add Images</a></li>
+<li><a href="note (1483).html">(3) Access to Services on Container</a></li>
+<li><a href="note (1484).html">(4) Use Dockerfile</a></li>
+<li><a href="note (1485).html">(5) Use Persistent Storage</a></li>
+<li><a href="note (1486).html">(6) Use Docker-Registry</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (1487).html">(7) Docker Swarm</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1488).html">Cloud Compute</a>
+<ul style="position: absolute; margin-top: -14.6em; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1488).html">&nbsp; OpenStack Newton</a></li>
+<li><a href="note (1489).html">( 1 ) Newton Overview</a></li>
+<li><a href="note (1490).html">( 2 ) Pre-Requirements</a></li>
+<li><a href="note (1491).html">( 3 ) Configure Keystone#1</a></li>
+<li><a href="note (1492).html">( 4 ) Configure Keystone#2</a></li>
+<li><a href="note (1493).html">( 5 ) Configure Glance</a></li>
+<li><a href="note (1494).html">( 6 ) Configure Nova#1</a></li>
+<li><a href="note (1495).html">( 7 ) Configure Nova#2</a></li>
+<li><a href="note (1496).html">( 8 ) Configure Nova#3</a></li>
+<li><a href="note (1497).html">( 9 ) Configure Neutron#1</a></li>
+<li><a href="note (1498).html">(10) Configure Neutron#2</a></li>
+<li><a href="note (1499).html">(11) Add VM Images</a></li>
+<li><a href="note (1500).html">(12) Configure Networking</a></li>
+<li><a href="note (1501).html">(13) Run Instances</a></li>
+<li><a href="note (1502).html">(14) Configure Horizon</a></li>
+<li><a href="note (1503).html">(15) Add Compute Nodes</a></li>
+<li><a href="note (1504).html">(16) Configure Neutron#3</a></li>
+<li><a href="note (1505).html">(17) Configure Neutron#4</a></li>
+<li><a href="note (1506).html">(18) Configure Neutron#5</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (1507).html">(19) Neutron Network (VXLAN)</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1508).html">Directory Server</a>
+<ul style="position: absolute; margin-top: -9.2em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1508).html">&nbsp; OpenLDAP</a></li>
+<li><a href="note (1509).html">(1) Configure LDAP Server</a></li>
+<li><a href="note (1510).html">(2) Add User Accounts</a></li>
+<li><a href="note (1511).html">(3) Configure LDAP Client</a></li>
+<li><a href="note (1512).html">(4) LDAP over TLS</a></li>
+<li><a href="note (1513).html">(5) LDAP Replication</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (1514).html">(6) Multi-Master Replication</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1515).html">&nbsp; NIS</a></li>
+<li><a href="note (1516).html">(1) Configure NIS Server</a></li>
+<li><a href="note (1517).html">(2) Configure NIS Client</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (1518).html">(3) Configure NIS Slave</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1519).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -9.2em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1519).html">&nbsp; Apache2</a></li>
+<li><a href="note (1520).html">( 1 ) Install Apache2</a></li>
+<li><a href="note (1521).html">( 2 ) Use Perl Scripts</a></li>
+<li><a href="note (1522).html">( 3 ) Use PHP Scripts</a></li>
+<li><a href="note (1523).html">( 4 ) Use Ruby Scripts</a></li>
+<li><a href="note (1524).html">( 5 ) Use Python Scripts</a></li>
+<li><a href="note (1525).html">( 6 ) Enable Userdir</a></li>
+<li><a href="note (1526).html">( 7 ) Virtual Hostings</a></li>
+<li><a href="note (1527).html">( 8 ) SSL Settings</a></li>
+<li><a href="note (1528).html">( 9 ) Basic Authentication</a></li>
+<li><a href="note (1529).html">(10) Basic Auth + PAM</a></li>
+<li><a href="note (1530).html">(11) Kerberos Authentication</a></li>
+<li><a href="note (1531).html">(12) WebDAV Settings</a></li>
+<li style="border-bottom: 0px"><a href="note (1532).html">(13) PHP + PHP-FPM</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1533).html">Database</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1533).html">&nbsp; MariaDB</a></li>
+<li><a href="note (1534).html">(1) Install MariaDB</a></li>
+<li><a href="note (1535).html">(2) Install phpMyAdmin</a></li>
+<li style="border-bottom: 0px"><a href="note (1536).html">(3) MariaDB Replication</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1537).html">FTP Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (1538).html">(1) Install Vsftpd</a></li>
+<li><a href="note (1539).html">(2) Install ProFTPD</a></li>
+<li><a href="note (1540).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (1541).html">(4) FTP Client (Debian)</a></li>
+<li><a href="note (1542).html">(5) FTP Client (Windows)</a></li>
+<li><a href="note (1543).html">(6) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (1544).html">(7) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (1545).html">(8) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1546).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (1547).html">( 1 ) Install Postfix</a></li>
+<li><a href="note (1548).html">( 2 ) Install Dovecot</a></li>
+<li><a href="note (1549).html">( 3 ) Add Mail Accounts#1</a></li>
+<li><a href="note (1550).html">( 4 ) Clients' Setting</a></li>
+<li><a href="note (1551).html">( 5 ) SSL Settings</a></li>
+<li><a href="note (1552).html">( 6 ) Virtual Domains</a></li>
+<li><a href="note (1553).html">( 7 ) Add Mail Accounts#2</a></li>
+<li><a href="note (1554).html">( 8 ) Postfix+Clamav+ClamSMTP</a></li>
+<li><a href="note (1555).html">( 9 ) Log Report : pflogsumm</a></li>
+<li style="border-bottom: 0px"><a href="note (1556).html">(10) Log Report : MailGraph</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1557).html">Samba Server</a>
+<ul style="position: absolute; margin-top: -3.8em;">
+<li><a href="note (1558).html">(1) Fully accessed Shared Directory</a></li>
+<li><a href="note (1559).html">(2) Restricted Shared Directory</a></li>
+<li><a href="note (1560).html">(3) Samba Winbind</a></li>
+<li><a href="note (1561).html">(4) Samba AD DC : Configure DC</a></li>
+<li><a href="note (1562).html">(5) Samba AD DC : User Manage</a></li>
+<li style="border-bottom: 0px"><a href="note (1563).html">(6) Samba AD DC : Join Domain</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1564).html">Proxy Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (1565).html">(1) Install Squid</a></li>
+<li><a href="note (1566).html">(2) Configure Proxy Clients</a></li>
+<li><a href="note (1567).html">(3) Set Basic Authentication</a></li>
+<li><a href="note (1568).html">(4) Configure as a Reverse Proxy</a></li>
+<li><a href="note (1569).html">(5) Squid + SquidClamav</a></li>
+<li><a href="note (1570).html">(6) Squid + SquidGuard</a></li>
+<li><a href="note (1571).html">(7) Log Report : LightSquid</a></li>
+<li style="border-bottom: 0px"><a href="note (1572).html">(8) Log Report : SARG</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (1573).html">Desktop Env</a>
+<ul style="position: absolute; margin-top: -11.0em;">
+<li><a href="note (1574).html">(9) Connect to Windows with RDP</a></li>
+<li><a href="note (1575).html">(8) Configure Xrdp Server</a></li>
+<li><a href="note (1576).html">(7) VNC Client : noVNC</a></li>
+<li><a href="note (1577).html">(6) Configure VNC Server</a></li>
+<li><a href="note (1578).html">(5) Xfce Desktop Environment</a></li>
+<li><a href="note (1579).html">(4) MATE Desktop Environment</a></li>
+<li><a href="note (1580).html">(3) Cinnamon Desktop Environment</a></li>
+<li><a href="note (1581).html">(2) KDE Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (1582).html">(1) GNOME Desktop Environment</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (1583).html">Others</a>
+<ul style="position: absolute; margin-top: -9.2em;">
+<li><a href="note (1584).html">Create SSL Certificates</a></li>
+<li><a href="note (1585).html">Set System Timezone</a></li>
+<li><a href="note (1586).html">Set KeyboardMap</a></li>
+<li><a href="note (1587).html">Set System Locale</a></li>
+<li><a href="note (1583).html">Set Hostname</a></li>
+<li><a href="note (1588).html">Join in Active Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (1589).html">Clamav AntiVirus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">OpenStack Newton : Overview<div class="date">2017/07/02</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+This is the Example of building Cloud Computing infrastracture by OpenStack Newton.<br>
+Please learn simply description about OpenStack below before building. 
+</div>
+(1) Main Components of OpenStack
+<table style="background: #ffffff; border: #cccccc 1px solid; margin-top: 5px;" summary="Description1">
+<tr>
+<td style="padding: 5px; width: 190px; vertical-align: top; border: #cccccc 1px solid; background: #f0f8ff;">Service</td>
+<td style="padding: 5px; width: 120px; vertical-align: top; border: #cccccc 1px solid; background: #f0f8ff;">Code Name</td>
+<td style="padding: 5px; border: #cccccc 1px solid; background: #f0f8ff;">Description</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Identity Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Keystone</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">User Management</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Compute Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Nova</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Virtual Machine Management</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Image Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Glance</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Manages Virtual image like kernel image or disk image</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Dashboard</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Horizon</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides GUI console via Web browser</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Object Storage</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Swift</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides Cloud Storage</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Block Storage</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Cinder</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Storage Management for Virtual Machine</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Network Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Neutron</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Virtual Networking Management</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Orchestration Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Heat</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides Orchestration function for Virtual Machine</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Metering Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Ceilometer</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides the function of Usage measurement for accounting</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Database Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Trove</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Database resource Management</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Data Processing Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Sahara</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides Data Processing function</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Bare Metal Provisioning</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Ironic</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides Bare Metal Provisioning function</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Messaging Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Zaqar</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides Messaging Service function</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Shared File System</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Manila</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides File Sharing Service</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">DNS Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Designate</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides DNS Server Service</td>
+</tr>
+<tr>
+<td style="padding: 5px; width: 150px; vertical-align: top; border: #cccccc 1px solid;">Key Manager Service</td>
+<td style="padding: 5px; width: 100px; vertical-align: top; border: #cccccc 1px solid;">Barbican</td>
+<td style="padding: 5px; border: #cccccc 1px solid;">Provides Key Management Service</td>
+</tr>
+</table><br>
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">OpenStack Newton
+</div>
+<div class="navi2">
+<ul>
+<li><a href="note (1489).html">Newton Overview</a></li>
+<li><a href="note (1490).html">Pre-Requirements</a></li>
+<li><a href="note (1491).html">Conf Keystone#1</a></li>
+<li><a href="note (1492).html">Conf Keystone#2</a></li>
+<li><a href="note (1493).html">Conf Glance</a></li>
+<li><a href="note (1494).html">Conf Nova#1</a></li>
+<li><a href="note (1495).html">Conf Nova#2</a></li>
+<li><a href="note (1496).html">Conf Nova#3</a></li>
+<li><a href="note (1497).html">Conf Neutron#1</a></li>
+<li><a href="note (1498).html">Conf Neutron#2</a></li>
+<li><a href="note (1499).html">Add VM-Images</a></li>
+<li><a href="note (1500).html">Conf Networking</a></li>
+<li><a href="note (1501).html">Boot Instances</a></li>
+<li><a href="note (1502).html">Conf Horizon</a></li>
+<li><a href="note (1503).html">Add Compute Nodes</a></li>
+<li><a href="note (1504).html">Conf Neutron#3</a></li>
+<li><a href="note (1505).html">Conf Neutron#4</a></li>
+<li><a href="note (1506).html">Conf Neutron#5</a></li>
+<li><a href="note (1507).html">Neutron Network</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (1590).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

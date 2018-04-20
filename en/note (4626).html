@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Ubuntu 13.04 - Initial Settings - Services/Jobs : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8772 / 62643508</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Ubuntu 13.04</div>
+<div class="navi">
+<ul>
+<li><a href="note (31).html">Get Ubuntu 13.04</a></li>
+<li><a href="note (4621).html">Install Ubuntu</a></li>
+<li class="tree"><a href="note (4622).html">Initial Settings</a>
+<ul>
+<li><a href="note (4623).html">(1) Add a user</a></li>
+<li><a href="note (4624).html">(2) Enable root user</a></li>
+<li><a href="note (4625).html">(3) Network Settings</a></li>
+<li><a href="note (4626).html">(4) Configure Services</a></li>
+<li><a href="note (4627).html">(5) Update System</a></li>
+<li><a href="note (4628).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (4629).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li><a href="note (4630).html">NTP Server</a></li>
+<li class="tree"><a href="note (4631).html">SSH Server</a>
+<ul>
+<li><a href="note (4632).html">(1) Password Authentication</a></li>
+<li><a href="note (4633).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (4634).html">(3) SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4635).html">DNS Server</a>
+<ul>
+<li><a href="note (4636).html">(1) Install BIND</a></li>
+<li><a href="note (4637).html">(2) Set Zones</a></li>
+<li><a href="note (4638).html">(3) Start BIND</a></li>
+<li><a href="note (4639).html">(4) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (4640).html">(5) Config as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (4641).html">DHCP Server</a></li>
+<li class="tree"><a href="note (4642).html">Virtualization</a>
+<ul>
+<li><a href="note (4643).html">(1) Install KVM</a></li>
+<li><a href="note (4644).html">(2) Create virtual machine #1</a></li>
+<li><a href="note (4645).html">(3) Create virtual machine #2</a></li>
+<li><a href="note (4646).html">(4) Create virtual machine #3</a></li>
+<li><a href="note (4647).html">(5) Operations</a></li>
+<li><a href="note (4648).html">(6) SPICE Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4649).html">(7) SPICE Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4650).html">Storage Server</a>
+<ul>
+<li><a href="note (4651).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (4652).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4653).html">NFS Server</a>
+<ul>
+<li><a href="note (4654).html">(1) Configure NFS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4655).html">(2) Configure NFS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4656).html">NIS Server</a>
+<ul>
+<li><a href="note (4657).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4658).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4659).html">LDAP Server</a>
+<ul>
+<li><a href="note (4660).html">(1) Configure LDAP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4661).html">(2) Configure LDAP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4662).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (4663).html">( 1 ) Install Apache2</a></li>
+<li><a href="note (4664).html">( 2 ) Install PHP</a></li>
+<li><a href="note (4665).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (4666).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (4667).html">( 5 ) Virtual Hostings</a></li>
+<li><a href="note (4668).html">( 6 ) Configure SSL</a></li>
+<li><a href="note (4669).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (4670).html">( 8 ) Enable suEXEC</a></li>
+<li><a href="note (4671).html">( 9 ) Basic Auth + PAM</a></li>
+<li><a href="note (4672).html">(10) Basic Auth + LDAP</a></li>
+<li><a href="note (4673).html">(11) Log analyzer - Visitors</a></li>
+<li><a href="note (4674).html">(12) Log analyzer - AWstats</a></li>
+<li><a href="note (4675).html">(13) WebMail - SquirrelMail</a></li>
+<li style="border-bottom: 0px"><a href="note (4676).html">(14) WebMail - RoundCubeMail</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4677).html">Database</a>
+<ul>
+<li><a href="note (4678).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (4679).html">(2) Install phpmyadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4680).html">FTP Server</a>
+<ul>
+<li><a href="note (4681).html">(1) Install ProFTPD</a></li>
+<li><a href="note (4682).html">(2) Install Pure-FTPd</a></li>
+<li><a href="note (4683).html">(3) FTP Client - WinSCP</a></li>
+<li><a href="note (4684).html">(4) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (4685).html">(5) Pure-FTPd Over SSL/TLS</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4686).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (4687).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (4688).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (4689).html">(3) Configure Client</a></li>
+<li><a href="note (4690).html">(4) Configure SSL</a></li>
+<li><a href="note (4691).html">(5) Virtual Domains</a></li>
+<li><a href="note (4692).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li><a href="note (4693).html">(7) Log Analyzer - pflogsumm</a></li>
+<li><a href="note (4694).html">(8) Log Analyzer - MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (4695).html">(9) Log Analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4696).html">Samba Server</a>
+<ul>
+<li><a href="note (4697).html">(1) Create Fully Accessed Directory</a></li>
+<li><a href="note (4698).html">(2) Create Limited Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (4699).html">(3) Install SWAT</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4700).html">Proxy Server</a>
+<ul>
+<li><a href="note (4701).html">(1) Install Squid</a></li>
+<li><a href="note (4702).html">(2) Run with Clamav - SquidClamav</a></li>
+<li><a href="note (4703).html">(3) Run with SquidClamav</a></li>
+<li style="border-bottom: 0px"><a href="note (4704).html">(4) Configure as a Reverse Proxy</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4705).html">Desktop Env</a>
+<ul>
+<li style="border-bottom: 0px"><a href="note (4706).html">(1) Configure Desktop Environment</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (4707).html">Others</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (4708).html">Create SSL Certificates</a></li>
+<li><a href="note (4709).html">Add Hard Drive</a></li>
+<li style="border-bottom: 0px"><a href="note (4707).html">Clamav <span style="display:inline;position:absolute;left:110px;">- Anti-Virus</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Services/Jobs<div class="date">2013/04/27</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Configure Services and Jobs. <br>
+There are the one with Upstart and the one with SysVinit.
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>For Upstart one, list all like follows.<br>
+The one with "start/running" is executed when booting the system. 
+And also the one with "process ***" are the daemon service.
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">initctl list </div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+mountall-net stop/waiting
+mountnfs-bootclean.sh start/running
+passwd stop/waiting
+rc stop/waiting
+rsyslog start/running, process 1021
+screen-cleanup stop/waiting
+tty4 start/running, process 1079
+udev start/running, process 429
+upstart-udev-bridge start/running, process 423
+.....
+.....
+</pre>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>For Upstart one, the configration file is under "/etc/init". 
+Jobs are controled by them. <br>
+For example, if you'd like to stop "atd" and disable autostart, set like follows.
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+<div class="block">
+root@dlp:~# <div class="color1">initctl stop atd </div><br>
+atd stop/waiting
+</div>
+<div class="block">
+root@dlp:~# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/init/atd.conf </div></div>
+<div class="color2"># make it comment</div><br>
+<div class="color1">#</div> start on runlevel [2345]<br>
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>For Upstart one, it's possible to know jobs like follows which are executed when booting. 
+And also it's possible to know the meanings for "start on ***" with "man upstart-events". 
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1"><a href="command\html\grep.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">grep</a> "start on" /etc/init/* </div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+/etc/init/acpid.conf:start on runlevel [2345]
+/etc/init/apport.conf:start on runlevel [2345]
+/etc/init/atd.conf:#start on runlevel [2345]
+/etc/init/bootmisc.sh.conf:start on virtual-filesystems
+/etc/init/checkfs.sh.conf:start on mounted MOUNTPOINT=/
+/etc/init/checkroot-bootclean.sh.conf:start on mounted MOUNTPOINT=/
+/etc/init/checkroot.sh.conf:start on mounted MOUNTPOINT=/
+/etc/init/console.conf:start on stopped rc RUNLEVEL=[2345] and container CONTAINER=lxc
+/etc/init/console-font.conf:start on starting plymouth-splash
+.....
+.....
+
+</pre>
+root@dlp:~# <div class="color1">man upstart-events </div><br>
+<pre style="font-family: Courier New; font-size: 14px; letter-spacing: 0;">
+Table 1: Well-Known System Events Summary.
+
+|-----------------------------------------------------------------------------|
+|Ref |          Event           | Type | Emit |          Time          | Note |
+|-----------------------------------------------------------------------------|
+|    | all-swaps                |  S   |  M   | &gt; (5)                  |      |
+|    | control-alt-delete(7)    |  S   |  A   | &gt; (5)                  |  A   |
+|    | container                |  S   |  C   | &gt; /run mounted         |  Q   |
+|    | dbus-activation          |  S   |  B   | &gt; D-Bus client request |      |
+|    | deconfiguring-networking |  H   |  V   | &lt; non-local IFs down   |  P   |
+|    | desktop-session-start    |  H   |  D   | &gt; X(7) session created |  B   |
+|    | desktop-shutdown         |  H   |  D   | &gt; X(7) session ended   |  O   |
+|    | device-not-ready         |  H   |  M   | &gt; (2)                  |  N   |
+|    | drm-device-added         |  S   |  U   | &gt; (5)                  |  C   |
+|    | failsafe-boot            |  S   |  X   | &gt; (7) and local IF     |  S   |
+|    | file                     |  S   |  K   | &gt; (1)                  |  U   |
+| 7  | filesystem               |  S   |  M   | After last (1)         |  D   |
+|    | graphics-device-added    |  S   |  U   | &gt; (5)                  |  C   |
+|    | keyboard-request(7)      |  S   |  A   | &gt; (5)                  |  E   |
+|    | local-filesystems(7)     |  S   |  M   | &gt; (6)                  |      |
+|    | login-session-start      |  H   |  D   | &lt; DM running           |  F   |
+| 1  | mounted(7)               |  H   |  M   | &gt; associated (2)       |  G   |
+| 2  | mounting(7)              |  H   |  M   | &gt; (5)                  |  H   |
+| 3  | net-device-added         |  S   |  U   | &gt; (5)                  |  C   |
+|    | net-device-changed       |  S   |  U   | &gt; (5)                  |  C   |
+|    | net-device-down          |  S   |  F   | &lt; (4)                  |  C   |
+| 4  | net-device-removed       |  S   |  U   | &gt; (5)                  |  C   |
+|    | net-device-up            |  S   | F,N  | &gt; (3)                  |  C   |
+|    | not-container            |  S   |  C   | &gt; /run mounted         |  Q   |
+|    | power-status-changed(7)  |  S   |  I   | &gt; (5)                  |  I   |
+|    | recovery                 |  S   |  G   | Boot (&lt;5)              |  R   |
+|    | remote-filesystems(7)    |  S   |  M   | &gt; (6)                  |      |
+|    | runlevel(7)              |  M   |  T   | &gt; (7) + (8)            |      |
+|    | socket(7)                |  S   |  S   | &gt; socket connection    |      |
+| 5  | startup(7)               |  S   |  I   | Boot                   |  J   |
+|    | started(7)               |  S   |  I   | &gt; job started          |  K   |
+|    | starting(7)              |  H   |  I   | &lt; job starts           |  K   |
+| 8  | static-network-up        |  S   |  N   | &gt; last static IF up    |      |
+|    | stopped(7)               |  S   |  I   | &gt; job stopped          |  K   |
+|    | stopping(7)              |  H   |  I   | &lt; job stops            |  K   |
+|    | unmounted-remote-        |  H   |  V   | &gt;   last   remote   FS |  L   |
+|    | filesystems              |      |      | unmounted              |      |
+| 6  | virtual-filesystems(7)   |  S   |  M   | &gt; last virtual FS (1)  |  M   |
+|-----------------------------------------------------------------------------|
+
+Table 2: Well-Known User Events Summary.
+
+|------------------------------------------------------------------------------|
+|Ref |      Event       | Type | Emit |              Time               | Note |
+|------------------------------------------------------------------------------|
+|    | desktop-end(7)   |  S   |  J   | &lt; (2)                           |      |
+|    | desktop-start(7) |  H   |  J   | &gt; (3)                           |      |
+|    | file             |  S   |  K   | &gt; (1)                           |  U   |
+| 2  | session-end(7)   |  M   |  I   | &lt; Session Init end              |      |
+| 1  | startup(7)       |  S   |  I   | &gt; Session Init start            |  J   |
+|    | :sys:*           |  S   |  E   | &gt; upstart-event-bridge(8) start |      |
+| 3  | xsession         |  M   |  H   | &gt; (1)                           |  T   |
+|------------------------------------------------------------------------------|
+
+Table 3: Event Types.
+
+|-------------------------------------------------|
+|Ref | Event Type | Notes                         |
+|-------------------------------------------------|
+| H  | Hook       | Blocking.  Waits  for  events |
+|    |            | that start on or stop on this |
+|    |            | event.                        |
+| M  | Method     | Blocking task.                |
+| S  | Signal     | Non-blocking.                 |
+|-------------------------------------------------|
+
+Table 4: Event Emitters.
+
+|-------------------------------------------------------------------------|
+|Ref | Emitter                          | Notes                           |
+|-------------------------------------------------------------------------|
+| A  | System Administrator (initiator) | Technically emitted by init(8). |
+| B  | dbus-daemon(1)                   | Run with "--activation=upstart" |
+| C  | container-detect job             |                                 |
+| D  | Display Manager                  | e.g. lightdm/gdm/kdm/xdm.       |
+| E  | upstart-event-bridge(8)          |                                 |
+| F  | ifup(8) or ifdown(8)             | See /etc/network/.              |
+| G  | bootloader or initramfs          |                                 |
+| H  | xsession-init session job        |                                 |
+| I  | init(8)                          | Either PID 1 or a Session Init. |
+| J  | job that starts desktop          | gnome-session job for Ubuntu.   |
+| K  | upstart-file-bridge(8)           |                                 |
+| M  | mountall(8)                      |                                 |
+| N  | network-interface job            |                                 |
+| S  | upstart-socket-bridge(8)         |                                 |
+| T  | telinit(8), shutdown(8)          |                                 |
+| U  | upstart-udev-bridge(8)           |                                 |
+| V  | System V init system             |                                 |
+| X  | failsafe job                     |                                 |
+|-------------------------------------------------------------------------|
+
+Table 5: Event Summary Notes.
+
+|-----------------------------------------------------------------------|
+|Note | Detail                                                          |
+|-----------------------------------------------------------------------|
+| A   | Requires administrator to press Control-Alt-Delete key combina- |
+|     | tion on the console.                                            |
+| B   | Event generated when user performs graphical login.             |
+| C   | These are specific examples. upstart-udev-bridge(8)  will  emit |
+|     | events  which  match the pattern, "S-device-A" where 'S' is the |
+|     | udev subsystem and 'A' is the udev action. See udev(7) and  for |
+|     | further  details.  If  you  have sysfs mounted, you can look in |
+|     | /sys/class/ for possible values for subsystem.                  |
+| D   | Note this is in the singular - there is no 'filesystems' event. |
+| E   | Emitted when administrator presses Alt-UpArrow key  combination |
+|     | on the console.                                                 |
+| F   | Denotes Display Manager running (about to be displayed), but no |
+|     | users logged in yet.                                            |
+| G   | Generated for each mount that completes successfully.           |
+| H   | Emitted when mount attempt for single entry from  fstab(5)  for |
+|     | any filesystem type is about to begin.                          |
+| I   | Emitted when Upstart receives the SIGPWR signal.                |
+| J   | Initial event (system or Session Init).                         |
+| K   | Although the events are emmitted by init(8), the instigator may |
+|     | be initctl(8) if a System Administrator has manually started or |
+|     | stopped a job.                                                  |
+| L   | /etc/init/umountnfs.sh.                                         |
+| M   | Emitted when all virtual filesystems (such as /proc) mounted.   |
+| N   | Emitted  when the --dev-wait-time timeout is exceeded for moun- |
+|     | tall(8).  This defaults to 30 seconds.                          |
+| O   | Emitted when the X(7) display  manager  exits  at  shutdown  or |
+|     | reboot, to hand off to the shutdown splash manager.             |
+| P   | Emitted  by  /etc/init.d/networking  just prior to stopping all |
+|     | non-local network interfaces.                                   |
+| Q   | Either 'container' or 'not-container' is emitted (depending  on |
+|     | the environment), but not both.                                 |
+| R   | Emitted  by  either  the  initramfs  or bootloader (for example |
+|     | grub) as the initial event (rather than startup(7))  to  denote |
+|     | the  system has booted into recovery mode. If recovery was suc- |
+|     | cessful, the standard startup(7) event is then emitted,  allow- |
+|     | ing the system to boot as normal.                               |
+| S   | Emitted  to  indicate  the system has failed to boot within the |
+|     | expected time. This event will trigger other jobs  to  forcibly |
+|     | attempt to bring the system into a usable state.                |
+| T   | Only emitted for a graphical session.                           |
+| U   | See file-event(7).                                              |
+|-----------------------------------------------------------------------|
+</pre>
+</td>
+</tr>
+</table>
+<table class="base" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td>For SysVinit one, for example, <a href="note (4630).html">NTP</a>, 
+it's easy to manage them to install a tool like follows. 
+</td>
+</tr>
+</table>
+<table class="term" summary="4-1">
+<tr>
+<td>
+<div class="block">
+root@dlp:~# <div class="color1"><a href="command\html\aptitude.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">aptitude</a> -y install sysv-rc-conf </div></div>
+<div class="block">
+root@dlp:~# <div class="color1"><a href="command\html\sysv-rc-conf.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">sysv-rc-conf</a> --list </div><div class="posl-1"><div class="color2"># list services</div></div></div>
+root@dlp:~# <div class="color1"><a href="command\html\sysv-rc-conf.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">sysv-rc-conf</a> ntp on </div><div class="posl-1"><div class="color2"># set auto-start for NTP</div></div><br>
+root@dlp:~# <div class="color1"><a href="command\html\sysv-rc-conf.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">sysv-rc-conf</a> ntp off </div><div class="posl-1"><div class="color2"># disable auto-start for NTP</div></div><br>
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">Initial Settings</div>
+<div class="navi2">
+<ul>
+<li><a href="note (4623).html">Add a User</a></li>
+<li><a href="note (4624).html">Enable root User</a></li>
+<li><a href="note (4625).html">Networking</a></li>
+<li><a href="note (4626).html">Services/Jobs</a></li>
+<li><a href="note (4627).html">Update System</a></li>
+<li><a href="note (4628).html">Configure vim</a></li>
+<li><a href="note (4629).html">Configure sudo</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (4710).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

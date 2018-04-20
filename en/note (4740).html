@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Ubuntu 12.04 LTS - KVM - Operations : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8796 / 62643532</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Ubuntu 12.04</div>
+<div class="navi">
+<ul>
+<li><a href="note (32).html">Get Ubuntu 12.04</a></li>
+<li><a href="note (4711).html">Install Ubuntu</a></li>
+<li class="tree"><a href="note (4712).html">Initial Settings</a>
+<ul>
+<li><a href="note (4713).html">(1) Add a user</a></li>
+<li><a href="note (4714).html">(2) Enable root user</a></li>
+<li><a href="note (4715).html">(3) Network Settings</a></li>
+<li><a href="note (4716).html">(4) Configure Services</a></li>
+<li><a href="note (4717).html">(5) Update System</a></li>
+<li><a href="note (4718).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (4719).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li><a href="note (4720).html">NTP Server</a></li>
+<li class="tree"><a href="note (4721).html">SSH Server</a>
+<ul>
+<li><a href="note (4722).html">(1) Password Authentication</a></li>
+<li><a href="note (4723).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (4724).html">(3) SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4725).html">DNS Server</a>
+<ul>
+<li><a href="note (4726).html">(1) Install BIND</a></li>
+<li><a href="note (4727).html">(2) Set Zones</a></li>
+<li><a href="note (4728).html">(3) Check working</a></li>
+<li><a href="note (4729).html">(4) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (4730).html">(5) Config as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (4731).html">DHCP Server</a></li>
+<li class="tree"><a href="note (4732).html">Storage Server</a>
+<ul>
+<li><a href="note (4733).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (4734).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4735).html">KVM</a>
+<ul>
+<li><a href="note (4736).html">(1) Install KVM</a></li>
+<li><a href="note (4737).html">(2) Create virtual machine #1</a></li>
+<li><a href="note (4738).html">(3) Create virtual machine #2</a></li>
+<li><a href="note (4739).html">(4) Create virtual machine #3</a></li>
+<li><a href="note (4740).html">(5) Operations</a></li>
+<li style="border-bottom: 0px"><a href="note (4741).html">(6) Install Virt-top</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4742).html">Cloud Compute</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (4742).html">&nbsp; OpenStack Havana</a></li>
+<li><a href="note (4743).html">( 1 ) About OpenStack Havana</a></li>
+<li><a href="note (4744).html">( 2 ) Pre-Requirements</a></li>
+<li><a href="note (4745).html">( 3 ) Conf Keystone#1</a></li>
+<li><a href="note (4746).html">( 4 ) Conf Keystone#2</a></li>
+<li><a href="note (4747).html">( 5 ) Conf Glance</a></li>
+<li><a href="note (4748).html">( 6 ) Conf Nova</a></li>
+<li><a href="note (4749).html">( 7 ) Add Virt-image</a></li>
+<li><a href="note (4750).html">( 8 ) Run Instance</a></li>
+<li><a href="note (4751).html">( 9 ) Set Floating IP</a></li>
+<li><a href="note (4752).html">(10) Add Compute Nodes</a></li>
+<li><a href="note (4753).html">(11) Configure Horizon</a></li>
+<li><a href="note (4754).html">(12) Configure Cinder</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (4755).html">(13) Use Virtual Storage(LVM)</a></li>
+</ul>
+</li>
+<li><a href="note (4756).html">NFS Server</a></li>
+<li class="tree"><a href="note (4757).html">NIS Server</a>
+<ul>
+<li><a href="note (4758).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4759).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4760).html">LDAP Server</a>
+<ul>
+<li><a href="note (4761).html">(1) Configure LDAP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (4762).html">(2) Configure LDAP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4763).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (4764).html">( 1 ) Install Apache2</a></li>
+<li><a href="note (4765).html">( 2 ) Install PHP</a></li>
+<li><a href="note (4766).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (4767).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (4768).html">( 5 ) Virtual Hostings</a></li>
+<li><a href="note (4769).html">( 6 ) Configure SSL</a></li>
+<li><a href="note (4770).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (4771).html">( 8 ) Enable suEXEC</a></li>
+<li><a href="note (4772).html">( 9 ) Basic Auth + PAM</a></li>
+<li><a href="note (4773).html">(10) Basic Auth + LDAP</a></li>
+<li><a href="note (4774).html">(11) Log analyzer - Visitors</a></li>
+<li style="border-bottom: 0px"><a href="note (4775).html">(12) Log analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4776).html">Database</a>
+<ul>
+<li><a href="note (4777).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (4778).html">(2) Install phpmyadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4779).html">FTP Server</a>
+<ul>
+<li><a href="note (4780).html">(1) Install Vsftpd</a></li>
+<li><a href="note (4781).html">(2) Install ProFTPD</a></li>
+<li><a href="note (4782).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (4783).html">(4) FTP Client - FileZilla</a></li>
+<li><a href="note (4784).html">(5) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (4785).html">(6) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (4786).html">(7) Pure-FTPd Over SSL/TLS</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4787).html">MAIL Server</a>
+<ul>
+<li><a href="note (4788).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (4789).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (4790).html">(3) Configure Client</a></li>
+<li><a href="note (4791).html">(4) Configure SSL</a></li>
+<li><a href="note (4792).html">(5) Virtual Domains</a></li>
+<li><a href="note (4793).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li style="border-bottom: 0px"><a href="note (4794).html">(7) Log Analyzer - pflogsumm</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4795).html">Samba Server</a>
+<ul>
+<li><a href="note (4796).html">(1) Create Fully Accessed Directory</a></li>
+<li><a href="note (4797).html">(2) Create Limited Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (4798).html">(3) Install SWAT</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4799).html">Proxy Server</a>
+<ul>
+<li><a href="note (4800).html">(1) Install Squid</a></li>
+<li><a href="note (4801).html">(2) Run with Clamav - SquidClamav</a></li>
+<li><a href="note (4802).html">(3) Run with SquidClamav</a></li>
+<li style="border-bottom: 0px"><a href="note (4803).html">(4) Configure as a Reverse Proxy</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (4804).html">Desktop Env</a>
+<ul>
+<li><a href="note (4805).html">(1) Configure Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (4806).html">(2) Install VNC Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (4807).html">Others</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (4808).html">Create SSL Certificates</a></li>
+<li><a href="note (4809).html">Add Hard Drive</a></li>
+<li style="border-bottom: 0px"><a href="note (4807).html">Clamav <span style="display:inline;position:absolute;left:110px;">- Anti-Virus</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Operations<div class="date">2012/05/07</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Operarions with virsh command</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Start Virtual Machine 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">virsh start www </div><div class="posl-1"><div class="color2"># Start Virtual Machine 'www'</div></div><br>
+<div class="block">Domain www started</div>
+root@dlp:~# <div class="color1">virsh start www --console </div><div class="posl-1"><div class="color2"># start and connect to console of 'www'</div></div><br>
+Domain www started<br>
+Connected to domain www
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Stop Virtual Machine 
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">virsh shutdown www </div><div class="posl-1"><div class="color2"># Stop Virtual Machine 'www' ( require acpid in guestos )</div></div><br>
+<div class="block">Domain www is being shutdown</div>
+root@dlp:~# <div class="color1">virsh destroy www </div><div class="posl-1"><div class="color2"># Stop fourcely Virtual Machine 'www'</div></div><br>
+Domain www destroyed
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>Set auto-start for Virtual Machines 
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">virsh autostart www </div><div class="posl-1"><div class="color2"># Enable auto-start for 'www'</div></div><br>
+<div class="block">Domain www marked as autostarted</div>
+root@dlp:~# <div class="color1">virsh autostart --disable www </div><div class="posl-1"><div class="color2"># Disable auto-start for 'www'</div></div><br>
+Domain www unmarked as autostarted
+</td>
+</tr>
+</table>
+<table class="base" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td>List Virtual Machines 
+</td>
+</tr>
+</table>
+<table class="term" summary="4-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">virsh list </div><div class="posl-1"><div class="color2"># List all active Virtual Machines</div></div><br>
+&nbsp; Id Name<div class="posl-1">State</div><br>
+------------------------------------------<br>
+<div class="block">&nbsp; 2 &nbsp; win2k8<div class="posl-1">running</div></div>
+root@dlp:~# <div class="color1">virsh list --all </div><div class="posl-1"><div class="color2"># List all Virtual Machines include inactives</div></div><br>
+&nbsp; Id Name<div class="posl-1">State</div><br>
+------------------------------------------<br>
+&nbsp; 2 &nbsp; win2k8<div class="posl-1">running</div><br>
+&nbsp; 1 &nbsp; www<div class="posl-1">shut off</div>
+</td>
+</tr>
+</table>
+<table class="base" summary="5">
+<tr>
+<td class="num">[5]</td>
+<td>Switch console<br>
+Move to GuestOS to HostOS with Ctrl + ] key.<br>
+Move to HostOS to GuestOS with a command 'virsh console (name of virtual machine)'. 
+</td>
+</tr>
+</table>
+<table class="term" summary="5-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">virsh console www </div><div class="posl-1"><div class="color2"># connect to 'www'</div></div><br>
+<div class="block">
+Connected to domain www<br>
+Escape character is ^]<div class="posl-1"><div class="color2"># Enter key</div></div>
+</div>
+<div class="block">
+Ubuntu 12.04 LTS temp ttyS0
+</div>
+<div class="block">
+www login:<div class="posl-1"><div class="color2"># just switched on Guest</div></div>
+</div>
+Password:<br>
+root@www:~# <div class="posl-1"><div class="color2"># "Ctrl + ]" key</div></div><br>
+root@dlp:~# <div class="posl-1"><div class="color2"># just switched on Host</div></div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="6">
+<tr>
+<td class="num">[6]</td>
+<td>Other options. There are many options, please try to execute them. 
+</td>
+</tr>
+</table>
+<table class="term" summary="6-1">
+<tr>
+<td>
+root@dlp:~# <div class="color1">virsh --help </div>
+<pre style="font-family: Courier New; font-size: 14px; letter-spacing: 0;">
+
+virsh [options]... [&lt;command_string&gt;]
+virsh [options]... &lt;command&gt; [args...]
+
+  options:
+    -c | --connect=URI      hypervisor connection URI
+    -r | --readonly         connect readonly
+    -d | --debug=NUM        debug level [0-4]
+    -h | --help             this help
+    -q | --quiet            quiet mode
+    -t | --timing           print timing information
+    -l | --log=FILE         output logging to file
+    -v                      short version
+    -V                      long version
+         --version[=TYPE]   version, TYPE is short or long (default short)
+    -e | --escape &lt;char&gt;    set escape sequence for console
+
+  commands (non interactive mode):
+
+ Domain Management (help keyword 'domain')
+    attach-device                  attach device from an XML file
+    attach-disk                    attach disk device
+    attach-interface               attach network interface
+    autostart                      autostart a domain
+    blkdeviotune                   Set or query a block device I/O tuning parameters.
+    blkiotune                      Get or set blkio parameters
+    blockpull                      Populate a disk from its backing image.
+    blockjob                       Manage active block operations.
+    blockresize                    Resize block device of domain.
+    console                        connect to the guest console
+    cpu-baseline                   compute baseline CPU
+    cpu-compare                    compare host CPU with a CPU described by an XML file
+    create                         create a domain from an XML file
+    define                         define (but don't start) a domain from an XML file
+    destroy                        destroy (stop) a domain
+    detach-device                  detach device from an XML file
+    detach-disk                    detach disk device
+    detach-interface               detach network interface
+    domid                          convert a domain name or UUID to domain id
+    domif-setlink                  set link state of a virtual interface
+    domjobabort                    abort active domain job
+    domjobinfo                     domain job information
+    domname                        convert a domain id or UUID to domain name
+    domuuid                        convert a domain name or id to domain UUID
+    domxml-from-native             Convert native config to domain XML
+    domxml-to-native               Convert domain XML to native config
+    dump                           dump the core of a domain to a file for analysis
+    dumpxml                        domain information in XML
+    edit                           edit XML configuration for a domain
+    inject-nmi                     Inject NMI to the guest
+    send-key                       Send keycodes to the guest
+    managedsave                    managed save of a domain state
+    managedsave-remove             Remove managed save of a domain
+    maxvcpus                       connection vcpu maximum
+    memtune                        Get or set memory parameters
+    migrate                        migrate domain to another host
+    migrate-setmaxdowntime         set maximum tolerable downtime
+    migrate-setspeed               Set the maximum migration bandwidth
+    migrate-getspeed               Get the maximum migration bandwidth
+    reboot                         reboot a domain
+    reset                          reset a domain
+    restore                        restore a domain from a saved state in a file
+    resume                         resume a domain
+    save                           save a domain state to a file
+    save-image-define              redefine the XML for a domain's saved state file
+    save-image-dumpxml             saved state domain information in XML
+    save-image-edit                edit XML for a domain's saved state file
+    schedinfo                      show/set scheduler parameters
+    screenshot                     take a screenshot of a current domain console and store it into a file
+    setmaxmem                      change maximum memory limit
+    setmem                         change memory allocation
+    setvcpus                       change number of virtual CPUs
+    shutdown                       gracefully shutdown a domain
+    start                          start a (previously defined) inactive domain
+    suspend                        suspend a domain
+    ttyconsole                     tty console
+    undefine                       undefine a domain
+    update-device                  update device from an XML file
+    vcpucount                      domain vcpu counts
+    vcpuinfo                       detailed domain vcpu information
+    vcpupin                        control or query domain vcpu affinity
+    version                        show version
+    vncdisplay                     vnc display
+
+ Domain Monitoring (help keyword 'monitor')
+    domblkinfo                     domain block device size information
+    domblklist                     list all domain blocks
+    domblkstat                     get device block stats for a domain
+    domcontrol                     domain control interface state
+    domif-getlink                  get link state of a virtual interface
+    domifstat                      get network interface stats for a domain
+    dominfo                        domain information
+    dommemstat                     get memory statistics for a domain
+    domstate                       domain state
+    list                           list domains
+
+ Host and Hypervisor (help keyword 'host')
+    capabilities                   capabilities
+    connect                        (re)connect to hypervisor
+    freecell                       NUMA free memory
+    hostname                       print the hypervisor hostname
+    nodecpustats                   Prints cpu stats of the node.
+    nodeinfo                       node information
+    nodememstats                   Prints memory stats of the node.
+    nodesuspend                    suspend the host node for a given time duration
+    qemu-attach                    QEMU Attach
+    qemu-monitor-command           QEMU Monitor Command
+    sysinfo                        print the hypervisor sysinfo
+    uri                            print the hypervisor canonical URI
+
+ Interface (help keyword 'interface')
+    iface-begin                    create a snapshot of current interfaces settings, which can be later commited
+                                   (iface-commit) or restored (iface-rollback)
+    iface-bridge                   create a bridge device and attach an existing network device to it
+    iface-commit                   commit changes made since iface-begin and free restore point
+    iface-define                   define (but don't start) a physical host interface from an XML file
+    iface-destroy                  destroy a physical host interface (disable it / "if-down")
+    iface-dumpxml                  interface information in XML
+    iface-edit                     edit XML configuration for a physical host interface
+    iface-list                     list physical host interfaces
+    iface-mac                      convert an interface name to interface MAC address
+    iface-name                     convert an interface MAC address to interface name
+    iface-rollback                 rollback to previous saved configuration created via iface-begin
+    iface-start                    start a physical host interface (enable it / "if-up")
+    iface-unbridge                 undefine a bridge device after detaching its slave device
+    iface-undefine                 undefine a physical host interface (remove it from configuration)
+
+ Network Filter (help keyword 'filter')
+    nwfilter-define                define or update a network filter from an XML file
+    nwfilter-dumpxml               network filter information in XML
+    nwfilter-edit                  edit XML configuration for a network filter
+    nwfilter-list                  list network filters
+    nwfilter-undefine              undefine a network filter
+
+ Networking (help keyword 'network')
+    net-autostart                  autostart a network
+    net-create                     create a network from an XML file
+    net-define                     define (but don't start) a network from an XML file
+    net-destroy                    destroy (stop) a network
+    net-dumpxml                    network information in XML
+    net-edit                       edit XML configuration for a network
+    net-info                       network information
+    net-list                       list networks
+    net-name                       convert a network UUID to network name
+    net-start                      start a (previously defined) inactive network
+    net-undefine                   undefine an inactive network
+    net-uuid                       convert a network name to network UUID
+
+ Node Device (help keyword 'nodedev')
+    nodedev-create                 create a device defined by an XML file on the node
+    nodedev-destroy                destroy (stop) a device on the node
+    nodedev-dettach                dettach node device from its device driver
+    nodedev-dumpxml                node device details in XML
+    nodedev-list                   enumerate devices on this host
+    nodedev-reattach               reattach node device to its device driver
+    nodedev-reset                  reset node device
+
+ Secret (help keyword 'secret')
+    secret-define                  define or modify a secret from an XML file
+    secret-dumpxml                 secret attributes in XML
+    secret-get-value               Output a secret value
+    secret-list                    list secrets
+    secret-set-value               set a secret value
+    secret-undefine                undefine a secret
+
+ Snapshot (help keyword 'snapshot')
+    snapshot-create                Create a snapshot from XML
+    snapshot-create-as             Create a snapshot from a set of args
+    snapshot-current               Get or set the current snapshot
+    snapshot-delete                Delete a domain snapshot
+    snapshot-dumpxml               Dump XML for a domain snapshot
+    snapshot-edit                  edit XML for a snapshot
+    snapshot-list                  List snapshots for a domain
+    snapshot-parent                Get the name of the parent of a snapshot
+    snapshot-revert                Revert a domain to a snapshot
+
+ Storage Pool (help keyword 'pool')
+    find-storage-pool-sources-as   find potential storage pool sources
+    find-storage-pool-sources      discover potential storage pool sources
+    pool-autostart                 autostart a pool
+    pool-build                     build a pool
+    pool-create-as                 create a pool from a set of args
+    pool-create                    create a pool from an XML file
+    pool-define-as                 define a pool from a set of args
+    pool-define                    define (but don't start) a pool from an XML file
+    pool-delete                    delete a pool
+    pool-destroy                   destroy (stop) a pool
+    pool-dumpxml                   pool information in XML
+    pool-edit                      edit XML configuration for a storage pool
+    pool-info                      storage pool information
+    pool-list                      list pools
+    pool-name                      convert a pool UUID to pool name
+    pool-refresh                   refresh a pool
+    pool-start                     start a (previously defined) inactive pool
+    pool-undefine                  undefine an inactive pool
+    pool-uuid                      convert a pool name to pool UUID
+
+ Storage Volume (help keyword 'volume')
+    vol-clone                      clone a volume.
+    vol-create-as                  create a volume from a set of args
+    vol-create                     create a vol from an XML file
+    vol-create-from                create a vol, using another volume as input
+    vol-delete                     delete a vol
+    vol-download                   Download a volume to a file
+    vol-dumpxml                    vol information in XML
+    vol-info                       storage vol information
+    vol-key                        returns the volume key for a given volume name or path
+    vol-list                       list vols
+    vol-name                       returns the volume name for a given volume key or path
+    vol-path                       returns the volume path for a given volume name or key
+    vol-pool                       returns the storage pool for a given volume key or path
+    vol-upload                     upload a file into a volume
+    vol-wipe                       wipe a vol
+
+ Virsh itself (help keyword 'virsh')
+    cd                             change the current directory
+    echo                           echo arguments
+    exit                           quit this interactive terminal
+    help                           print help
+    pwd                            print the current directory
+    quit                           quit this interactive terminal
+
+
+  (specify help &lt;group&gt; for details about the commands in the group)
+
+  (specify help &lt;command&gt; for details about the command)
+</pre>
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">KVM</div>
+<div class="navi2">
+<ul>
+<li><a href="note (4736).html">Install KVM</a></li>
+<li><a href="note (4737).html">Virtual machine#1</a></li>
+<li><a href="note (4738).html">Virtual machine#2</a></li>
+<li><a href="note (4739).html">Virtual machine#3</a></li>
+<li><a href="note (4740).html">Operations</a></li>
+<li><a href="note (4741).html">Install Virt-top</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (4810).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

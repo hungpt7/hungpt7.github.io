@@ -1,0 +1,124 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>logrotate : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+logrotateè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã§æŒ‡å®šã™ã‚‹ã‚³ãƒžãƒ³ãƒ‰</td>
+</tr>
+<tr>
+<td>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td>compress</td>
+<td>ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã—ãŸãƒ­ã‚°ã‚’gzipã§åœ§ç¸®ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>delaycompress</td>
+<td>ãƒ­ã‚°ã®åœ§ç¸®ä½œæ¥­ã‚’æ¬¡å›žã®ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³æ™‚ã¾ã§é…ã‚‰ã›ã‚‹ã€‚compressã¨å…±ã«æŒ‡å®šã™ã‚‹ã€‚
+</td>
+</tr>
+<tr>
+<td>nocompress</td>
+<td>ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã—ãŸãƒ­ã‚°ã‚’åœ§ç¸®ã—ãªã„
+</td>
+</tr>
+<tr>
+<td>create</td>
+<td>ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³å¾Œã«ç©ºã®ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ–°è¦ä½œæˆã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>nocreate</td>
+<td>ç©ºã®ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ–°è¦ä½œæˆã—ãªã„
+</td>
+</tr>
+<tr>
+<td>copytruncate</td>
+<td>ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼ã—ã¦å†…å®¹ã‚’å‰Šé™¤ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>daily</td>
+<td>ãƒ­ã‚°ã‚’æ¯Žæ—¥ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>weekly</td>
+<td>ãƒ­ã‚°ã‚’æ¯Žé€±ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>monthly</td>
+<td>ãƒ­ã‚°ã‚’æ¯Žæœˆãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>ifempty</td>
+<td>ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ãŒç©ºã§ã‚‚ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>notifempty</td>
+<td>ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ãŒç©ºãªã‚‰ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã—ãªã„
+</td>
+</tr>
+<tr>
+<td>missingok</td>
+<td>ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ãŒå­˜åœ¨ã—ãªãã¦ã‚‚ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã•ãšã«å‡¦ç†ã‚’ç¶šè¡Œã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>nomissingok</td>
+<td>ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ãŒå­˜åœ¨ã—ãªã„å ´åˆã«ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã™
+</td>
+</tr>
+<tr>
+<td>olddir ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå</td>
+<td>æŒ‡å®šã—ãŸãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå†…ã«ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã—ãŸãƒ­ã‚°ã‚’æ ¼ç´ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>noolddir</td>
+<td>ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³å¯¾è±¡ã®ãƒ­ã‚°ã¨åŒã˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã—ãŸãƒ­ã‚°ã‚’æ ¼ç´ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>postrotateï½žendscript</td>
+<td>postrotateã¨endscriptã®é–“ã«è¨˜è¿°ã•ã‚ŒãŸã‚³ãƒžãƒ³ãƒ‰ã‚’ãƒ­ã‚°ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³å¾Œã«å®Ÿè¡Œã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>prerotateï½žendscript</td>
+<td>postrotateã¨endscriptã®é–“ã«è¨˜è¿°ã•ã‚ŒãŸã‚³ãƒžãƒ³ãƒ‰ã‚’ãƒ­ã‚°ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³å‰ã«å®Ÿè¡Œã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>rotate å›žæ•°</td>
+<td>ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹å›žæ•°ã‚’æŒ‡å®š
+</td>
+</tr>
+<tr>
+<td>size ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º</td>
+<td>ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ãŒæŒ‡å®šã—ãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºä»¥ä¸Šã«ãªã£ãŸã‚‰ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹
+</td>
+</tr>
+<tr>
+<td>sharedscripts</td>
+<td>è¤‡æ•°æŒ‡å®šã—ãŸãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã«å¯¾ã—ã€postrotateã¾ãŸã¯prerotateã§è¨˜è¿°ã—ãŸã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œ
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

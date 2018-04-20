@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>SUSE Linux Enterprise 12 : Initial Settings : Vim Settings : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8100 / 62642836</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">SLES 12</div>
+<div class="navi">
+<ul>
+<li><a href="note (9).html">Get SLES 12</a></li>
+<li><a href="note (2168).html">Install SLES 12</a></li>
+<li class="tree"><a href="note (2169).html">Initial Settings</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (2170).html">(1) Add Users</a></li>
+<li><a href="note (2171).html">(2) FireWall</a></li>
+<li><a href="note (2172).html">(3) Networking</a></li>
+<li><a href="note (2173).html">(4) Services</a></li>
+<li><a href="note (2174).html">(5) Activate System</a></li>
+<li><a href="note (2175).html">(6) Update System</a></li>
+<li><a href="note (2176).html">(7) Vim Settings</a></li>
+<li><a href="note (2177).html">(8) Sudo Settings</a></li>
+<li style="border-bottom: 0px"><a href="note (2178).html">(9) Add Add-on Repository</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2179).html">NTP Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (2180).html">(1) Configure NTP Server (NTPd)</a></li>
+<li style="border-bottom: 0px"><a href="note (2181).html">(2) Configure NTP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2182).html">SSH Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (2183).html">(1) KeyBoard-Intereractive Auth</a></li>
+<li><a href="note (2184).html">(2) SSH File Transfer(SUSE)</a></li>
+<li><a href="note (2185).html">(3) SSH File Transfer(Windows)</a></li>
+<li><a href="note (2186).html">(4) SSH Key-Pair Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (2187).html">(5) SFTP only + Chroot</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2188).html">DNS Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (2189).html">(1) Install BIND</a></li>
+<li><a href="note (2190).html">(2) Configure Zones</a></li>
+<li><a href="note (2191).html">(3) Start BIND</a></li>
+<li><a href="note (2192).html">(4) Chroot Environment</a></li>
+<li><a href="note (2193).html">(5) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (2194).html">(6) Configure as a Slave Server</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2195).html">DHCP Server</a>
+<ul>
+<li><a href="note (2196).html">(1) Configure DHCP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (2197).html">(2) Configure DHCP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2198).html">Storage Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (2198).html">&nbsp; NFS</a></li>
+<li><a href="note (2199).html">(1) Configure NFS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (2200).html">(2) Configure NFS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2201).html">Virtualization</a>
+<ul style="position: absolute; margin-top: -9.2em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (2201).html">&nbsp; KVM</a></li>
+<li><a href="note (2202).html">(1) Install KVM</a></li>
+<li><a href="note (2203).html">(2) Create Virtual Machine#1</a></li>
+<li><a href="note (2204).html">(3) Create Virtual Machine#2</a></li>
+<li><a href="note (2205).html">(4) Basic Operation</a></li>
+<li><a href="note (2206).html">(5) Management Tools</a></li>
+<li><a href="note (2207).html">(6) SPICE Server</a></li>
+<li><a href="note (2208).html">(7) SPICE Client</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (2209).html">(8) Nested KVM</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2210).html">Directory Server</a>
+<ul style="position: absolute; margin-top: -1.8em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (2210).html">&nbsp; OpenLDAP</a></li>
+<li><a href="note (2211).html">(1) Configure LDAP Server</a></li>
+<li><a href="note (2212).html">(2) Add User Accounts</a></li>
+<li><a href="note (2213).html">(3) Configure LDAP Client</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (2214).html">(4) LDAP Replication</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2215).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -11.0em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (2215).html">&nbsp; Apache2</a></li>
+<li><a href="note (2216).html">( 1 ) Install Apache2</a></li>
+<li><a href="note (2217).html">( 2 ) Use Perl Scripts</a></li>
+<li><a href="note (2218).html">( 3 ) Use PHP Scripts</a></li>
+<li><a href="note (2219).html">( 4 ) Use Ruby Scripts</a></li>
+<li><a href="note (2220).html">( 5 ) Use Python Scripts</a></li>
+<li><a href="note (2221).html">( 6 ) Enable UserDir</a></li>
+<li><a href="note (2222).html">( 7 ) Virtual Hostings</a></li>
+<li><a href="note (2223).html">( 8 ) SSL Settings</a></li>
+<li><a href="note (2224).html">( 9 ) Basic Authentication</a></li>
+<li><a href="note (2225).html">(10) Kerberos Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (2226).html">(11) Use WebDAV</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2227).html">Database</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (2227).html">&nbsp; MariaDB</a></li>
+<li><a href="note (2228).html">(1) Install MariaDB</a></li>
+<li style="border-bottom: 0px"><a href="note (2229).html">(2) MariaDB Replication</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2230).html">FTP Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (2231).html">(1) Install Vsftpd</a></li>
+<li><a href="note (2232).html">(2) FTP Client : SUSE</a></li>
+<li><a href="note (2233).html">(3) FTP Client : Windows</a></li>
+<li style="border-bottom: 0px"><a href="note (2234).html">(4) Vsftpd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2235).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -3.8em;">
+<li><a href="note (2236).html">(1) Install Postfix</a></li>
+<li><a href="note (2237).html">(2) Install Dovecot</a></li>
+<li><a href="note (2238).html">(3) Client's Settings</a></li>
+<li><a href="note (2239).html">(4) SSL Settings</a></li>
+<li><a href="note (2240).html">(5) Virtual Domain</a></li>
+<li style="border-bottom: 0px"><a href="note (2241).html">(6) Postfix + Clamav + Amavisd</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2242).html">Samba Server</a>
+<ul style="position: absolute; margin-top: -1.8em;">
+<li><a href="note (2243).html">(1) Fully accessed shared Folder</a></li>
+<li style="border-bottom: 0px"><a href="note (2244).html">(2) Limited accessed shared Folder</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2245).html">Proxy Server</a>
+<ul style="position: absolute; margin-top: -3.6em;">
+<li><a href="note (2246).html">(1) Install Squid</a></li>
+<li><a href="note (2247).html">(2) Proxy Clients' Settings</a></li>
+<li><a href="note (2248).html">(3) Set Basic Auth</a></li>
+<li><a href="note (2249).html">(4) Reverse Proxy Settings</a></li>
+<li style="border-bottom: 0px"><a href="note (2250).html">(5) Squid + SquidGuard</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (2251).html">Desktop Env</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (2252).html">(1) Desktop Environment</a></li>
+<li><a href="note (2253).html">(2) Configure VNC Server</a></li>
+<li style="border-bottom: 0px"><a href="note (2254).html">(3) Configure XRDP Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (2255).html">Others</a>
+<ul style="position: absolute; margin-top: -9.2em;">
+<li><a href="note (2256).html">Create SSL Certificates</a></li>
+<li><a href="note (2257).html">Change Run-Level</a></li>
+<li><a href="note (2258).html">Set Timezone</a></li>
+<li><a href="note (2259).html">Set Keymap</a></li>
+<li><a href="note (2260).html">Set Locale</a></li>
+<li><a href="note (2255).html">Set Hostname</a></li>
+<li style="border-bottom: 0px"><a href="note (2261).html">Clamav AntiVirus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Vim Settings<div class="date">2015/11/21</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Install and Configure Vim that is more convenience than vi.
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Install Vim.
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+dlp:~ # <div class="color1"><a href="command\html\zypper.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">zypper</a> -n install vim </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Set command alias. ( Apply to all users below. If you apply to a user, Write the same settings in '~/.bashrc' )
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+<div class="block">
+dlp:~ # <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/profile </div></div>
+<div class="block">
+<div class="color2"># add to the end</div><br>
+<div class="color1">alias vi='vim'</div>
+</div>
+<div class="color2"># apply changing</div><br>
+dlp:~ # <div class="color1"><a href="command\html\source.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">source</a> /etc/profile </div>
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>Configure Vim. ( Apply to a user below. If you applly to all users, Write the same settings in '/etc/vimrc', 
+some settings are applied by default though. )
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+<div class="block">
+dlp:~ # <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> ~/.vimrc </div></div>
+<div class="color1">
+<div class="block">
+<div class="color2">" use extended function of vim (no compatible with vi)</div><br>
+set nocompatible
+</div>
+<div class="block">
+<div class="color2">" specify encoding</div><br>
+set encoding=euc-jp
+</div>
+<div class="block">
+<div class="color2">" specify file encoding</div><br>
+set fileencodings=iso-2022-jp,sjis
+</div>
+<div class="block">
+<div class="color2">" specify file formats</div><br>
+set fileformats=unix,dos
+</div>
+<div class="block">
+<div class="color2">" take backup</div><br>
+<div class="color2">" if not, specify [ set nobackup ]</div><br>
+set backup
+</div>
+<div class="block">
+<div class="color2">" specify backup directory</div><br>
+set backupdir=~/backup
+</div>
+<div class="block">
+<div class="color2">" take 50 search histories</div><br>
+set history=50
+</div>
+<div class="block">
+<div class="color2">" ignore Case</div><br>
+set ignorecase
+</div>
+<div class="block">
+<div class="color2">" distinct Capital if you mix it in search words</div><br>
+set smartcase
+</div>
+<div class="block">
+<div class="color2">" highlights matched words</div><br>
+<div class="color2">" if not, specify [ set nohlsearch ]</div><br>
+set hlsearch
+</div>
+<div class="block">
+<div class="color2">" use incremental search</div><br>
+<div class="color2">" if not, specify [ set noincsearch ]</div><br>
+set incsearch
+</div>
+<div class="block">
+<div class="color2">" show line number</div><br>
+<div class="color2">" if not, specify [ set nonumber ]</div><br>
+set number
+</div>
+<div class="block">
+<div class="color2">" Visualize break ( $ ) or tab ( ^I )</div><br>
+set list
+</div>
+<div class="block">
+<div class="color2">" highlights parentheses</div><br>
+set showmatch
+</div>
+<div class="block">
+<div class="color2">" show color display</div><br>
+<div class="color2">" if not, specify [ syntax off ]</div><br>
+syntax on
+</div>
+<div class="block">
+<div class="color2">" change colors for comments if [ syntax on ] is set</div><br>
+highlight Comment ctermfg=LightCyan
+</div>
+<div class="color2">" wrap lines</div><br>
+<div class="color2">" if not, specify [ set nowrap ]</div><br>
+set wrap</div><br>
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">Initial Settings</div>
+<div class="navi2">
+<ul>
+<li><a href="note (2170).html">Add Users</a></li>
+<li><a href="note (2171).html">FireWall</a></li>
+<li><a href="note (2172).html">Networking</a></li>
+<li><a href="note (2173).html">Services</a></li>
+<li><a href="note (2174).html">Activate System</a></li>
+<li><a href="note (2175).html">Update System</a></li>
+<li><a href="note (2176).html">Vim Settings</a></li>
+<li><a href="note (2177).html">Sudo Settings</a></li>
+<li><a href="note (2178).html">Add-on Repository</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (2262).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Fedora 17 - Proxy Server - Run with Clamav - SquidClamav : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8393 / 62643129</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Fedora 17</div>
+<div class="navi">
+<ul>
+<li><a href="note (23).html">Get Fedora 17</a></li>
+<li><a href="note (3668).html">Install Fedora 17</a></li>
+<li class="tree"><a href="note (3669).html">Initial Config</a>
+<ul>
+<li><a href="note (3670).html">(1) Create a User</a></li>
+<li><a href="note (3671).html">(2) FW &amp; SELinux</a></li>
+<li><a href="note (3672).html">(3) Networking</a></li>
+<li><a href="note (3673).html">(4) Services</a></li>
+<li><a href="note (3674).html">(5) Update System</a></li>
+<li><a href="note (3675).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (3676).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li><a href="note (3677).html">NTP Server</a></li>
+<li class="tree"><a href="note (3678).html">SSH Server</a>
+<ul>
+<li><a href="note (3679).html">(1) Password Authentication</a></li>
+<li><a href="note (3680).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (3681).html">(3) Transfer files with SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3682).html">DNS Server</a>
+<ul>
+<li><a href="note (3683).html">(1) Install BIND</a></li>
+<li><a href="note (3684).html">(2) Configure Zones</a></li>
+<li><a href="note (3685).html">(3) Start BIND</a></li>
+<li><a href="note (3686).html">(4) chroot Environment</a></li>
+<li><a href="note (3687).html">(5) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (3688).html">(6) Configure as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (3689).html">DHCP Server</a></li>
+<li class="tree"><a href="note (3690).html">Storage Server</a>
+<ul>
+<li><a href="note (3691).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (3692).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3693).html">Virtualization</a>
+<ul>
+<li><a href="note (3694).html">(1) Install KVM</a></li>
+<li><a href="note (3695).html">(2) Create Virtual Machine #1</a></li>
+<li><a href="note (3696).html">(3) Create Virtual Machine #2</a></li>
+<li><a href="note (3697).html">(4) Create Virtual Machine #3</a></li>
+<li><a href="note (3698).html">(5) Operation</a></li>
+<li><a href="note (3699).html">(6) Install Virt-top</a></li>
+<li><a href="note (3700).html">(7) Configure SPICE Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3701).html">(8) Configure SPICE Client</a></li>
+</ul>
+</li>
+<li><a href="note (3702).html">NFS Server</a></li>
+<li class="tree"><a href="note (3703).html">NIS Server</a>
+<ul>
+<li><a href="note (3704).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3705).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3706).html">LDAP Server</a>
+<ul>
+<li><a href="note (3707).html">(1) Configure LDAP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3708).html">(2) Configure LDAP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3709).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (3710).html">( 1 ) Install/Configure httpd</a></li>
+<li><a href="note (3711).html">( 2 ) Install PHP</a></li>
+<li><a href="note (3712).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (3713).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (3714).html">( 5 ) Configure SSL</a></li>
+<li><a href="note (3715).html">( 6 ) Virtual Hostings</a></li>
+<li><a href="note (3716).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (3717).html">( 8 ) Basic Auth + PAM</a></li>
+<li><a href="note (3718).html">( 9 ) Basic Auth + LDAP</a></li>
+<li><a href="note (3719).html">(10) Log Analyzer - Visitors</a></li>
+<li><a href="note (3720).html">(11) Log Analyzer - AWstats</a></li>
+<li><a href="note (3721).html">(12) WebMail - SquirrelMail</a></li>
+<li style="border-bottom: 0px"><a href="note (3722).html">(13) WebMail - RoundCubeMail</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3723).html">Database</a>
+<ul>
+<li><a href="note (3724).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (3725).html">(2) Install phpmyadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3726).html">FTP Server</a>
+<ul>
+<li><a href="note (3727).html">(1) Install Vsftpd</a></li>
+<li><a href="note (3728).html">(2) Install ProFTPD</a></li>
+<li><a href="note (3729).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (3730).html">(4) FTP Client - FileZilla</a></li>
+<li><a href="note (3731).html">(5) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (3732).html">(6) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (3733).html">(7) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3734).html">MAIL Server</a>
+<ul>
+<li><a href="note (3735).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (3736).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (3737).html">(3) Configure Client</a></li>
+<li><a href="note (3738).html">(4) Configure SSL</a></li>
+<li><a href="note (3739).html">(5) Virtual Domains</a></li>
+<li><a href="note (3740).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li><a href="note (3741).html">(7) Log Analyzer - pflogsumm</a></li>
+<li><a href="note (3742).html">(8) Log Analyzer - MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (3743).html">(9) Log Analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3744).html">Samba Server</a>
+<ul>
+<li><a href="note (3745).html">(1) Create fully accessed Directory</a></li>
+<li><a href="note (3746).html">(2) Create Limited Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (3747).html">(3) Install SWAT</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3748).html">Proxy Server</a>
+<ul>
+<li><a href="note (3749).html">(1) Install Squid</a></li>
+<li><a href="note (3750).html">(2) Run with Clamav - SquidClamav</a></li>
+<li><a href="note (3751).html">(3) Run with SquidGuard</a></li>
+<li style="border-bottom: 0px"><a href="note (3752).html">(4) Config as a Reverse Proxy</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3753).html">Desktop Env</a>
+<ul>
+<li><a href="note (3754).html">(1) Install Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (3755).html">(2) Install VNC Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (3756).html">Others</a>
+<ul style="position: absolute; margin-top: -1.8em;">
+<li><a href="note (3757).html">Create SSL Certificates</a></li>
+<li><a href="note (3758).html">Add Hard Drive</a></li>
+<li style="border-bottom: 0px"><a href="note (3756).html">Clamav <span style="display:inline;position:absolute;left:110px;">- Anti-Virus</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">Run with Clamav - SquidClamav<div class="date">2012/06/17</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Install SquidClamav and Configure Proxy Server in order to scan download files to protect from virus. 
+<a href="note (3756).html">Install Clamav first</a>. 
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Install Clamd 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\yum.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">yum</a> -y install clamav-server clamav-server-systemd clamav-server-sysvinit </div></div>
+[root@lan ~]# <div class="color1"><a href="command\html\cp.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cp</a> /usr/share/doc/clamav-server-*/clamd.conf /etc/clamd.d/squid.conf </div><br>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/clamd.d/squid.conf </div></div>
+<div class="block">
+<div class="color2"># line 8: make it comment</div><br>
+<div class="color1">#</div>Example
+</div>
+<div class="block">
+<div class="color2"># line 14: uncomment and change</div><br>
+LogFile <div class="color1">/var/log/clamd.squid </div>
+</div>
+<div class="block">
+<div class="color2"># line 61: uncomment and change</div><br>
+PidFile <div class="color1">/var/run/clamd.squid/clamd.pid </div>
+</div>
+<div class="block">
+<div class="color2"># line 65: uncomment</div><br>
+TemporaryDirectory /var/tmp
+</div>
+<div class="block">
+<div class="color2"># line 80: uncomment and change</div><br>
+LocalSocket <div class="color1">/var/run/clamd.squid/clamd.sock </div>
+</div>
+<div class="block">
+<div class="color2"># line 96: uncomment</div><br>
+TCPSocket 3310
+</div>
+<div class="block">
+<div class="color2"># line 189: change</div><br>
+User <div class="color1">squidclamav </div>
+</div>
+[root@lan ~]# <div class="color1"><a href="command\html\useradd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">useradd</a> -d /var/tmp -s /sbin/nologin squidclamav </div><br>
+useradd: warning: the home directory already exists.<br>
+Not copying any file from skel directory into it.<br>
+[root@lan ~]# <div class="color1"><a href="command\html\mkdir.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">mkdir</a> /var/run/clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\chown.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chown</a> squidclamav. /var/run/clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\cp.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cp</a> /usr/share/doc/clamav-server-*/clamd.sysconfig /etc/sysconfig/clamd.squid </div><br>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/sysconfig/clamd.squid </div></div>
+<div class="block">
+<div class="color2"># line 1, 2: uncomment and change</div><br>
+CLAMD_CONFIGFILE=/etc/clamd.d/<div class="color1">squid.conf</div><br>
+CLAMD_SOCKET=/var/run/<div class="color1">clamd.squid</div>/clamd.sock
+</div>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/tmpfiles.d/clamd.squid.conf </div></div>
+<div class="block"><div class="color1">
+<div class="color2"># create new</div><br>
+d /var/run/clamd.squid 0755 squidclamav squidclamav -
+</div></div>
+[root@lan ~]# <div class="color1"><a href="command\html\cp.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cp</a> /usr/share/doc/clamav-server-*/clamd.init /etc/rc.d/init.d/clamd.squid </div><br>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/rc.d/init.d/clamd.squid </div></div>
+<div class="block">
+<div class="color2"># line 4: change</div><br>
+# description: The clamd server running for <div class="color1">Squid</div>
+</div>
+<div class="block">
+<div class="color2"># line 6: change</div><br>
+CLAMD_SERVICE=<div class="color1">squid</div>
+</div>
+[root@lan ~]# <div class="color1"><a href="command\html\chmod.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chmod</a> 755 /etc/rc.d/init.d/clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\touch.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">touch</a> /var/log/clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\chown.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chown</a> squidclamav. /var/log/clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\chmod.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chmod</a> 600 /var/log/clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> start clamd.squid.service </div><br>
+Starting clamd.squid: [  OK  ]<br>
+[root@lan ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chkconfig</a> --add clamd.squid </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chkconfig</a> clamd.squid on </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Install c-icap 
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+[root@lan ~]# <div class="color1"><a href="command\html\wget.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">wget</a> http://ftp.jaist.ac.jp/pub/sourceforge/c/project/c-/c-icap/c-icap/0.1.x/c_icap-0.1.7.tar.gz </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\tar.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">tar</a> zxvf c_icap-0.1.7.tar.gz </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> c_icap-0.1.7 </div><br>
+[root@lan c_icap-0.1.7]# <div class="color1">./configure </div><br>
+[root@lan c_icap-0.1.7]# <div class="color1"><a href="command\html\make.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">make</a></div><br>
+[root@lan c_icap-0.1.7]# <div class="color1"><a href="command\html\make.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">make</a> install </div><br>
+[root@lan c_icap-0.1.7]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\cp.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cp</a> /usr/local/etc/c-icap.conf /etc </div><br>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/c-icap.conf </div></div>
+<div class="block">
+<div class="color2"># line 140: change admin address</div><br>
+ServerAdmin <div class="color1">root@srv.world </div>
+</div>
+<div class="block">
+<div class="color2"># line 149: change to your server name</div><br>
+ServerName <div class="color1">lan.srv.world </div>
+</div>
+<div class="block">
+<div class="color2"># line 497: add</div><br>
+<div class="color1">Service squidclamav squidclamav.so </div>
+</div>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/tmpfiles.d/c-icap.conf </div></div>
+<div class="block"><div class="color1">
+<div class="color2"># create new</div><br>
+d /var/run/c-icap 0755 root root -
+</div></div>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/rc.d/init.d/c-icap </div><div class="posl-1"><div class="color2"># create init script</div></div></div>
+<div class="color1">
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+#!/bin/bash
+
+# c-icap: Start/Stop c-icap
+# chkconfig: - 70 30
+# description: c-icap is an implementation of an ICAP server.
+# processname: c-icap
+# pidfile: /var/run/c-icap/c-icap.pid
+
+. /etc/rc.d/init.d/functions
+. /etc/sysconfig/network
+
+CONFIG_FILE=/etc/c-icap.conf
+PID_DIR=/var/run/c-icap
+
+RETVAL=0
+start() {
+   echo -n $"Starting c-icap: "
+   daemon /usr/local/bin/c-icap -f $CONFIG_FILE
+   RETVAL=$?
+   echo
+   [ $RETVAL -eq 0 ] &amp;&amp; touch /var/lock/subsys/c-icap
+   return $RETVAL
+}
+stop() {
+   echo -n $"Stopping c-icap: "
+   killproc c-icap
+   rm -f /var/run/c-icap/c-icap.ctl
+   RETVAL=$?
+   echo
+   [ $RETVAL -eq 0 ] &amp;&amp; rm -f $PID_DIR/c-icap.pid /var/lock/subsys/c-icap
+   return $RETVAL
+}
+case "$1" in
+   start)
+      start
+   ;;
+   stop)
+      stop
+   ;;
+   status)
+      status c-icap
+   ;;
+   restart)
+      stop
+      start
+   ;;
+   *)
+      echo $"Usage: $0 {start|stop|status|restart}"
+   exit 1
+esac
+exit $?
+
+</pre></div>
+[root@lan ~]# <div class="color1"><a href="command\html\chmod.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chmod</a> 755 /etc/rc.d/init.d/c-icap </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>Install SquidClamav ( Download latest version of it from the following link )<br>
+<a href="http://sourceforge.net/projects/squidclamav/files/squidclamav/">http://sourceforge.net/projects/squidclamav/files/squidclamav/</a>
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+[root@lan ~]# <div class="color1"><a href="command\html\wget.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">wget</a> http://ftp.jaist.ac.jp/pub/sourceforge/s/project/sq/squidclamav/squidclamav/6.6/squidclamav-6.6.tar.gz </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\tar.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">tar</a> zxvf squidclamav-6.6.tar.gz </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> squidclamav-6.6 </div><br>
+[root@lan squidclamav-6.6]# <div class="color1">./configure </div><br>
+[root@lan squidclamav-6.6]# <div class="color1"><a href="command\html\make.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">make</a> </div><br>
+[root@lan squidclamav-6.6]# <div class="color1"><a href="command\html\make.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">make</a> install </div><br>
+[root@lan squidclamav-6.6]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd </a></div><br>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/squidclamav.conf </div></div>
+<div class="block">
+<div class="color2"># line 17: change( destination URL for redirect. Create it first )</div><br>
+redirect <div class="color1">http://www.srv.world/error.html</div>
+</div>
+<div class="block">
+<div class="color2"># line 26: change( same with clamd )</div><br>
+clamd_local <div class="color1">/var/run/clamd.squid/clamd.sock </div>
+</div>
+[root@lan ~]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> start c-icap.service </div><br>
+Starting c-icap: [  OK  ]<br>
+[root@lan ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chkconfig</a> --add c-icap </div><br>
+[root@lan ~]# <div class="color1"><a href="command\html\chkconfig.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">chkconfig</a> c-icap on </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td>Squid ã®è¨­å®š
+</td>
+</tr>
+</table>
+<table class="term" summary="4-1">
+<tr>
+<td>
+<div class="block">
+[root@lan ~]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> /etc/squid/squid.conf </div></div>
+<div class="block">
+<div class="color2"># add at the last line</div><br>
+<div class="color1">
+icap_enable on<br>
+icap_send_client_ip on<br>
+icap_send_client_username on<br>
+icap_client_username_header X-Authenticated-User<br>
+icap_service service_req reqmod_precache bypass=1 icap://127.0.0.1:1344/squidclamav<br>
+adaptation_access service_req allow all<br>
+icap_service service_resp respmod_precache bypass=1 icap://127.0.0.1:1344/squidclamav<br>
+adaptation_access service_resp allow all </div>
+</div>
+[root@lan ~]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> restart squid.service </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="5">
+<tr>
+<td class="num">[5]</td>
+<td>
+Try to access to a page that has trial virus from here.<br>
+<a href="http://www.eicar.org/85-0-Download.html">
+http://www.eicar.org/85-0-Download.html</a><br>
+Click 'eicar.com' and rty to download it. Then, the error page that is set in the config of squidclamav. Virus is blocked normally.
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<img src="Fedora_17\squid\img\3.jpg" width="696" height="256" alt="" class="img">
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">Proxy Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (3749).html">Install Squid</a></li>
+<li><a href="note (3750).html">Run with Clamav</a></li>
+<li><a href="note (3751).html">SquidGuard</a></li>
+<li><a href="note (3752).html">Reverse Proxy</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (3759).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

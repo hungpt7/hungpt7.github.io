@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>Fedora 17 - WEB Server - Web Mail - SquirrelMail : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">8389 / 62643125</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">Fedora 17</div>
+<div class="navi">
+<ul>
+<li><a href="note (23).html">Get Fedora 17</a></li>
+<li><a href="note (3668).html">Install Fedora 17</a></li>
+<li class="tree"><a href="note (3669).html">Initial Config</a>
+<ul>
+<li><a href="note (3670).html">(1) Create a User</a></li>
+<li><a href="note (3671).html">(2) FW &amp; SELinux</a></li>
+<li><a href="note (3672).html">(3) Networking</a></li>
+<li><a href="note (3673).html">(4) Services</a></li>
+<li><a href="note (3674).html">(5) Update System</a></li>
+<li><a href="note (3675).html">(6) Configure vim</a></li>
+<li style="border-bottom: 0px"><a href="note (3676).html">(7) Configure sudo</a></li>
+</ul>
+</li>
+<li><a href="note (3677).html">NTP Server</a></li>
+<li class="tree"><a href="note (3678).html">SSH Server</a>
+<ul>
+<li><a href="note (3679).html">(1) Password Authentication</a></li>
+<li><a href="note (3680).html">(2) Keys Authentication</a></li>
+<li style="border-bottom: 0px"><a href="note (3681).html">(3) Transfer files with SFTP</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3682).html">DNS Server</a>
+<ul>
+<li><a href="note (3683).html">(1) Install BIND</a></li>
+<li><a href="note (3684).html">(2) Configure Zones</a></li>
+<li><a href="note (3685).html">(3) Start BIND</a></li>
+<li><a href="note (3686).html">(4) chroot Environment</a></li>
+<li><a href="note (3687).html">(5) Set CNAME</a></li>
+<li style="border-bottom: 0px"><a href="note (3688).html">(6) Configure as a Slave Server</a></li>
+</ul>
+</li>
+<li><a href="note (3689).html">DHCP Server</a></li>
+<li class="tree"><a href="note (3690).html">Storage Server</a>
+<ul>
+<li><a href="note (3691).html">(1) Configure iSCSI Target</a></li>
+<li style="border-bottom: 0px"><a href="note (3692).html">(2) Configure iSCSI Initiator</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3693).html">Virtualization</a>
+<ul>
+<li><a href="note (3694).html">(1) Install KVM</a></li>
+<li><a href="note (3695).html">(2) Create Virtual Machine #1</a></li>
+<li><a href="note (3696).html">(3) Create Virtual Machine #2</a></li>
+<li><a href="note (3697).html">(4) Create Virtual Machine #3</a></li>
+<li><a href="note (3698).html">(5) Operation</a></li>
+<li><a href="note (3699).html">(6) Install Virt-top</a></li>
+<li><a href="note (3700).html">(7) Configure SPICE Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3701).html">(8) Configure SPICE Client</a></li>
+</ul>
+</li>
+<li><a href="note (3702).html">NFS Server</a></li>
+<li class="tree"><a href="note (3703).html">NIS Server</a>
+<ul>
+<li><a href="note (3704).html">(1) Configure NIS Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3705).html">(2) Configure NIS Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3706).html">LDAP Server</a>
+<ul>
+<li><a href="note (3707).html">(1) Configure LDAP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (3708).html">(2) Configure LDAP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3709).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (3710).html">( 1 ) Install/Configure httpd</a></li>
+<li><a href="note (3711).html">( 2 ) Install PHP</a></li>
+<li><a href="note (3712).html">( 3 ) Install Ruby</a></li>
+<li><a href="note (3713).html">( 4 ) Enable Userdir</a></li>
+<li><a href="note (3714).html">( 5 ) Configure SSL</a></li>
+<li><a href="note (3715).html">( 6 ) Virtual Hostings</a></li>
+<li><a href="note (3716).html">( 7 ) Configure WebDAV</a></li>
+<li><a href="note (3717).html">( 8 ) Basic Auth + PAM</a></li>
+<li><a href="note (3718).html">( 9 ) Basic Auth + LDAP</a></li>
+<li><a href="note (3719).html">(10) Log Analyzer - Visitors</a></li>
+<li><a href="note (3720).html">(11) Log Analyzer - AWstats</a></li>
+<li><a href="note (3721).html">(12) WebMail - SquirrelMail</a></li>
+<li style="border-bottom: 0px"><a href="note (3722).html">(13) WebMail - RoundCubeMail</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3723).html">Database</a>
+<ul>
+<li><a href="note (3724).html">(1) Install MySQL</a></li>
+<li style="border-bottom: 0px"><a href="note (3725).html">(2) Install phpmyadmin</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3726).html">FTP Server</a>
+<ul>
+<li><a href="note (3727).html">(1) Install Vsftpd</a></li>
+<li><a href="note (3728).html">(2) Install ProFTPD</a></li>
+<li><a href="note (3729).html">(3) Install Pure-FTPd</a></li>
+<li><a href="note (3730).html">(4) FTP Client - FileZilla</a></li>
+<li><a href="note (3731).html">(5) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (3732).html">(6) ProFTPD over TLS/SSL</a></li>
+<li style="border-bottom: 0px"><a href="note (3733).html">(7) Pure-FTPd over TLS/SSL</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3734).html">MAIL Server</a>
+<ul>
+<li><a href="note (3735).html">(1) Install/Configure Postfix</a></li>
+<li><a href="note (3736).html">(2) Install/Configure Dovecot</a></li>
+<li><a href="note (3737).html">(3) Configure Client</a></li>
+<li><a href="note (3738).html">(4) Configure SSL</a></li>
+<li><a href="note (3739).html">(5) Virtual Domains</a></li>
+<li><a href="note (3740).html">(6) Run with Clamav - ClamSMTP</a></li>
+<li><a href="note (3741).html">(7) Log Analyzer - pflogsumm</a></li>
+<li><a href="note (3742).html">(8) Log Analyzer - MailGraph</a></li>
+<li style="border-bottom: 0px"><a href="note (3743).html">(9) Log Analyzer - AWstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3744).html">Samba Server</a>
+<ul>
+<li><a href="note (3745).html">(1) Create fully accessed Directory</a></li>
+<li><a href="note (3746).html">(2) Create Limited Directory</a></li>
+<li style="border-bottom: 0px"><a href="note (3747).html">(3) Install SWAT</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3748).html">Proxy Server</a>
+<ul>
+<li><a href="note (3749).html">(1) Install Squid</a></li>
+<li><a href="note (3750).html">(2) Run with Clamav - SquidClamav</a></li>
+<li><a href="note (3751).html">(3) Run with SquidGuard</a></li>
+<li style="border-bottom: 0px"><a href="note (3752).html">(4) Config as a Reverse Proxy</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (3753).html">Desktop Env</a>
+<ul>
+<li><a href="note (3754).html">(1) Install Desktop Environment</a></li>
+<li style="border-bottom: 0px"><a href="note (3755).html">(2) Install VNC Server</a></li>
+</ul>
+</li>
+<li id="other"><a href="note (3756).html">Others</a>
+<ul style="position: absolute; margin-top: -1.8em;">
+<li><a href="note (3757).html">Create SSL Certificates</a></li>
+<li><a href="note (3758).html">Add Hard Drive</a></li>
+<li style="border-bottom: 0px"><a href="note (3756).html">Clamav <span style="display:inline;position:absolute;left:110px;">- Anti-Virus</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">WebMail - SquirrelMail<div class="date">2012/06/17</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Install SquirrelMail to build web-based mail transfer system like yahoo mail or hotmail. 
+<a href="note (3734).html">SMTP/IMAP server are needed to run in your LAN</a>.
+</div>
+<div class="block">
+&nbsp;<div class="posl-1">www.srv.world</div><div class="posl-1">- SquirrelMail Server</div><br>
+&nbsp;<div class="posl-1">mail.srv.world</div><div class="posl-1">- SMTP/IMAP Server</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Install and Configure SquirrelMail 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+<div class="block">
+[root@www ~]# <div class="color1"><a href="command\html\yum.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">yum</a> -y install squirrelmail </div></div>
+[root@www ~]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> /usr/share/squirrelmail/plugins/ </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\wget.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">wget</a> http://www.squirrelmail.org/plugins/compatibility-2.0.16-1.0.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\wget.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">wget</a> http://www.squirrelmail.org/plugins/empty_trash-1.4-1.2.2.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\wget.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">wget</a> http://www.squirrelmail.org/plugins/secure_login-1.4-1.2.8.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\tar.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">tar</a> zxvf compatibility-2.0.16-1.0.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\tar.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">tar</a> zxvf empty_trash-1.4-1.2.2.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\tar.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">tar</a> zxvf secure_login-1.4-1.2.8.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\rm.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">rm</a> -f *.tar.gz </div><br>
+[root@www plugins]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> </div><br>
+[root@www ~]# <div class="color1">/usr/share/squirrelmail/config/conf.pl</div> &nbsp; <div class="color2"># run config script</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Main Menu --<br>
+1.  Organization Preferences<br>
+2.  Server Settings<br>
+3.  Folder Defaults<br>
+4.  General Options<br>
+5.  Themes<br>
+6.  Address Books<br>
+7.  Message of the Day (MOTD)<br>
+8.  Plugins<br>
+9.  Database<br>
+<div class="block">
+10. Languages</div>
+<div class="block">
+D.  Set pre-defined settings for specific IMAP servers</div>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">1</div>&nbsp; <div class="color2"># select</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Organization Preferences<br>
+1.  Organization Name<div class="posl-1">: SquirrelMail</div><br>
+2.  Organization Logo<div class="posl-1">: ../images/sm_logo.png</div><br>
+3.  Org. Logo Width/Height<div class="posl-1">: (308/111)</div><br>
+4.  Organization Title<div class="posl-1">: SquirrelMail </div><br>
+5.  Signout Page <div class="posl-1">:</div><br>
+6.  Top Frame<div class="posl-1">: _top</div><br>
+7.  Provider link <div class="posl-1">: http://squirrelmail.org/</div><br>
+<div class="block">
+8.  Provider name<div class="posl-1">: SquirrelMail</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">5</div>&nbsp; <div class="color2"># change log-out page</div></div>
+<div class="block">
+When users click the Sign Out button they will be logged out and<br>
+then sent to signout_page.  If signout_page is left empty,<br>
+(hit space and then return) they will be taken, as normal,<br>
+to the default and rather sparse SquirrelMail signout page.</div>
+[]: <div class="color1">/webmail</div>&nbsp;&nbsp;&nbsp; <div class="color2"># change log-out page</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Organization Preferences<br>
+1.  Organization Name<div class="posl-1">: SquirrelMail</div><br>
+2.  Organization Logo<div class="posl-1">: ../images/sm_logo.png</div><br>
+3.  Org. Logo Width/Height<div class="posl-1">: (308/111)</div><br>
+4.  Organization Title<div class="posl-1">: SquirrelMail </div><br>
+5.  Signout Page<div class="posl-1">: /webmail</div><br>
+6.  Top Frame<div class="posl-1">: _top</div><br>
+7.  Provider link<div class="posl-1">: http://squirrelmail.org/</div><br>
+<div class="block">
+8.  Provider name<div class="posl-1">: SquirrelMail</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">r</div>&nbsp; <div class="color2"># back to menu</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Main Menu --<br>
+1.  Organization Preferences<br>
+2.  Server Settings<br>
+3.  Folder Defaults<br>
+4.  General Options<br>
+5.  Themes<br>
+6.  Address Books<br>
+7.  Message of the Day (MOTD)<br>
+8.  Plugins<br>
+9.  Database<br>
+<div class="block">
+10. Languages</div>
+<div class="block">
+D.  Set pre-defined settings for specific IMAP servers</div>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">2</div>&nbsp; <div class="color2"># select</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain<div class="posl-1">: localhost</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: Sendmail</div></div>
+A.  Update IMAP Settings<div class="posl-1">: localhost:143 (uw)</div><br>
+<div class="block">
+B.  Change Sendmail Config<div class="posl-1">: /usr/sbin/sendmail</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">1</div>&nbsp; <div class="color2"># change domain name</div></div>
+<div class="block">
+The domain name is the suffix at the end of all email addresses.  If<br>
+for example, your email address is jdoe.com, then your domain<br>
+would be example.com.</div>
+[localhost]: <div class="color1">srv.world</div>&nbsp; <div class="color2"># input your domain name</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain<div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: Sendmail</div></div>
+A.  Update IMAP Settings<div class="posl-1">: localhost:143 (uw)</div><br>
+B.  Change Sendmail Config<div class="posl-1">: /usr/sbin/sendmail</div><br>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">3</div>&nbsp; <div class="color2"># select</div></div>
+<div class="block">
+You now need to choose the method that you will use for sending<br>
+messages in SquirrelMail.  You can either connect to an SMTP server<br>
+or use sendmail directly.</div>
+  1.  Sendmail<br>
+  2.  SMTP<br>
+Your choice [1/2] [1]: <div class="color1">2</div>&nbsp; <div class="color2"># change to SMTP</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain<div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+A.  Update IMAP Settings<div class="posl-1">: localhost:143 (uw)</div><br>
+B.  Change Sendmail Config<div class="posl-1">: localhost:25</div><br>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">A</div>&nbsp; <div class="color2"># select</div></div>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain<div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+IMAP Settings<br>
+--------------<br>
+4.  IMAP Server<div class="posl-1">: localhost</div><br>
+5.  IMAP Port <div class="posl-1">: 143</div><br>
+6.  Authentication type<div class="posl-1">: login</div><br>
+7.  Secure IMAP (TLS)<div class="posl-1">: false</div><br>
+8.  Server software<div class="posl-1">: uw</div><br>
+<div class="block">
+9.  Delimiter <div class="posl-1">: /</div></div>
+B.  Update SMTP Settings<div class="posl-1">: localhost:25</div><br>
+<div class="block">
+H.  Hide IMAP Server Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">4</div>&nbsp; <div class="color2"># select</div></div>
+This is the hostname where your IMAP server can be contacted.<br>
+[localhost]: <div class="color1">mail.srv.world</div>&nbsp; <div class="color2"># input your IMAP server</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain<div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+IMAP Settings<br>
+--------------<br>
+4.  IMAP Server<div class="posl-1">: mail.srv.world</div><br>
+5.  IMAP Port <div class="posl-1">: 143</div><br>
+6.  Authentication type<div class="posl-1">: login</div><br>
+7.  Secure IMAP (TLS)<div class="posl-1">: false</div><br>
+8.  Server software<div class="posl-1">: uw</div><br>
+<div class="block">
+9.  Delimiter  <div class="posl-1">: /</div></div>
+B.  Update SMTP Settings<div class="posl-1">: localhost:25</div><br>
+<div class="block">
+H.  Hide IMAP Server Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">8</div>&nbsp; <div class="color2"># select</div></div>
+Each IMAP server has its own quirks.  As much as we tried to stick<br>
+to standards, it doesn't help much if the IMAP server doesn't follow<br>
+the same principles.  We have made some work-arounds for some of<br>
+these servers.  If you would like to use them, please select your<br>
+IMAP server.  If you do not wish to use these work-arounds, you can<br>
+set this to "other", and none will be used.<br>
+&nbsp;&nbsp; bincimap<div class="posl-1">= Binc IMAP server</div><br>
+&nbsp;&nbsp; courier<div class="posl-1">= Courier IMAP server</div><br>
+&nbsp;&nbsp; cyrus<div class="posl-1">= Cyrus IMAP server</div><br>
+&nbsp;&nbsp; dovecot<div class="posl-1">= Dovecot Secure IMAP server</div><br>
+&nbsp;&nbsp; exchange<div class="posl-1">= Microsoft Exchange IMAP server</div><br>
+&nbsp;&nbsp; hmailserver<div class="posl-1">= hMailServer</div><br>
+&nbsp;&nbsp; macosx <div class="posl-1">= Mac OS X Mailserver</div><br>
+&nbsp;&nbsp; mercury32<div class="posl-1">= Mercury/32</div><br>
+&nbsp;&nbsp; uw <div class="posl-1">= University of Washington's IMAP server</div><br>
+&nbsp;&nbsp; gmail<div class="posl-1">= IMAP access to Google mail (Gmail) accounts</div><br>
+&nbsp;&nbsp; other<div class="posl-1">= Not one of the above servers</div><br>
+[uw]: <div class="color1">dovecot</div>&nbsp; <div class="color2"># select Dovecot</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain <div class="posl-1">: srv.world</div><br>
+2.  Invert Time <div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+IMAP Settings<br>
+--------------<br>
+4.  IMAP Server<div class="posl-1">: mail.srv.world</div><br>
+5.  IMAP Port <div class="posl-1">: 143</div><br>
+6.  Authentication type<div class="posl-1">: login</div><br>
+7.  Secure IMAP (TLS)<div class="posl-1">: false</div><br>
+8.  Server software<div class="posl-1">: dovecot</div><br>
+<div class="block">
+9.  Delimiter <div class="posl-1">: /</div></div>
+B.  Update SMTP Settings<div class="posl-1">: localhost:25</div><br>
+<div class="block">
+H.  Hide IMAP Server Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">9</div>&nbsp; <div class="color2"># select</div></div>
+<div class="block">
+This is the delimiter that your IMAP server uses to distinguish between<br>
+folders.  For example, Cyrus uses '.' as the delimiter and a complete<br>
+folder would look like 'INBOX.Friends.Bob', while UW uses '/' and would<br>
+look like 'INBOX/Friends/Bob'.  Normally this should be left at 'detect'<br>
+but if you are sure you know what delimiter your server uses, you can<br>
+specify it here.</div>
+<div class="block">
+To have it autodetect the delimiter, set it to 'detect'.</div>
+[/]: <div class="color1">detect</div>&nbsp; <div class="color2"># detect</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain<div class="posl-1">: srv.world</div><br>
+2.  Invert Time <div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+IMAP Settings<br>
+--------------<br>
+4.  IMAP Server <div class="posl-1">: mail.srv.world</div><br>
+5.  IMAP Port <div class="posl-1">: 143</div><br>
+6.  Authentication type<div class="posl-1">: login</div><br>
+7.  Secure IMAP (TLS)<div class="posl-1">: false</div><br>
+8.  Server software<div class="posl-1">: dovecot</div><br>
+<div class="block">
+9.  Delimiter<div class="posl-1">: detect</div></div>
+B.  Update SMTP Settings<div class="posl-1">: localhost:25</div><br>
+<div class="block">
+H.  Hide IMAP Server Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">B</div>&nbsp; <div class="color2"># select</div></div>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain <div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+SMTP Settings<br>
+-------------<br>
+4.   SMTP Server<div class="posl-1">: localhost</div><br>
+5.   SMTP Port<div class="posl-1">: 25</div><br>
+6.   POP before SMTP<div class="posl-1">: false</div><br>
+7.   SMTP Authentication<div class="posl-1">: none</div><br>
+8.   Secure SMTP (TLS)<div class="posl-1">: false</div><br>
+<div class="block">
+9.   Header encryption key<div class="posl-1">:</div></div>
+A.  Update IMAP Settings<div class="posl-1">: mail.srv.world:143 (dovecot)</div><br>
+<div class="block">
+H.  Hide SMTP Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">4</div>&nbsp; <div class="color2"># select</div></div>
+This is the hostname of your SMTP server.<br>
+[localhost]: <div class="color1">mail.srv.world</div>&nbsp; <div class="color2"># input your SMTP server</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain <div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+SMTP Settings<br>
+-------------<br>
+4.   SMTP Server<div class="posl-1">: mail.srv.world</div><br>
+5.   SMTP Port<div class="posl-1">: 25</div><br>
+6.   POP before SMTP<div class="posl-1">: false</div><br>
+7.   SMTP Authentication<div class="posl-1">: none</div><br>
+8.   Secure SMTP (TLS)<div class="posl-1">: false</div><br>
+<div class="block">
+9.   Header encryption key<div class="posl-1">:</div></div>
+A.  Update IMAP Settings<div class="posl-1">: mail.srv.world:143 (dovecot)</div><br>
+<div class="block">
+H.  Hide SMTP Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">7</div>&nbsp; <div class="color2"># select</div></div>
+<div class="block">
+If you have already set the hostname and port number, I can try to<br>
+automatically detect the mechanisms your SMTP server supports.<br>
+Auto-detection is *optional* - you can safely say "n" here.</div>
+Try to detect auth mechanisms? [y/N]: <div class="color1">y</div>&nbsp; <div class="color2"># yes</div><br>
+Trying to detect supported methods (SMTP)...<br>
+Testing none:           SUPPORTED<br>
+Testing login:          SUPPORTED<br>
+Testing CRAM-MD5:       NOT SUPPORTED<br>
+<div class="block">
+Testing DIGEST-MD5:     NOT SUPPORTED</div>
+What authentication mechanism do you want to use for SMTP connections?<br>
+none - Your SMTP server does not require authorization.<br>
+login - Plaintext. If you can do better, you probably should.<br>
+cram-md5 - Slightly better than plaintext.<br>
+<div class="block">
+digest-md5 - Privacy protection - better than cram-md5.</div>
+*** YOUR SMTP SERVER MUST SUPPORT THE MECHANISM YOU CHOOSE HERE ***<br>
+<div class="block">
+If you don't understand or are unsure, you probably want "none"</div>
+<div class="block">
+none, login, cram-md5, or digest-md5 [none]: <div class="color1">login</div>&nbsp; <div class="color2"># select login</div><br>
+SMTP authentication uses IMAP username and password by default.</div>
+Would you like to use other login and password for all SquirrelMail<br>
+SMTP connections? [y/N]: <div class="color1">n</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+<div class="block">
+Server Settings</div>
+General<br>
+-------<br>
+1.  Domain <div class="posl-1">: srv.world</div><br>
+2.  Invert Time<div class="posl-1">: false</div><br>
+<div class="block">
+3.  Sendmail or SMTP<div class="posl-1">: SMTP</div></div>
+SMTP Settings<br>
+-------------<br>
+4.   SMTP Server<div class="posl-1">: mail.srv.world</div><br>
+5.   SMTP Port<div class="posl-1">: 25</div><br>
+6.   POP before SMTP<div class="posl-1">: false</div><br>
+7.   SMTP Authentication<div class="posl-1">: login (with IMAP username and password)</div><br>
+8.   Secure SMTP (TLS)<div class="posl-1">: false</div><br>
+<div class="block">
+9.   Header encryption key<div class="posl-1">:</div></div>
+A.  Update IMAP Settings<div class="posl-1">: mail.srv.world:143 (dovecot)</div><br>
+<div class="block">
+H.  Hide SMTP Settings</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">r</div>&nbsp; <div class="color2"># back to menu</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Main Menu --<br>
+1.  Organization Preferences<br>
+2.  Server Settings<br>
+3.  Folder Defaults<br>
+4.  General Options<br>
+5.  Themes<br>
+6.  Address Books<br>
+7.  Message of the Day (MOTD)<br>
+8.  Plugins<br>
+9.  Database<br>
+<div class="block">
+10. Languages</div>
+<div class="block">
+D.  Set pre-defined settings for specific IMAP servers</div>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">10</div>&nbsp; <div class="color2"># select</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Language preferences<br>
+1.  Default Language<div class="posl-1">: en_US</div><br>
+2.  Default Charset<div class="posl-1">: iso-8859-1</div><br>
+<div class="block">
+3.  Enable lossy encoding<div class="posl-1">: falsev</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">1</div>&nbsp; <div class="color2"># select</div></div>
+SquirrelMail attempts to set the language in many ways.  If it<br>
+can not figure it out in another way, it will default to this<br>
+<div class="block">
+language.  Please use the code for the desired language.</div>
+[en_US]: <div class="color1">ja_JP</div>&nbsp; <div class="color2"># set your language</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Language preferences<br>
+1.  Default Language<div class="posl-1">: ja_JP</div><br>
+2.  Default Charset<div class="posl-1">: iso-8859-1</div><br>
+<div class="block">
+3.  Enable lossy encoding<div class="posl-1">: false</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">2</div>&nbsp; <div class="color2"># select</div><br>
+This option controls what character set is used when sending<br>
+<div class="block">
+mail and when sending HTML to the browser.</div>
+<div class="block">
+This option is used only when default language is 'en_US'.</div>
+[iso-8859-1]: <div class="color1">iso-2022-jp</div>&nbsp; <div class="color2"># set your language</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Language preferences<br>
+1.  Default Language<div class="posl-1">: ja_JP</div><br>
+2.  Default Charset<div class="posl-1">: iso-2022-jp</div><br>
+3.  Enable lossy encoding<div class="posl-1">: false</div><br>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">r</div>&nbsp; <div class="color2"># back to menu</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Main Menu --<br>
+1.  Organization Preferences<br>
+2.  Server Settings<br>
+3.  Folder Defaults<br>
+4.  General Options<br>
+5.  Themes<br>
+6.  Address Books<br>
+7.  Message of the Day (MOTD)<br>
+8.  Plugins<br>
+9.  Database<br>
+<div class="block">
+10. Languages</div>
+<div class="block">
+D.  Set pre-defined settings for specific IMAP servers</div>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">4</div>&nbsp; <div class="color2"># select</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+General Options<br>
+1.  Data Directory<div class="posl-1">: /var/lib/squirrelmail/prefs/</div><br>
+2.  Attachment Directory<div class="posl-1">: /var/spool/squirrelmail/attach/</div><br>
+3.  Directory Hash Level<div class="posl-1">: 0</div><br>
+4.  Default Left Size<div class="posl-1">: 150</div><br>
+5.  Usernames in Lowercase<div class="posl-1">: false</div><br>
+6.  Allow use of priority<div class="posl-1">: true</div><br>
+7.  Hide SM attributions<div class="posl-1">: false</div><br>
+8.  Allow use of receipts<div class="posl-1">: true</div><br>
+9.  Allow editing of identity<div class="posl-1">: true</div><br>
+    Allow editing of name<div class="posl-1">: true</div><br>
+    Remove username from header<div class="posl-1">: false</div><br>
+10. Allow server thread sort<div class="posl-1">: true</div><br>
+11. Allow server-side sorting<div class="posl-1">: true</div><br>
+12. Allow server charset search<div class="posl-1">: true</div><br>
+13. Enable UID support<div class="posl-1">: true</div><br>
+14. PHP session name<div class="posl-1">: SQMSESSID</div><br>
+<div class="block">
+15. Location base<div class="posl-1">:</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">7</div>&nbsp; <div class="color2"># select</div><br>
+Hide SM attributions (y/n) [n]: <div class="color1">y</div>&nbsp; <div class="color2"># Yes</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+General Options<br>
+1.  Data Directory<div class="posl-1">: /var/lib/squirrelmail/prefs/</div><br>
+2.  Attachment Directory<div class="posl-1">: /var/spool/squirrelmail/attach/</div><br>
+3.  Directory Hash Level<div class="posl-1">: 0</div><br>
+4.  Default Left Size<div class="posl-1">: 150</div><br>
+5.  Usernames in Lowercase<div class="posl-1">: false</div><br>
+6.  Allow use of priority<div class="posl-1">: true</div><br>
+7.  Hide SM attributions<div class="posl-1">: true</div><br>
+8.  Allow use of receipts<div class="posl-1">: true</div><br>
+9.  Allow editing of identity<div class="posl-1">: true</div><br>
+    Allow editing of name<div class="posl-1">: true</div><br>
+    Remove username from header<div class="posl-1">: false</div><br>
+10. Allow server thread sort<div class="posl-1">: true</div><br>
+11. Allow server-side sorting<div class="posl-1">: true</div><br>
+12. Allow server charset search<div class="posl-1">: true</div><br>
+13. Enable UID support<div class="posl-1">: true</div><br>
+14. PHP session name<div class="posl-1">: SQMSESSID</div><br>
+<div class="block">
+15. Location base<div class="posl-1">:</div></div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">r</div>&nbsp; <div class="color2"># back to menu</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Main Menu --<br>
+1.  Organization Preferences<br>
+2.  Server Settings<br>
+3.  Folder Defaults<br>
+4.  General Options<br>
+5.  Themes<br>
+6.  Address Books<br>
+7.  Message of the Day (MOTD)<br>
+8.  Plugins<br>
+9.  Database<br>
+<div class="block">
+10. Languages</div>
+<div class="block">
+D.  Set pre-defined settings for specific IMAP servers</div>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">8</div>&nbsp; <div class="color2"># select</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Plugins<br>
+  Installed Plugins<br>
+    1. delete_move_next<br>
+    2. squirrelspell<br>
+<div class="block">
+    3. newmail</div>
+  Available Plugins:<br>
+    4. listcommands<br>
+    5. filters<br>
+    6. fortune<br>
+    7. mail_fetch<br>
+    8. message_details<br>
+    9. compatibility<br>
+    10. calendar<br>
+    11. translate<br>
+    12. sent_subfolders<br>
+    13. empty_trash<br>
+    14. spamcop<br>
+    15. bug_report<br>
+    16. abook_take<br>
+    17. info<br>
+    18. secure_login<br>
+<div class="block">
+    19. administrator</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">9</div>&nbsp; <div class="color2"># add compatibility(number is different on a env)</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Plugins<br>
+  Installed Plugins<br>
+    1. delete_move_next<br>
+    2. squirrelspell<br>
+    3. newmail<br>
+<div class="block">
+    4. compatibility</div>
+  Available Plugins:<br>
+    5. listcommands<br>
+    6. filters<br>
+    7. fortune<br>
+    8. mail_fetch<br>
+    9. message_details<br>
+    10. calendar<br>
+    11. translate<br>
+    12. sent_subfolders<br>
+    13. empty_trash<br>
+    14. spamcop<br>
+    15. bug_report<br>
+    16. abook_take<br>
+    17. info<br>
+    18. secure_login<br>
+<div class="block">
+    19. administrator</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">13</div>&nbsp; <div class="color2"># add empty_trash(number is different on a env)</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Plugins<br>
+  Installed Plugins<br>
+    1. delete_move_next<br>
+    2. squirrelspell<br>
+    3. newmail<br>
+    4. compatibility<br>
+<div class="block">
+    5. empty_trash</div>
+  Available Plugins:<br>
+    6. listcommands<br>
+    7. filters<br>
+    8. fortune<br>
+    9. mail_fetch<br>
+    10. message_details<br>
+    11. calendar<br>
+    12. translate<br>
+    13. sent_subfolders<br>
+    14. spamcop<br>
+    15. bug_report<br>
+    16. abook_take<br>
+    17. info<br>
+    18. secure_login<br>
+<div class="block">
+    19. administrator</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+Command &gt;&gt; <div class="color1">18</div>&nbsp; <div class="color2"># add secure_login(number is different on a env)</div><br>
+SquirrelMail Configuration : Read: config.php (1.4.0)<br>
+---------------------------------------------------------<br>
+Plugins<br>
+  Installed Plugins<br>
+    1. delete_move_next<br>
+    2. squirrelspell<br>
+    3. newmail<br>
+    4. compatibility<br>
+    5. empty_trash<br>
+<div class="block">
+    6. secure_login</div>
+  Available Plugins:<br>
+    7. listcommands<br>
+    8. filters<br>
+    9. fortune<br>
+    10. mail_fetch<br>
+    11. message_details<br>
+    12. calendar<br>
+    13. translate<br>
+    14. sent_subfolders<br>
+    15. spamcop<br>
+    16. bug_report<br>
+    17. abook_take<br>
+    18. info<br>
+<div class="block">
+    19. administrator</div>
+R   Return to Main Menu<br>
+C   Turn color off<br>
+S   Save data<br>
+<div class="block">
+Q   Quit</div>
+<div class="block">
+Command &gt;&gt; <div class="color1">q</div>&nbsp; <div class="color2"># quit</div></div>
+You have not saved your data.<br>
+Save?  [Y/n]: <div class="color1">y</div>&nbsp; <div class="color2"># save</div><br>
+<div class="block">
+Data saved in config.php</div>
+<div class="block">
+Exiting conf.pl.<br>
+You might want to test your configuration by browsing to<br>
+http://your-squirrelmail-location/src/configtest.php<br>
+Happy SquirrelMailing!</div>
+[root@www ~]# <div class="color1"><a href="command\html\cd.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cd</a> /usr/share/squirrelmail/plugins/secure_login </div><br>
+[root@www secure_login]# <div class="color1"><a href="command\html\cp.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">cp</a> config.sample.php config.php </div><br>
+<div class="block">
+[root@www secure_login]# <div class="color1"><a href="command\html\vi.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">vi</a> config.php </div></div>
+<div class="block">
+<div class="color2"># line 24: change</div><br>
+$change_back_to_http_after_login = <div class="color1">0</div>;
+</div>
+[root@www secure_login]# <div class="color1"><a href="command\html\systemctl.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">systemctl</a> restart httpd.service </div><br>
+</td>
+</tr>
+</table>
+<table class="base_win" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>
+Access to 'http://(your server's name or IP address/)/webmail/', then follwing sacreen is shown, 
+then authenticate your user name and password to login. 
+</td>
+</tr>
+</table>
+<table class="base_win" summary="2-1">
+<tr>
+<td>
+<img src="Fedora_17\httpd\img\21.jpg" width="700" height="453" alt="" class="img" style="border: #696969 1px solid;">
+</td>
+</tr>
+</table>
+<table class="base_win" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>Just logined. 
+</td>
+</tr>
+</table>
+<table class="base_win" summary="3-1">
+<tr>
+<td>
+<img src="Fedora_17\httpd\img\22.jpg" width="700" height="453" alt="" class="img" style="border: #696969 1px solid;">
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">WEB Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (3710).html">Install httpd</a></li>
+<li><a href="note (3711).html">Install PHP</a></li>
+<li><a href="note (3712).html">Install Ruby</a></li>
+<li><a href="note (3713).html">Enable Userdir</a></li>
+<li><a href="note (3714).html">Config SSL</a></li>
+<li><a href="note (3715).html">Virtual Host</a></li>
+<li><a href="note (3716).html">Conf WebDAV</a></li>
+<li><a href="note (3717).html">Basic Auth+PAM</a></li>
+<li><a href="note (3718).html">Basic Auth+LDAP</a></li>
+<li><a href="note (3719).html">Log Analyzer#1</a></li>
+<li><a href="note (3720).html">Log Analyzer#2</a></li>
+<li><a href="note (3721).html">WebMail#1</a></li>
+<li><a href="note (3722).html">WebMail#2</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (3759).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

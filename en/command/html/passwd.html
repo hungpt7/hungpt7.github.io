@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta http-equiv="content-style-type" content="text/css">
+<title>passwd : Server World</title>
+<link rel="stylesheet" type="text/css" href="..\..\css\main (1).css">
+</head>
+<body>
+<table style="width: 550px; margin-left: auto; margin-right: auto;">
+<tr>
+<td style="height: 28px; background-image: url(../../img/icon.gif); padding-left: 45px; font-weight: bold; font-size: 13px;">
+passwd - update a userâ€™s authentication tokens(s)</td>
+</tr>
+<tr><td style="padding-left: 20px; padding-top: 5px; padding-bottom: 10px;">[SYNOPSIS] passwd OPTION USER</td></tr>
+<tr>
+<td>
+<table style="width: 100px; background-color: #999999;">
+<tr>
+<td style="padding-left:20px; font-weight:bold; color:#ffffff">option</td>
+</tr>
+</table>
+<table style="width: 550px; border: #aaaaaa 1px solid;" class="com">
+<tr>
+<td>-d</td>
+<td>This  is  a quick way to disable a password for an account<br>
+<div style="margin-left: 20px"># passwd -d user</div>
+</td>
+</tr>
+<tr>
+<td style="width: 20px">-l</td>
+<td>This option is used to lock the specified account and it is available to root only<br>
+<div style="margin-left: 20px"># passwd -l user</div>
+</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>This is the reverse of the -l option - it will unlock the account password by removing  the  !  prefix<br>
+<div style="margin-left: 20px"># passwd -u user</div>
+</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>This  will  set  the  maximum password lifetime, in days, if the userâ€™s account supports password life-times<br>
+<div style="margin-left: 20px"># passwd -x 10 user</div>
+</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>This will set the minimum password lifetime, in days, if the userâ€™s  account  supports  password  life-times.  Available to root only<br>
+<div style="margin-left: 20px"># passwd -n 10 user</div>
+</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>This  will  set  the number of days which will pass before an expired password for this account will be 
+taken to mean that the account is inactive and should be disabled, if the userâ€™s account supports pass-word lifetimes<br>
+<div style="margin-left: 20px"># passwd -i 10 user</div>
+</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>This will set the number of days in advance the user will begin receiving warnings  that  her  password will expire, if the userâ€™s account supports password lifetimes<br>
+<div style="margin-left: 20px"># passwd -w 10 user</div>
+</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>This will output a short information about the status of the password for a given account<br>
+<div style="margin-left: 20px"># passwd -S user</div>
+<div style="margin-left: 20px">&nbsp;&nbsp; user PS 2009-09-12 0 99999 7 -1 (Password set, MD5 crypt.)</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

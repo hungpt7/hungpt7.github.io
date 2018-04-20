@@ -1,0 +1,1185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" content="CentOS,Ubuntu,Fedora,Debian,Linux,KVM,Virtualization">
+<meta name="description" content="The site for people who want to establish the Network Server with CentOS, Ubuntu, Fedora, Debian">
+<title>CentOS 7 : FreeIPA : Replication Setting : Server World</title>
+<link href="css\base.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\navi.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\position.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css\print.css" media="print" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="command\popup.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = './command/graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+</head>
+<body>
+<div id="top-menu">
+<table id="menu-table" summary="menu">
+<tr>
+<td class="menu" style="width: 13%;"><a href="..\index.htm">Server World</a></td>
+<td class="menu">
+<div class="top_navi">
+<ul>
+<li><a href="note.html">Other OS Configs</a>
+<ul>
+<li><a href="note (1).html">CentOS 7</a></li>
+<li><a href="note (2).html">CentOS 6</a></li>
+<li><a href="note (3).html">Fedora 27</a></li>
+<li><a href="note (4).html">Fedora 26</a></li>
+<li><a href="note (5).html">Debian 9</a></li>
+<li><a href="note (6).html">Debian 8</a></li>
+<li><a href="note (7).html">Ubuntu 17.04</a></li>
+<li><a href="note (8).html">Ubuntu 16.04 LTS</a></li>
+<li><a href="note (9).html">SUSE Linux Enterprise 12</a></li>
+<li><a href="note (10).html">SUSE Linux Enterprise 11</a></li>
+<li><a href="note (11).html">Windows Server 2016</a></li>
+<li><a href="note (12).html">Windows Server 2012 R2</a></li>
+<li><a href="note (13).html">Other Tips</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 18em; z-index: 90;">
+<li><a href="note (14).html">CentOS 5</a></li>
+<li><a href="note (15).html">Fedora 25</a></li>
+<li><a href="note (16).html">Fedora 24</a></li>
+<li><a href="note (17).html">Fedora 23</a></li>
+<li><a href="note (18).html">Fedora 22</a></li>
+<li><a href="note (19).html">Fedora 21</a></li>
+<li><a href="note (20).html">Fedora 20</a></li>
+<li><a href="note (21).html">Fedora 19</a></li>
+<li><a href="note (22).html">Fedora 18</a></li>
+<li><a href="note (23).html">Fedora 17</a></li>
+<li><a href="note (24).html">Fedora 16</a></li>
+<li><a href="note (25).html">Fedora 15</a></li>
+<li><a href="note (26).html" style="border-bottom: #aaaaaa 0px solid;">Fedora 14</a></li>
+</ul>
+<ul style="position: absolute; margin-left: 36em; z-index: 80;">
+<li><a href="note (27).html">Debian 7</a></li>
+<li><a href="note (28).html">Debian 6</a></li>
+<li><a href="note (29).html">Ubuntu 15.04</a></li>
+<li><a href="note (30).html">Ubuntu 14.04 LTS</a></li>
+<li><a href="note (31).html">Ubuntu 13.04</a></li>
+<li><a href="note (32).html">Ubuntu 12.04 LTS</a></li>
+<li><a href="note (33).html">Ubuntu 11.04</a></li>
+<li><a href="note (34).html">Ubuntu 10.04 LTS</a></li>
+<li><a href="note (35).html">Fedora 13</a></li>
+<li><a href="note (36).html">Fedora 12</a></li>
+<li><a href="note (37).html">Fedora 11</a></li>
+<li><a href="note (38).html">Fedora 10</a></li>
+<li><a href="note (39).html" style="border-bottom: #aaaaaa 0px solid;">Scientific Linux 6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+<td class="menu"><a href="note (40).html">Introductions</a></td>
+<td class="menu"><a href="note (41).html">Histories</a></td>
+<td class="menu"><a href="note (42).html">Commands Help</a></td>
+<td class="menu"><a href="note (43).html">Links/Contact</a></td>
+<td class="menu" style="width: 13%;">
+<div class="count">7557 / 62642293</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="left">
+<div class="os">CentOS 7</div>
+<div class="navi">
+<ul>
+<li class="tree"><a href="note (1).html">Install / Initial Config</a>
+<ul style="position: absolute; margin-top: -1.8em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (1).html">&nbsp; Install CentOS</a></li>
+<li><a href="note (1).html">(01) Download CentOS 7</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (44).html">(02) Install CentOS 7</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (45).html">&nbsp; Initial Settings</a></li>
+<li><a href="note (46).html">(01) Add an User</a></li>
+<li><a href="note (47).html">(02) FireWall &amp; SELinux</a></li>
+<li><a href="note (48).html">(03) Configure Networking</a></li>
+<li><a href="note (49).html">(04) Configure Services</a></li>
+<li><a href="note (50).html">(05) Update System</a></li>
+<li><a href="note (51).html">(06) Add Repositories</a></li>
+<li><a href="note (52).html">(07) Configure vim</a></li>
+<li><a href="note (53).html">(08) Configure sudo</a></li>
+<li style="border-bottom: 0px"><a href="note (54).html">(09) Cron's Setting</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (55).html">NTP / SSH Server</a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (55).html">&nbsp; NTP Server</a></li>
+<li><a href="note (56).html">(01) Configure NTP Server (NTPd)</a></li>
+<li><a href="note (57).html">(02) Configure NTP Server (Chrony)</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (58).html">(03) Configure NTP Client</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (59).html">&nbsp; SSH Server</a></li>
+<li><a href="note (60).html">(01) Password Authentication</a></li>
+<li><a href="note (61).html">(02) SSH File Transfer(CentOS)</a></li>
+<li><a href="note (62).html">(03) SSH File Transfer(Windows)</a></li>
+<li><a href="note (63).html">(04) SSH Keys Authentication</a></li>
+<li><a href="note (64).html">(05) SFTP only + Chroot</a></li>
+<li><a href="note (65).html">(06) SSH Port Forwarding</a></li>
+<li><a href="note (66).html">(07) SSH X11 Forwarding</a></li>
+<li><a href="note (67).html">(08) Use SSHPass</a></li>
+<li><a href="note (68).html">(09) Use SSH-Agent</a></li>
+<li style="border-bottom: 0px"><a href="note (69).html">(10) Use Parallel SSH</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (70).html">DNS / DHCP Server</a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (71).html">&nbsp; DNS/DHCP Server (Dnsmasq)</a></li>
+<li><a href="note (72).html">(01) Install Dnsmasq</a></li>
+<li style="border-bottom: #696969 1px solid"><a href="note (73).html">(02) Configure DHCP Server</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (70).html">&nbsp; DNS Server (BIND)</a></li>
+<li><a href="note (74).html">(01) Install BIND</a></li>
+<li><a href="note (75).html">(02) Set Zones</a></li>
+<li><a href="note (76).html">(03) Start BIND</a></li>
+<li><a href="note (77).html">(04) Enable chroot</a></li>
+<li><a href="note (78).html">(05) Set CNAME</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (79).html">(06) Configure Slave DNS Server</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (80).html">&nbsp; DHCP Server</a></li>
+<li><a href="note (81).html">(01) Configure DHCP Server</a></li>
+<li style="border-bottom: 0px"><a href="note (82).html">(02) Configure DHCP Client</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (83).html">Storage Server</a>
+<ul style="position: absolute; margin-top: -5.55em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (83).html">&nbsp; NFS</a></li>
+<li><a href="note (84).html">(01) Configure NFS Server</a></li>
+<li><a href="note (85).html">(02) Conf NFS Client(CentOS)</a></li>
+<li><a href="note (86).html">(03) Conf NFS Client(Win Server)</a></li>
+<li style="border-bottom: 0px"><a href="note (87).html">(04) Conf NFS Client(Win Client)</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (88).html">&nbsp; iSCSI</a></li>
+<li><a href="note (89).html">(01) Configure iSCSI Target</a></li>
+<li><a href="note (90).html">(02) Configure iSCSI Target (tgt)</a></li>
+<li><a href="note (91).html">(03) Conf iSCSI Initiator(CentOS)</a></li>
+<li style="border-bottom: 0px"><a href="note (92).html">(04) Conf iSCSI Initiator(Win)</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 0px solid;"><a href="note (93).html">&nbsp; Ceph Jewel</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (94).html">&nbsp; Ceph Luminous</a></li>
+<li><a href="note (95).html">(01) Configure Ceph Cluster</a></li>
+<li><a href="note (96).html">(02) Use as Block Device</a></li>
+<li style="border-bottom: 0px"><a href="note (97).html">(03) Use as File System</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (98).html">&nbsp; DRBD</a></li>
+<li><a href="note (99).html">(01) Install DRBD</a></li>
+<li style="border-bottom: 0px"><a href="note (100).html">(02) Configure DRBD</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -5.55em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (101).html">&nbsp; GlusterFS</a></li>
+<li><a href="note (102).html">(01) Install GlusterFS</a></li>
+<li><a href="note (103).html">(02) Distributed Setting</a></li>
+<li><a href="note (104).html">(03) Replication Setting</a></li>
+<li><a href="note (105).html">(04) Striping Setting</a></li>
+<li><a href="note (106).html">(05) Distributed + Replication</a></li>
+<li><a href="note (107).html">(06) Striping + Replication</a></li>
+<li><a href="note (108).html">(07) Clients' Settings</a></li>
+<li style="border-bottom: 0px"><a href="note (109).html">(08) Gluster + NFS-Ganesha</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (110).html">&nbsp; NextCloud</a></li>
+<li style="border-bottom: 0px"><a href="note (111).html">(01) Install NextCloud</a></li>
+<li style="background: #dcdcdc; border-top: #696969 1px solid;border-bottom: #696969 1px solid;"><a href="note (112).html">&nbsp; ownCloud</a></li>
+<li style="border-bottom: 0px"><a href="note (113).html">(01) Install ownCloud</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (114).html">Virtualization</a>
+<ul style="position: absolute; margin-top: -7.4em; z-index:60;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (114).html">&nbsp; KVM</a></li>
+<li><a href="note (115).html">(01) Install KVM</a></li>
+<li><a href="note (116).html">(02) Create a Virtual Machine#1</a></li>
+<li><a href="note (117).html">(03) Create a Virtual Machine#2</a></li>
+<li><a href="note (118).html">(04) Basic Operations</a></li>
+<li><a href="note (119).html">(05) Virt Tools</a></li>
+<li><a href="note (120).html">(06) Live Migration</a></li>
+<li><a href="note (121).html">(07) SPICE Server</a></li>
+<li><a href="note (122).html">(08) SPICE Client</a></li>
+<li><a href="note (123).html">(09) Nested KVM</a></li>
+<li><a href="note (124).html">(10) GPU Passthrough</a></li>
+<li><a href="note (125).html">(11) UEFI Boot</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (126).html">(12) VMWare ESXi on KVM</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (127).html">&nbsp; oVirt</a></li>
+<li><a href="note (128).html">(01) Configure Control Server</a></li>
+<li><a href="note (129).html">(02) Configure oVirt Node</a></li>
+<li><a href="note (130).html">(03) Add Target Node for Manage</a></li>
+<li><a href="note (131).html">(04) Add Storage</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (132).html">(05) Create Virtual Machine</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -7.4em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (133).html">&nbsp; Xen</a></li>
+<li><a href="note (134).html">(01) Install Xen</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (135).html">(02) Create a Virtual Machine</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (136).html">&nbsp; VirtualBox</a></li>
+<li><a href="note (137).html">(01) Install VirtualBox</a></li>
+<li><a href="note (138).html">(02) Create a Virtual Machine#1</a></li>
+<li><a href="note (139).html">(03) Install GuestAdditions</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (140).html">(04) Create a Virtual Machine#2</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (141).html">&nbsp; VMware Player</a></li>
+<li><a href="note (142).html">(01) Install VMware Player</a></li>
+<li><a href="note (143).html">(02) Create a Virtual Machine</a></li>
+<li style="border-bottom: 0px"><a href="note (144).html">(03) Nested Virtualization</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (145).html">Cloud Compute</a>
+<ul style="position: absolute; margin-top: -9.2em; border-right: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (145).html">&nbsp; OpenStack Queens</a></li>
+<li><a href="note (146).html">(01) Queens Overview</a></li>
+<li><a href="note (147).html">(02) Pre-Requirements</a></li>
+<li><a href="note (148).html">(03) Configure Keystone#1</a></li>
+<li><a href="note (149).html">(04) Configure Keystone#2</a></li>
+<li><a href="note (150).html">(05) Configure Glance</a></li>
+<li><a href="note (151).html">(06) Add VM Images</a></li>
+<li><a href="note (152).html">(07) Configure Nova#1</a></li>
+<li><a href="note (153).html">(08) Configure Nova#2</a></li>
+<li><a href="note (154).html">(09) Configure Nova#3</a></li>
+<li><a href="note (155).html">(10) Configure Neutron#1</a></li>
+<li><a href="note (156).html">(11) Configure Neutron#2</a></li>
+<li><a href="note (157).html">(12) Configure Networking</a></li>
+<li><a href="note (158).html">(13) Add new Users</a></li>
+<li><a href="note (159).html">(14) Run Instances</a></li>
+<li><a href="note (160).html">(15) Configure Horizon</a></li>
+<li><a href="note (161).html">(16) Add Compute Nodes</a></li>
+<li><a href="note (162).html">(17) Configure Neutron#3</a></li>
+<li><a href="note (163).html">(18) Configure Neutron#4</a></li>
+<li><a href="note (164).html">(19) Configure Neutron#5</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (165).html">(20) Neutron Network (FLAT)</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -9.2em; margin-left: 22.8em; border-right: #696969 1px dashed; z-index:60;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid; width: 250px; line-height: 19px;">&nbsp;</li>
+<li><a href="note (166).html">(21) Neutron Network (VXLAN)</a></li>
+<li><a href="note (167).html">(22) Configure Cinder#1</a></li>
+<li><a href="note (168).html">(23) Configure Cinder#2</a></li>
+<li><a href="note (169).html">(24) Cinder Storage (LVM)</a></li>
+<li><a href="note (170).html">(25) Cinder Storage (NFS)</a></li>
+<li><a href="note (171).html">(26) Cinder Storage (Multi-Back)</a></li>
+<li><a href="note (172).html">(27) Configure Cinder Backup</a></li>
+<li><a href="note (173).html">(28) Configure Swift#1</a></li>
+<li><a href="note (174).html">(29) Configure Swift#2</a></li>
+<li><a href="note (175).html">(30) Configure Swift#3</a></li>
+<li><a href="note (176).html">(31) How to use Swift</a></li>
+<li><a href="note (177).html">(32) Configure Manila#1</a></li>
+<li><a href="note (178).html">(33) Configure Manila#2</a></li>
+<li><a href="note (179).html">(34) How to use Manila#1</a></li>
+<li><a href="note (180).html">(35) How to use Manila#2</a></li>
+<li><a href="note (181).html">(36) Configure Heat#1</a></li>
+<li><a href="note (182).html">(37) Configure Heat#2</a></li>
+<li><a href="note (183).html">(38) How to use Heat</a></li>
+<li><a href="note (184).html">(39) Configure Barbican</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (185).html">(40) How to use Barbican</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -9.2em; margin-left: 45.6em; z-index:55;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid; width: 250px; line-height: 19px;">&nbsp;</li>
+<li><a href="note (186).html">(41) Configure Gnocchi</a></li>
+<li><a href="note (187).html">(42) Configure Ceilometer#1</a></li>
+<li><a href="note (188).html">(43) Configure Ceilometer#2</a></li>
+<li><a href="note (189).html">(44) How to use Ceilometer(Nova)</a></li>
+<li><a href="note (190).html">(45) How to use Ceilometer(Glance)</a></li>
+<li><a href="note (191).html">(46) How to use Ceilometer(Cinder)</a></li>
+<li><a href="note (192).html">(47) Configure Aodh</a></li>
+<li><a href="note (193).html">(48) How to use Aodh</a></li>
+<li><a href="note (194).html">(49) Configure Designate#1</a></li>
+<li><a href="note (195).html">(50) Configure Designate#2</a></li>
+<li><a href="note (196).html">(51) How to use Designate</a></li>
+<li><a href="note (197).html">(52) OpenStack Rally</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (198).html">(53) OpenStack Packstack</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (199).html">&nbsp; OpenStack Pike</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (200).html">&nbsp; OpenStack Ocata</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (201).html">&nbsp; OpenStack Newton</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (202).html">&nbsp; OpenStack Mitaka</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (203).html">&nbsp; OpenStack Liberty</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (204).html">&nbsp; OpenStack Kilo</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (205).html">&nbsp; OpenStack Juno</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 0px solid;"><a href="note (206).html">&nbsp; OpenStack Icehouse</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (207).html">Containers Infra</a>
+<ul style="position: absolute; margin-top: -11.0em; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (207).html">&nbsp; Docker</a></li>
+<li><a href="note (208).html">(01) Install Docker</a></li>
+<li><a href="note (209).html">(02) Add Images</a></li>
+<li><a href="note (210).html">(03) Access to Container</a></li>
+<li><a href="note (211).html">(04) Use Dockerfile#1</a></li>
+<li><a href="note (212).html">(05) Use Dockerfile#2</a></li>
+<li><a href="note (213).html">(06) Use Docker-Registry#1</a></li>
+<li><a href="note (214).html">(07) Use Docker-Registry#2</a></li>
+<li><a href="note (215).html">(08) Use Persistent Storage</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (216).html">(09) Docker Swarm</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (217).html">&nbsp; Kubernetes</a></li>
+<li><a href="note (218).html">(01) Configure Admin Node</a></li>
+<li><a href="note (219).html">(02) Configure Container Node</a></li>
+<li><a href="note (220).html">(03) Create Pods</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (221).html">(04) Use Persistent Storage</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -11.0em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:75;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (222).html">&nbsp; OpenShift Origin 3.7</a></li>
+<li><a href="note (223).html">(01) Install OpenShift Origin</a></li>
+<li><a href="note (224).html">(02) Add new Users</a></li>
+<li><a href="note (225).html">(03) Deploy Applications</a></li>
+<li><a href="note (226).html">(04) Add Nodes to a Cluster</a></li>
+<li><a href="note (227).html">(05) Deploy Registry</a></li>
+<li><a href="note (228).html">(06) Deploy Router</a></li>
+<li><a href="note (229).html">(07) Allow External Access</a></li>
+<li><a href="note (230).html">(08) Use Persistent Storage</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (231).html">(09) Keystone Authentication</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 0px solid;"><a href="note (232).html">&nbsp; OpenShift Origin 3.6</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (233).html">Directory Server</a>
+<ul style="position: absolute; margin-top: -12.8em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (233).html">&nbsp; FreeIPA</a></li>
+<li><a href="note (234).html">(01) Configure FreeIPA Server</a></li>
+<li><a href="note (235).html">(02) Add User Accounts</a></li>
+<li><a href="note (236).html">(03) Configure FreeIPA Client</a></li>
+<li><a href="note (237).html">(04) Basic Operation</a></li>
+<li><a href="note (238).html">(05) Use Web GUI</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (239).html">(06) FreeIPA Replication</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (240).html">&nbsp; OpenLDAP</a></li>
+<li><a href="note (241).html">(01) Configure LDAP Server</a></li>
+<li><a href="note (242).html">(02) Add User Accounts</a></li>
+<li><a href="note (243).html">(03) Configure LDAP Client</a></li>
+<li><a href="note (244).html">(04) LDAP over TLS</a></li>
+<li><a href="note (245).html">(05) LDAP Replication</a></li>
+<li><a href="note (246).html">(06) Multi-Master Replication</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (247).html">(07) Install phpLDAPadmin</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (248).html">&nbsp; NIS</a></li>
+<li><a href="note (249).html">(01) Configure NIS Server</a></li>
+<li><a href="note (250).html">(02) Configure NIS Client</a></li>
+<li style="border-bottom: 0px"><a href="note (251).html">(03) Configure NIS Slave</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (252).html">WEB Server</a>
+<ul style="position: absolute; margin-top: -14.6em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (252).html">&nbsp; Apache httpd</a></li>
+<li><a href="note (253).html">(01) Install Apache httpd</a></li>
+<li><a href="note (254).html">(02) Use Perl Scripts</a></li>
+<li><a href="note (255).html">(03) Use PHP Scripts</a></li>
+<li><a href="note (256).html">(04) Use Ruby Scripts</a></li>
+<li><a href="note (257).html">(05) Use Python Scripts</a></li>
+<li><a href="note (258).html">(06) Enable Userdir</a></li>
+<li><a href="note (259).html">(07) Virtual Hostings</a></li>
+<li><a href="note (260).html">(08) Configure SSL</a></li>
+<li><a href="note (261).html">(09) Enable Basic Auth</a></li>
+<li><a href="note (262).html">(10) Basic Auth+PAM</a></li>
+<li><a href="note (263).html">(11) Basic Auth+LDAP</a></li>
+<li><a href="note (264).html">(12) Enable Kerberos Auth</a></li>
+<li><a href="note (265).html">(13) Use WebDAV</a></li>
+<li><a href="note (266).html">(14) Perl + mod_perl</a></li>
+<li><a href="note (267).html">(15) PHP + PHP-FPM</a></li>
+<li><a href="note (268).html">(16) Python + mod_wsgi</a></li>
+<li><a href="note (269).html">(17) WebMail : SquirrelMail</a></li>
+<li><a href="note (270).html">(18) WebMail : RoundCube</a></li>
+<li><a href="note (271).html">(19) WebMail : RainLoop</a></li>
+<li style="border-bottom: 0px"><a href="note (272).html">(20) Log Analyzer : AWstats</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -14.6em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid; width: 250px; line-height: 19px;">&nbsp;</li>
+<li><a href="note (273).html">(21) Log Analyzer : Piwik</a></li>
+<li><a href="note (274).html">(22) Blog System : WordPress</a></li>
+<li><a href="note (275).html">(23) Wiki System : MediaWiki</a></li>
+<li><a href="note (276).html">(24) Use mod_proxy#1</a></li>
+<li><a href="note (277).html">(25) Use mod_proxy#2</a></li>
+<li><a href="note (278).html">(26) Use mod_proxy_wstunnel</a></li>
+<li><a href="note (279).html">(27) Use mod_ratelimit</a></li>
+<li><a href="note (280).html">(28) Use mod_limitipconn</a></li>
+<li><a href="note (281).html">(29) Use mod_evasive</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (282).html">(30) Use mod_security</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (283).html">&nbsp; Nginx</a></li>
+<li><a href="note (284).html">(01) Install Nginx</a></li>
+<li><a href="note (285).html">(02) Virtual Hostings</a></li>
+<li><a href="note (286).html">(03) Enable Userdir</a></li>
+<li><a href="note (287).html">(04) Configure SSL</a></li>
+<li><a href="note (288).html">(05) Enable Basic Auth</a></li>
+<li><a href="note (289).html">(06) Reverse Proxy Settings#1</a></li>
+<li><a href="note (290).html">(07) Reverse Proxy Settings#2</a></li>
+<li><a href="note (291).html">(08) Reverse Proxy Settings#3</a></li>
+<li style="border-bottom: 0px"><a href="note (292).html">(09) Nginx + PHP-FPM</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (293).html">Database</a>
+<ul style="position: absolute; margin-top: -16.45em; z-index:60;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (293).html">&nbsp; MariaDB 5.5</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (294).html">&nbsp; MariaDB 10.1</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (295).html">&nbsp; MariaDB 10.2</a></li>
+<li><a href="note (296).html">(01) Install MariaDB 10.2</a></li>
+<li><a href="note (297).html">(02) Install phpMyAdmin</a></li>
+<li><a href="note (298).html">(03) MariaDB over SSL/TLS</a></li>
+<li><a href="note (299).html">(04) MariaDB Replication</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (300).html">(05) MariaDB Galera Cluster</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (301).html">&nbsp; SQL Server 2017</a></li>
+<li><a href="note (302).html">(01) Install SQL Server 2017</a></li>
+<li><a href="note (303).html">(02) Connect from Win Client</a></li>
+<li><a href="note (304).html">(03) T-SQL Basic Operation</a></li>
+<li><a href="note (305).html">(04) bcp Utility</a></li>
+<li><a href="note (306).html">(05) SQL Server Agent</a></li>
+<li><a href="note (307).html">(06) Integration Services</a></li>
+<li><a href="note (308).html">(07) Full-Text Search</a></li>
+<li><a href="note (309).html">(08) Windows Authentication</a></li>
+<li><a href="note (310).html">(09) Failover Cluster Instance</a></li>
+<li><a href="note (311).html">(10) Read Scale-out Replica</a></li>
+<li><a href="note (312).html">(11) Always On Availability Group</a></li>
+<li><a href="note (313).html">(12) Use SQL Server from Python</a></li>
+<li><a href="note (314).html">(13) Use SQL Server from PHP</a></li>
+<li><a href="note (315).html">(14) Use SQL Server from Node.js</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (316).html">(15) Use SQL Server from C#</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (317).html">&nbsp; MySQL 5.6</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 0px solid;"><a href="note (318).html">&nbsp; MySQL 5.7</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -16.45em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (319).html">&nbsp; PostgreSQL 9.2</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (320).html">&nbsp; PostgreSQL 9.5</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (321).html">&nbsp; PostgreSQL 9.6</a></li>
+<li><a href="note (322).html">(01) Install PostgreSQL 9.6</a></li>
+<li><a href="note (323).html">(02) Install phpPgAdmin</a></li>
+<li><a href="note (324).html">(03) PostgreSQL over SSL/TLS</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (325).html">(04) PostgreSQL Replication</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (326).html">&nbsp; Redis</a></li>
+<li><a href="note (327).html">(01) Install Redis</a></li>
+<li><a href="note (328).html">(02) Basic Usage#1</a></li>
+<li><a href="note (329).html">(03) Basic Usage#2 (Keys)</a></li>
+<li><a href="note (330).html">(04) Basic Usage#3 (Lists)</a></li>
+<li><a href="note (331).html">(05) Basic Usage#4 (Hashes)</a></li>
+<li><a href="note (332).html">(06) Basic Usage#5 (Sets)</a></li>
+<li><a href="note (333).html">(07) Use Redis from Python</a></li>
+<li><a href="note (334).html">(08) Use Redis from PHP</a></li>
+<li><a href="note (335).html">(09) Use Redis from Node.js</a></li>
+<li><a href="note (336).html">(10) Redis Replication</a></li>
+<li><a href="note (337).html">(11) Redis Sentinel</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (338).html">(12) Redis Benchmark</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (339).html">&nbsp; Oracle Database 12c Release 2</a></li>
+<li><a href="note (340).html">(01) Pre-Requirements</a></li>
+<li><a href="note (341).html">(02) Install Oracle 12c</a></li>
+<li><a href="note (342).html">(03) Add Oracle Net Listener</a></li>
+<li><a href="note (343).html">(04) Create Database</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (344).html">(05) Create Systemd file</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (345).html">MAIL Server</a>
+<ul style="position: absolute; margin-top: -7.4em;">
+<li><a href="note (346).html">(01) Install Postfix</a></li>
+<li><a href="note (347).html">(02) Install Dovecot</a></li>
+<li><a href="note (348).html">(03) Add Mail Accounts#1</a></li>
+<li><a href="note (349).html">(04) Email Client's Setting</a></li>
+<li><a href="note (350).html">(05) Configure SSL</a></li>
+<li><a href="note (351).html">(06) Virtual domain</a></li>
+<li><a href="note (352).html">(07) Add Mail Accounts#2</a></li>
+<li><a href="note (353).html">(08) Postfix + Clamav + Amavisd</a></li>
+<li><a href="note (354).html">(09) Mail Log Analyze : pflogsumm</a></li>
+<li style="border-bottom: 0px"><a href="note (355).html">(10) Mail Log Analyze : Awstats</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (356).html">FTP/Samba Server</a>
+<ul style="position: absolute; margin-top: -18.3em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (357).html">&nbsp; FTP Server</a></li>
+<li><a href="note (358).html">(01) Install Vsftpd</a></li>
+<li><a href="note (359).html">(02) Install ProFTPD</a></li>
+<li><a href="note (360).html">(03) Install Pure-FTPd</a></li>
+<li><a href="note (361).html">(04) FTP Client : CentOS</a></li>
+<li><a href="note (362).html">(05) FTP Client : Windows</a></li>
+<li><a href="note (363).html">(06) Vsftpd over TLS/SSL</a></li>
+<li><a href="note (364).html">(07) ProFTPD over TLS/SSL</a></li>
+<li><a href="note (365).html">(08) Pure-FTPd over TLS/SSL</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (366).html">(09) Pure-FTPd + Clamav</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (356).html">&nbsp; Samba Server</a></li>
+<li><a href="note (367).html">(01) Fully accessed shared Folder</a></li>
+<li><a href="note (368).html">(02) Limited shared Folder</a></li>
+<li><a href="note (369).html">(03) Samba Winbind</a></li>
+<li><a href="note (370).html">(04) Samba AD DC : Install</a></li>
+<li><a href="note (371).html">(05) Samba AD DC : User Manage</a></li>
+<li style="border-bottom: 0px"><a href="note (372).html">(06) Samba AD DC : Join Domain</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (373).html">Proxy/Load Balancer</a>
+<ul style="position: absolute; margin-top: -12.8em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (374).html">&nbsp; Pound</a></li>
+<li><a href="note (375).html">(01) HTTP Load Balancing</a></li>
+<li><a href="note (376).html">(02) SSL Settings</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (377).html">(03) URL Redirect</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (378).html">&nbsp; LVS</a></li>
+<li><a href="note (379).html">(01) Install LVS</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (380).html">(02) LVS + Keepalived</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (381).html">&nbsp; Squid</a></li>
+<li><a href="note (382).html">(01) Install Squid</a></li>
+<li><a href="note (383).html">(02) Configure Proxy Client</a></li>
+<li><a href="note (384).html">(03) Use Basic Auth</a></li>
+<li><a href="note (385).html">(04) Reverse Proxy Settings</a></li>
+<li><a href="note (386).html">(05) Squid + SquidClamav</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (387).html">(06) Squid + SquidGuard</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -7.35em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (388).html">&nbsp; Pen</a></li>
+<li><a href="note (389).html">(01) HTTP Load Balancing</a></li>
+<li><a href="note (390).html">(02) SSL Settings</a></li>
+<li><a href="note (391).html">(03) Refer to the Statics</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (392).html">(04) MariaDB Load Balancing</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (373).html">&nbsp; HAProxy</a></li>
+<li><a href="note (393).html">(01) HTTP Load Balancing</a></li>
+<li><a href="note (394).html">(02) SSL Settings</a></li>
+<li><a href="note (395).html">(03) Refer to the Statistics#1</a></li>
+<li><a href="note (396).html">(04) Refer to the Statistics#2</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (397).html">(05) Load Balancing on Layer4</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (398).html">Monitoring</a>
+<ul style="position: absolute; margin-top: -23.7em; z-index:60;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (398).html">&nbsp; SysStat</a></li>
+<li><a href="note (399).html">(01) Install SysStat</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (400).html">(02) How to use</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (401).html">&nbsp; Sensu</a></li>
+<li><a href="note (402).html">(01) Install Sensu</a></li>
+<li><a href="note (403).html">(02) Add Target Hosts#1</a></li>
+<li><a href="note (404).html">(03) Add Check Plugins#1</a></li>
+<li><a href="note (405).html">(04) Set Metric Collection Check</a></li>
+<li><a href="note (406).html">(05) Visualize with Grafana</a></li>
+<li><a href="note (407).html">(06) Add Check Plugins#2</a></li>
+<li><a href="note (408).html">(07) Add Check Plugins</a></li>
+<li><a href="note (409).html">(08) Add Check Plugins</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (410).html">(09) Add Check Plugins</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (411).html">&nbsp; Zabbix 3.4</a></li>
+<li><a href="note (412).html">(01) Install Zabbix 3.4</a></li>
+<li><a href="note (413).html">(02) Initial Setup</a></li>
+<li><a href="note (414).html">(03) Change admin password</a></li>
+<li><a href="note (415).html">(04) Set Monitoring Target</a></li>
+<li><a href="note (416).html">(05) Set SMTP for Notifications</a></li>
+<li><a href="note (417).html">(06) Notification email setting</a></li>
+<li><a href="note (418).html">(07) Add Monitoring Target(CentOS)</a></li>
+<li><a href="note (419).html">(08) Add Monitoring Target(Win)</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (420).html">(09) Add Monitoring Item</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (421).html">&nbsp; Zabbix 3.2</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (422).html">&nbsp; Zabbix 3.0 LTS</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 0px solid;"><a href="note (423).html">&nbsp; Zabbix 2.4</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -23.7em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (424).html">&nbsp; Munin</a></li>
+<li><a href="note (425).html">(01) Install Munin</a></li>
+<li><a href="note (426).html">(02) Email Notification</a></li>
+<li><a href="note (427).html">(03) Set Thresholds</a></li>
+<li><a href="note (428).html">(04) Add Target Hosts</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (429).html">(05) Add Target Items</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (430).html">&nbsp; Cacti</a></li>
+<li><a href="note (431).html">(01) Install Cacti</a></li>
+<li><a href="note (432).html">(02) Setup Cacti</a></li>
+<li><a href="note (433).html">(03) Basic Monitoring Settings</a></li>
+<li><a href="note (434).html">(04) Email Notification Settings</a></li>
+<li><a href="note (435).html">(05) Enable Threshold</a></li>
+<li><a href="note (436).html">(06) Set Threshold</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (437).html">(07) Add Monitoring Host</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (438).html">&nbsp; Nagios</a></li>
+<li><a href="note (439).html">(01) Install Nagios</a></li>
+<li><a href="note (440).html">(02) Notification Setting</a></li>
+<li><a href="note (441).html">(03) Set Thresholds</a></li>
+<li><a href="note (442).html">(04) Add Monitoring Target Item</a></li>
+<li><a href="note (443).html">(05) Add Monitoring Target Host#1</a></li>
+<li><a href="note (444).html">(06) Add Monitoring Target Host#2</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (445).html">(07) Add Monitoring Target Host#3</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (446).html">&nbsp; OSQuery</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (447).html">&nbsp; MRTG</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 0px solid;"><a href="note (448).html">&nbsp; Monitorix</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (59).html">Lang / Development</a>
+<ul style="position: absolute; margin-top: -25.55em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (449).html">&nbsp; Ruby</a></li>
+<li><a href="note (449).html">(01) Install Ruby 2.2</a></li>
+<li><a href="note (450).html">(02) Install Ruby 2.3</a></li>
+<li><a href="note (451).html">(03) Install Ruby 2.4</a></li>
+<li><a href="note (452).html">(04) Install Ruby on Rails 4</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (453).html">(05) Install Ruby on Rails 5</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (454).html">&nbsp; JavaScript</a></li>
+<li><a href="note (454).html">(01) Install Node.js</a></li>
+<li><a href="note (455).html">(02) Install Node.js 4</a></li>
+<li><a href="note (456).html">(03) Install Node.js 6</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (457).html">(04) Install Node.js 8</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (458).html">&nbsp; PHP</a></li>
+<li><a href="note (458).html">(01) Install PHP 5.6</a></li>
+<li><a href="note (459).html">(02) Install PHP 7.0</a></li>
+<li><a href="note (460).html">(03) Install PHP 7.1</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (461).html">(04) Install PHP 7.2</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (462).html">&nbsp; Python</a></li>
+<li><a href="note (462).html">(01) Install Python 3.3</a></li>
+<li><a href="note (463).html">(02) Install Python 3.4</a></li>
+<li><a href="note (464).html">(03) Install Python 3.5</a></li>
+<li><a href="note (465).html">(04) Install Python 3.6</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (466).html">(05) Install Django</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -16.5em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:70;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (467).html">&nbsp; CUDA</a></li>
+<li><a href="note (468).html">(01) Install CUDA 8.0</a></li>
+<li><a href="note (469).html">(02) Install CUDA 9.0</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (470).html">(03) Install CUDA 9.1</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (471).html">&nbsp; TensorFlow</a></li>
+<li><a href="note (472).html">(01) Install TensorFlow (CPU Only)</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (473).html">(02) Install TensorFlow (with GPU)</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (474).html">&nbsp; .NET Core</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (474).html">(01) Install .NET Core 2.0</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (475).html">&nbsp; Scala</a></li>
+<li style="border-bottom: #696969 1px solid;"><a href="note (475).html">(01) Install Scala</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (476).html">&nbsp; Java</a></li>
+<li><a href="note (477).html">(01) Install JDK 8</a></li>
+<li><a href="note (478).html">(02) Install OpenJDK 8</a></li>
+<li><a href="note (479).html">(03) Install JDK 9</a></li>
+<li><a href="note (480).html">(04) Install Tomcat 8</a></li>
+<li style="border-bottom: #696969 0px solid;"><a href="note (481).html">(05) Install Tomcat 9</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (482).html">Desktop Env</a>
+<ul style="position: absolute; margin-top: -12.8em;">
+<li><a href="note (483).html">(10) Connect to Windows with RDP</a></li>
+<li><a href="note (484).html">(09) VNC Client : noVNC</a></li>
+<li><a href="note (485).html">(08) VNC Server</a></li>
+<li><a href="note (486).html">(07) Xrdp Server</a></li>
+<li><a href="note (487).html">(06) Xfce Desktop</a></li>
+<li><a href="note (488).html">(05) MATE Desktop</a></li>
+<li><a href="note (489).html">(04) Cinnamon Desktop</a></li>
+<li><a href="note (490).html">(03) KDE Desktop</a></li>
+<li><a href="note (491).html">(02) Use GNOME Shell</a></li>
+<li style="border-bottom: 0px"><a href="note (492).html">(01) GNOME Desktop</a></li>
+</ul>
+</li>
+<li class="tree"><a href="note (80).html">Others #1</a>
+<ul style="position: absolute; margin-top: -29.2em;">
+<li class="tree2"><a href="note (493).html">Zarafa <span style="display:inline;position:absolute;left:95px;">- &nbsp; Groupware</span></a>
+<ul>
+<li><a href="note (494).html">(01) Install Zarafa</a></li>
+<li style="border-bottom: 0px"><a href="note (495).html">(02) Access to Web UI</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (496).html">Zimbra <span style="display:inline;position:absolute;left:95px;">- &nbsp; Groupware</span></a>
+<ul>
+<li><a href="note (497).html">(01) Install Zimbra</a></li>
+<li style="border-bottom: 0px"><a href="note (498).html">(02) Setup Zimbra</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (499).html">Bacula <span style="display:inline;position:absolute;left:95px;">- &nbsp; Backup</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (500).html">(01) Configure Bacula Server#1</a></li>
+<li><a href="note (501).html">(02) Configure Bacula Server#2</a></li>
+<li><a href="note (502).html">(03) Configure Bacula Client</a></li>
+<li><a href="note (503).html">(04) Backup Operation</a></li>
+<li style="border-bottom: 0px"><a href="note (504).html">(05) Restore Operation</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (505).html">Subversion <span style="display:inline;position:absolute;left:95px;">- &nbsp; Revision Control</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (506).html">(01) Install Subversion</a></li>
+<li><a href="note (507).html">(02) Set Access Control</a></li>
+<li><a href="note (508).html">(03) Windows Client</a></li>
+<li style="border-bottom: 0px"><a href="note (509).html">(04) HTTP Access</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (510).html">Gitolite3 <span style="display:inline;position:absolute;left:95px;">- &nbsp; Revision Control</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (511).html">(01) Install Gitolite</a></li>
+<li><a href="note (512).html">(02) Add Users</a></li>
+<li><a href="note (513).html">(03) Add Repositories</a></li>
+<li style="border-bottom: 0px"><a href="note (514).html">(04) Set Access Control</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (515).html">RabbitMQ <span style="display:inline;position:absolute;left:95px;">- &nbsp; Message Broker</span></a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (516).html">(01) Install RabbitMQ</a></li>
+<li><a href="note (517).html">(02) Use on Python</a></li>
+<li><a href="note (518).html">(03) Use on PHP</a></li>
+<li><a href="note (519).html">(04) Use on Ruby</a></li>
+<li><a href="note (520).html">(05) Use Web UI</a></li>
+<li><a href="note (521).html">(06) Use rabbitmqadmin</a></li>
+<li style="border-bottom: 0px"><a href="note (522).html">(07) Configure Cluster</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (523).html">Memcached <span style="display:inline;position:absolute;left:95px;">- &nbsp; Memory Cache</span></a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (524).html">(01) Install Memcached</a></li>
+<li><a href="note (525).html">(02) Basic Usage</a></li>
+<li><a href="note (526).html">(03) Use it on Python</a></li>
+<li><a href="note (527).html">(04) Use it on PHP</a></li>
+<li style="border-bottom: 0px"><a href="note (528).html">(05) Use it on Node.js</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (529).html">ElasticStack <span style="display:inline;position:absolute;left:95px;">- &nbsp; Search Engine++</span></a>
+<ul style="position: absolute; margin-top: -3.8em;">
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (530).html">ElasticStack 5</a></li>
+<li style="background: #dcdcdc; border-bottom: #696969 1px solid;"><a href="note (529).html">ElasticStack 6</a></li>
+<li><a href="note (531).html">(01) Install Elasticsearch</a></li>
+<li><a href="note (532).html">(02) Elasticsearch Cluster</a></li>
+<li><a href="note (533).html">(03) Install Kibana</a></li>
+<li><a href="note (534).html">(04) Install Logstash</a></li>
+<li><a href="note (535).html">(05) Install Metricbeat</a></li>
+<li><a href="note (536).html">(06) Install Packetbeat</a></li>
+<li><a href="note (537).html">(07) Install Filebeat</a></li>
+<li><a href="note (538).html">(08) Install Heartbeat</a></li>
+<li><a href="note (539).html">(09) Install Auditbeat</a></li>
+<li><a href="note (540).html">(10) Install Winlogbeat</a></li>
+<li><a href="note (541).html">(11) Install X-Pack</a></li>
+<li style="border-bottom: 0px"><a href="note (542).html">(12) Configure X-Pack.Security</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (543).html">Func <span style="display:inline;position:absolute;left:95px;">- &nbsp; Remote Manage</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (544).html">(01) Install Func</a></li>
+<li><a href="note (545).html">(02) Basic Operation</a></li>
+<li><a href="note (546).html">(03) Use YumModule</a></li>
+<li><a href="note (547).html">(04) Use CopyFileModule</a></li>
+<li style="border-bottom: 0px"><a href="note (548).html">(05) Use CommandModule</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (549).html">Salt <span style="display:inline;position:absolute;left:95px;">- &nbsp; Config Manage</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (550).html">(01) Install Salt</a></li>
+<li><a href="note (551).html">(02) Salt Basic Usage</a></li>
+<li><a href="note (552).html">(03) Use Salt State File#1</a></li>
+<li><a href="note (553).html">(04) Use Salt State File#2</a></li>
+<li style="border-bottom: 0px"><a href="note (554).html">(05) Use Salt-cp</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (555).html">Puppet <span style="display:inline;position:absolute;left:95px;">- &nbsp; Config Manage</span></a>
+<ul style="position: absolute; margin-top: -3.7em;">
+<li><a href="note (556).html">(01) Install Puppet</a></li>
+<li><a href="note (557).html">(02) file Resource</a></li>
+<li><a href="note (558).html">(03) package Resource</a></li>
+<li><a href="note (559).html">(04) service Resource</a></li>
+<li><a href="note (560).html">(05) group Resource</a></li>
+<li><a href="note (561).html">(06) user Resource</a></li>
+<li><a href="note (562).html">(07) exec Resource</a></li>
+<li><a href="note (563).html">(08) node Section</a></li>
+<li><a href="note (564).html">(09) class Section</a></li>
+<li style="border-bottom: 0px"><a href="note (565).html">(10) facter Variable</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (566).html">Ansible <span style="display:inline;position:absolute;left:95px;">- &nbsp; Config Manage</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (567).html">(01) Install Ansible</a></li>
+<li><a href="note (568).html">(02) Basic Usage</a></li>
+<li><a href="note (569).html">(03) Use Playbook#1</a></li>
+<li><a href="note (570).html">(04) Use Playbook#2</a></li>
+<li><a href="note (571).html">(05) Use Playbook#3</a></li>
+<li><a href="note (572).html">(06) Use Playbook#4</a></li>
+<li><a href="note (573).html">(07) Use Playbook#5</a></li>
+<li style="border-bottom: 0px"><a href="note (574).html">(08) Use Playbook#6</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (575).html">Spacewalk <span style="display:inline;position:absolute;left:95px;">- &nbsp; System Manage</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (576).html">(01) Install Spacewalk</a></li>
+<li><a href="note (577).html">(02) Initial Settings</a></li>
+<li style="border-bottom: 0px"><a href="note (578).html">(03) Clients' Settings</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (579).html">Pacemaker <span style="display:inline;position:absolute;left:95px;">- &nbsp; HA Cluster</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (580).html">(01) Install Pacemaker</a></li>
+<li><a href="note (581).html">(02) Add Resource (httpd)</a></li>
+<li style="border-bottom: 0px"><a href="note (582).html">(03) CLVM + GFS2</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (583).html">PXE Boot<span style="display:inline;position:absolute;left:95px;">- &nbsp; PXE Server</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (584).html">(01) Configure PXE Server</a></li>
+<li><a href="note (585).html">(02) Network Install</a></li>
+<li><a href="note (586).html">(03) Kickstart Install</a></li>
+<li style="border-bottom: 0px"><a href="note (587).html">(04) Diskless Client</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (588).html">OpenVPN <span style="display:inline;position:absolute;left:95px;">- &nbsp; VPN Server</span></a>
+<ul>
+<li><a href="note (589).html">(01) Configure VPN Server</a></li>
+<li style="border-bottom: 0px"><a href="note (590).html">(02) Configure VPN Client</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (591).html">LVM <span style="display:inline;position:absolute;left:95px;">- &nbsp; LVM Manage</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (592).html">(01) Manage Phisical Volumes</a></li>
+<li><a href="note (593).html">(02) Manage Volume Groups</a></li>
+<li><a href="note (594).html">(03) Manage Logical Volumes</a></li>
+<li><a href="note (595).html">(04) Create Mirroring Volume</a></li>
+<li style="border-bottom: 0px"><a href="note (596).html">(05) Create Striped Volume</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (597).html">Rsyslog <span style="display:inline;position:absolute;left:95px;">- &nbsp; Syslog Server</span></a>
+<ul style="position: absolute; margin-top: -0.1em;">
+<li><a href="note (598).html">(01) Output Logs to Remote Host</a></li>
+<li style="border-bottom: 0px"><a href="note (599).html">(02) Output Logs to Database</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (600).html">Cgroups <span style="display:inline;position:absolute;left:95px;">- &nbsp; Resource Control</span></a>
+<ul style="position: absolute; margin-top: -1.9em;">
+<li><a href="note (601).html">(01) Install Cgroups</a></li>
+<li><a href="note (602).html">(02) Create Control Groups</a></li>
+<li style="border-bottom: 0px"><a href="note (603).html">(03) Configure Rules</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (604).html">Auditd <span style="display:inline;position:absolute;left:95px;">- &nbsp; System Audit</span></a>
+<ul style="position: absolute; margin-top: -5.6em;">
+<li><a href="note (605).html">(01) Install Auditd</a></li>
+<li><a href="note (606).html">(02) Output Logs to Remote Host</a></li>
+<li><a href="note (607).html">(03) Search Logs with ausearch</a></li>
+<li><a href="note (608).html">(04) Display Logs with aureport</a></li>
+<li style="border-bottom: 0px"><a href="note (609).html">(05) Add Audit Rules</a></li>
+</ul>
+</li>
+<li class="tree2"><a href="note (610).html">SELinux <span style="display:inline;position:absolute;left:95px;">- &nbsp; Access Control</span></a>
+<ul style="position: absolute; margin-top: -16.45em;">
+<li><a href="note (611).html">(01) SELinux Operating Mode</a></li>
+<li><a href="note (612).html">(02) SELinux Policy Type</a></li>
+<li><a href="note (613).html">(03) SELinux Context</a></li>
+<li><a href="note (614).html">(04) Change Boolean Values</a></li>
+<li><a href="note (615).html">(05) Change File Types</a></li>
+<li><a href="note (616).html">(06) Change Port Types</a></li>
+<li><a href="note (617).html">(07) Search Logs</a></li>
+<li><a href="note (618).html">(08) Use SETroubleShoot</a></li>
+<li><a href="note (619).html">(09) Use audit2allow</a></li>
+<li><a href="note (620).html">(10) Use matchpathcon</a></li>
+<li style="border-bottom: 0px"><a href="note (621).html">(11) Use sesearch</a></li>
+</ul>
+</li>
+<li class="tree2" style="border-bottom: 0px"><a href="note (622).html">Firewalld <span style="display:inline;position:absolute;left:95px;">- &nbsp; Packet Filter</span></a>
+<ul style="position: absolute; margin-top: -1.8em;">
+<li><a href="note (623).html">(01) Basic Operation</a></li>
+<li style="border-bottom: 0px"><a href="note (624).html">(02) IP Masquerade</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li id="other"><a href="note (625).html">Others #2</a>
+<ul style="position: absolute; margin-top: -29.2em; margin-left: 22.8em; border-left: #696969 1px dashed; z-index:60;">
+<li><a href="note (626).html">Install NVIDIA Graphic Driver</a></li>
+<li><a href="note (627).html">Configure Local Yum Mirror</a></li>
+<li><a href="note (628).html">Check Network Bandwidth</a></li>
+<li><a href="note (629).html">Mount with SSHFS</a></li>
+<li><a href="note (630).html">Display Hardware Info</a></li>
+<li><a href="note (631).html">Configure RAID 1</a></li>
+<li><a href="note (632).html">Set Disk Quota</a></li>
+<li><a href="note (633).html">Display HDD Info</a></li>
+<li><a href="note (634).html">Add Hard Drive</a></li>
+<li><a href="note (635).html">Create SSL Certificates (Self Sign)</a></li>
+<li><a href="note (636).html">Get SSL Certificates (Let's Encrypt)</a></li>
+<li><a href="note (637).html">Reset root Password</a></li>
+<li><a href="note (638).html">Monitor User Activity</a></li>
+<li><a href="note (639).html">Count attempted Accesses</a></li>
+<li><a href="note (640).html">Change RunLevel</a></li>
+<li><a href="note (641).html">Set Timezone</a></li>
+<li><a href="note (642).html">Set Keymap</a></li>
+<li><a href="note (643).html">Set System Language</a></li>
+<li><a href="note (644).html">Set Password Rules</a></li>
+<li style="border-bottom: 0px"><a href="note (625).html">Set Hostname</a></li>
+</ul>
+<ul style="position: absolute; margin-top: -31.0em; z-index:55;">
+<li><a href="note (645).html">Grafana <span style="display:inline;position:absolute;left:90px;">- &nbsp; Web Dashboard</span></a></li>
+<li><a href="note (646).html">Graphite <span style="display:inline;position:absolute;left:90px;">- &nbsp; Graph System</span></a></li>
+<li><a href="note (647).html">Virtualmin <span style="display:inline;position:absolute;left:90px;">- &nbsp; System Manage</span></a></li>
+<li><a href="note (648).html">Usermin <span style="display:inline;position:absolute;left:90px;">- &nbsp; System Manage</span></a></li>
+<li><a href="note (649).html">Webmin <span style="display:inline;position:absolute;left:90px;">- &nbsp; System Manage</span></a></li>
+<li><a href="note (650).html">Ajenti <span style="display:inline;position:absolute;left:90px;">- &nbsp; System Manage</span></a></li>
+<li><a href="note (651).html">Cockpit <span style="display:inline;position:absolute;left:90px;">- &nbsp; System Manage</span></a></li>
+<li><a href="note (652).html">Redmine <span style="display:inline;position:absolute;left:90px;">- &nbsp; Project Manage</span></a></li>
+<li><a href="note (653).html">GitLab <span style="display:inline;position:absolute;left:90px;">- &nbsp; Project Manage</span></a></li>
+<li><a href="note (654).html">Hadoop <span style="display:inline;position:absolute;left:90px;">- &nbsp; Distributed File Sys</span></a></li>
+<li><a href="note (655).html">PowerShell <span style="display:inline;position:absolute;left:90px;">- &nbsp; CommandLine Shell</span></a></li>
+<li><a href="note (656).html">Lynis <span style="display:inline;position:absolute;left:90px;">- &nbsp; Security Audit</span></a></li>
+<li><a href="note (657).html">Tripwire <span style="display:inline;position:absolute;left:90px;">- &nbsp; Host Bsed IDS</span></a></li>
+<li><a href="note (658).html">AIDE <span style="display:inline;position:absolute;left:90px;">- &nbsp; Host Bsed IDS</span></a></li>
+<li><a href="note (659).html">RKHunter <span style="display:inline;position:absolute;left:90px;">- &nbsp; Detect Rootkit</span></a></li>
+<li><a href="note (660).html">Lsync <span style="display:inline;position:absolute;left:90px;">- &nbsp; File Sync</span></a></li>
+<li><a href="note (661).html">Rsync <span style="display:inline;position:absolute;left:90px;">- &nbsp; File Sync</span></a></li>
+<li><a href="note (662).html">TCP Wrapp <span style="display:inline;position:absolute;left:90px;">- &nbsp; Access Controls</span></a></li>
+<li><a href="note (663).html">ACL <span style="display:inline;position:absolute;left:90px;">- &nbsp; Access Controls</span></a></li>
+<li><a href="note (664).html">Realmd <span style="display:inline;position:absolute;left:90px;">- &nbsp; Join in AD Domain</span></a></li>
+<li style="border-bottom: 0px"><a href="note (665).html">Clamav <span style="display:inline;position:absolute;left:90px;">- &nbsp; AntiVirus</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<div id="bann">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="contents">
+<br>
+<table style="width: 96%; line-height: 1.5; margin-top: 5px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" summary="subject">
+<tr>
+<td style="width: 100%; height: 28px; color: #ff3399; padding-left: 50px; background: url(./img/icon.gif) #ffffff no-repeat 0 0;">
+<div class="subject">FreeIPA Replication<div class="date">2015/03/21</div></div>
+</td>
+</tr>
+</table>
+<table class="base" summary="1">
+<tr>
+<td class="num">&nbsp;</td>
+<td>
+<div class="block">
+Configure FreeIPA Replication. 
+</div>
+</td>
+</tr>
+<tr>
+<td class="num">[1]</td>
+<td>Install FreeIPA server's tools on the Replica Host and change DNS settings. 
+</td>
+</tr>
+</table>
+<table class="term" summary="1-1">
+<tr>
+<td>
+<div class="block">
+[root@repl01 ~]# <div class="color1"><a href="command\html\yum.html" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )" onkeypress="">yum</a> -y install ipa-server ipa-server-dns bind bind-dyndb-ldap </div></div>
+<div class="color2"># change DNS to FreeIPA server</div><br>
+[root@repl01 ~]# <div class="color1">nmcli c modify eno16777736 ipv4.dns 10.0.0.30 </div><br>
+[root@repl01 ~]# <div class="color1">nmcli c down eno16777736; nmcli c up eno16777736 </div><br>
+</td>
+</tr>
+</table>
+<table class="base" summary="2">
+<tr>
+<td class="num">[2]</td>
+<td>Add DNS entry for Replica Host on FreeIPA server. 
+</td>
+</tr>
+</table>
+<table class="term" summary="2-1">
+<tr>
+<td>
+<div class="color2"># ipa dnsrecord-add [domain name] [record name] [record type] [record]</div><br>
+[root@dlp ~]# <div class="color1">ipa dnsrecord-add srv.world repl01 --a-rec 10.0.0.61 </div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+  Record name: repl01
+  A record: 10.0.0.61
+
+</pre>
+[root@dlp ~]# <div class="color1">ipa-replica-prepare repl01.srv.world --ip-address 10.0.0.61 </div><br>
+Directory Manager (existing master) password: &nbsp; &nbsp; <div class="color2"># Directory Manager password</div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+
+Preparing replica for repl01.srv.world from dlp.srv.world
+Creating SSL certificate for the Directory Server
+Creating SSL certificate for the dogtag Directory Server
+Creating SSL certificate for the Web Server
+Exporting RA certificate
+Copying additional files
+Finalizing configuration
+Packaging replica information into /var/lib/ipa/replica-info-repl01.srv.world.gpg
+Adding DNS records for repl01.srv.world
+Using reverse zone 0.0.10.in-addr.arpa.
+
+</pre>
+<div class="color2"># transfer generated key to Replica Host</div><br>
+[root@dlp ~]# <div class="color1">scp /var/lib/ipa/replica-info-repl01.srv.world.gpg root@repl01.srv.world:/var/lib/ipa/ </div><br>
+root@repl01.srv.world's password:<br>
+replica-info-repl01.srv.world.gpg          100%   35KB  34.6KB/s   00:00
+</td>
+</tr>
+</table>
+<table class="base" summary="3">
+<tr>
+<td class="num">[3]</td>
+<td>On FreeIPA server, <a href="note (622).html">If Firewalld is running</a>, allow FreeIPA replication service.
+</td>
+</tr>
+</table>
+<table class="term" summary="3-1">
+<tr>
+<td>
+[root@dlp ~]# <div class="color1">firewall-cmd --add-service=freeipa-replication --permanent </div><br>
+success<br>
+[root@dlp ~]# <div class="color1">firewall-cmd --reload </div><br>
+success
+</td>
+</tr>
+</table>
+<table class="base" summary="4">
+<tr>
+<td class="num">[4]</td>
+<td>On FreeIPA replication Host, <a href="note (622).html">If Firewalld is running</a>, allow FreeIPA services.
+</td>
+</tr>
+</table>
+<table class="term" summary="4-1">
+<tr>
+<td>
+[root@repl01 ~]# <div class="color1">firewall-cmd --add-service={ssh,dns,freeipa-ldap,freeipa-ldaps,freeipa-replication} --permanent </div><br>
+success<br>
+[root@repl01 ~]# <div class="color1">firewall-cmd --reload </div><br>
+success
+</td>
+</tr>
+</table>
+<table class="base" summary="5">
+<tr>
+<td class="num">[5]</td>
+<td>Setup as a Replica Server on FreeIPA Replica.<br>
+The following example set "--no-forwarders" for DNS, but if you set it, specify like "--forwarder=x.x.x.x". 
+</td>
+</tr>
+</table>
+<table class="term" summary="5-1">
+<tr>
+<td>
+[root@repl01 ~]# <div class="color1">ipa-replica-install --setup-ca --setup-dns --no-forwarders /var/lib/ipa/replica-info-repl01.srv.world.gpg </div><br>
+Directory Manager (existing master) password: &nbsp; &nbsp; <div class="color2"># Directory Manager password</div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+
+Run connection check to master
+Check connection from replica to remote master 'dlp.srv.world':
+   Directory Service: Unsecure port (389): OK
+   Directory Service: Secure port (636): OK
+   Kerberos KDC: TCP (88): OK
+   Kerberos Kpasswd: TCP (464): OK
+   HTTP Server: Unsecure port (80): OK
+   HTTP Server: Secure port (443): OK
+   PKI-CA: Directory Service port (7389): OK
+
+The following list of ports use UDP protocol and would need to be
+checked manually:
+   Kerberos KDC: UDP (88): SKIPPED
+   Kerberos Kpasswd: UDP (464): SKIPPED
+
+Connection from replica to master is OK.
+Start listening on required ports for remote master check
+Get credentials to log in to remote master
+</pre>
+admin@SRV.WORLD password: &nbsp; &nbsp; <div class="color2"># admin password</div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+
+Execute check on remote master
+.....
+.....
+Global DNS configuration in LDAP server is empty
+You can use 'dnsconfig-mod' command to set global DNS options that
+would override settings in local named.conf files
+
+Restarting the web server
+</pre>
+</td>
+</tr>
+</table>
+<table class="base" summary="6">
+<tr>
+<td class="num">[6]</td>
+<td>Get Kerberos tickets on Replica Host and make sure it's possible to get datas on FreeIPA Directory. 
+If possible, it's OK to setup replication settings. <br>
+For FreeIPA Clients, it's not necessarry to set additinal settings, Clients can continue to authenticate even if a Server is down. 
+</td>
+</tr>
+</table>
+<table class="term" summary="6-1">
+<tr>
+<td>
+[root@repl01 ~]# <div class="color1">kinit admin </div><br>
+Password for admin@SRV.WORLD: &nbsp; &nbsp; <div class="color2"># admin password</div><br>
+[root@repl01 ~]# <div class="color1">klist </div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+Ticket cache: KEYRING:persistent:0:0
+Default principal: admin@SRV.WORLD
+
+Valid starting       Expires              Service principal
+03/21/2015 15:13:38  03/24/2015 15:13:35  krbtgt/SRV.WORLD@SRV.WORLD
+
+</pre>
+[root@repl01 ~]# <div class="color1">ipa user-find </div><br>
+<pre style="font-family: Consolas, Courier, Monaco, monospace;">
+---------------
+4 users matched
+---------------
+  User login: admin
+  Last name: Administrator
+  Home directory: /home/admin
+  Login shell: /bin/bash
+  UID: 1219600000
+  GID: 1219600000
+  Account disabled: False
+  Password: True
+  Kerberos keys available: True
+
+  User login: cent
+  First name: CentOS
+  Last name: Linux
+  Home directory: /home/cent
+  Login shell: /bin/bash
+  Email address: cent@srv.world
+  UID: 1219600001
+  GID: 1219600001
+  Account disabled: False
+  Password: True
+  Kerberos keys available: True
+.....
+.....
+</pre>
+</td>
+</tr>
+</table>
+<div style="width: 100%; border-top: 1px #696969 solid; padding-top: 20px; padding-bottom: 20px;">
+<div style="width: 728px; height: 90px; margin-left: auto; margin-right: auto;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "3679227322";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div id="right">
+<div class="os">IPA Server</div>
+<div class="navi2">
+<ul>
+<li><a href="note (234).html">Conf IPA Server</a></li>
+<li><a href="note (235).html">Add User Accounts</a></li>
+<li><a href="note (236).html">Conf IPA Client</a></li>
+<li><a href="note (237).html">Basic Operation</a></li>
+<li><a href="note (238).html">Web Management UI</a></li>
+<li><a href="note (239).html">Replication Setting</a></li>
+</ul>
+</div>
+<div style="width: 160px; text-align: center;">
+<div style="display: inline-block; width: 100%; font-size: 12px; text-align: center; background-color: #dcdcdc; border-bottom: 1px solid #696969; border-top: 2px solid #dcdcdc;">Sponsored Link</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6423793798099903";
+    google_ad_slot = "6315121180";
+    google_ad_width = 160;
+    google_ad_height = 600;
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div id="footer">Copyright &copy; 2007-2018 Server World All Rights Reserved.
+<script type="text/javascript" src="bin\count.js"></script>
+<img src="../bin/count/count.cgi?1" width="1" height="1" alt="">
+</div>
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="toolbar0">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="Medium"></g:plusone>
+</div>
+<div id="toolbar1">
+<fb:like href="note (666).html" send="true" layout="button_count" width="450" show_faces="true"></fb:like>
+</div>
+<div id="toolbar2">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11962766-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>
